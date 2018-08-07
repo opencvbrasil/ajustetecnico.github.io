@@ -327,6 +327,29 @@ finalizar o processo que executa o pequeno servidor web e ainda poder
 acompanhar todas as alterações realizadas no desenvolvimento dos
 posts.</p>
 
+<p>Caso a página hospedada no GitHub pages já esteja sendo usada para
+outros fins, é possível também hospedá-la em um subdiretório. Para
+isso, os seguintes passos devem ser realizados:</p>
+
+<ol>
+  <li>Criar um repositório com um nome específico no GitHub. Ex: <code class="highlighter-rouge">blog</code>.</li>
+  <li>Clonar o repositório remoto na máquina local. Ex: <code class="highlighter-rouge">git clone
+git@github.com:usuario/blog.git</code>
+</li>
+  <li>Criar o blog nesse diretório usando Jekyll. Ex: <code class="highlighter-rouge">jekyll new blog</code>.</li>
+  <li>Entre no diretório criado e execute o comando <code class="highlighter-rouge">git checkout -b
+gh-pages</code>. Todas as páginas do GitHub são lançadas nesse branch
+denominado <code class="highlighter-rouge">gh-pages</code>. Logo, mais uma página ficará disponível para
+acesso pelo GitHub pages.</li>
+  <li>Atualize o arquivo <code class="highlighter-rouge">_config.yml</code>, incluindo as seguintes linhas:</li>
+</ol>
+
+<div class="language-markdown highlighter-rouge">
+<pre class="highlight"><code>baseurl: "/blog"
+production_url : http://usuario.github.io.com/blog
+</code></pre>
+</div>
+
 <p>Os procedimentos descritos aqui servem apenas para criar um esqueleto
 bem rudimentar para um blog baseado em Jekyll. A criação de um blog
 com qualidade visual diferenciada é possível e será fruto de um post

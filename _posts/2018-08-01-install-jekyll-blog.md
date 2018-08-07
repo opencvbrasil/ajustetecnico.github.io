@@ -8,6 +8,7 @@ tag:
   - install_jekyll
   - ubuntu_setup
 mathjax: true
+use_math: true
 ---
 
 A criação de um blog com Jekyll pode ser feito com passos simples,
@@ -102,6 +103,25 @@ Mantenha o terminal onde o comando `bundle` foi lançado, para não
 finalizar o processo que executa o pequeno servidor web e ainda poder
 acompanhar todas as alterações realizadas no desenvolvimento dos
 posts.
+
+Caso a página hospedada no GitHub pages já esteja sendo usada para
+outros fins, é possível também hospedá-la em um subdiretório. Para
+isso, os seguintes passos devem ser realizados:
+
+1. Criar um repositório com um nome específico no GitHub. Ex: `blog`.
+2. Clonar o repositório remoto na máquina local. Ex: `git clone
+git@github.com:usuario/blog.git`
+3. Criar o blog nesse diretório usando Jekyll. Ex: `jekyll new blog`.
+4. Entre no diretório criado e execute o comando `git checkout -b
+   gh-pages`. Todas as páginas do GitHub são lançadas nesse branch
+   denominado `gh-pages`. Logo, mais uma página ficará disponível para
+   acesso pelo GitHub pages.
+5. Atualize o arquivo `_config.yml`, incluindo as seguintes linhas:
+   
+```markdown
+baseurl: "/blog"
+production_url : http://usuario.github.io.com/blog
+``` 
 
 Os procedimentos descritos aqui servem apenas para criar um esqueleto
 bem rudimentar para um blog baseado em Jekyll. A criação de um blog
