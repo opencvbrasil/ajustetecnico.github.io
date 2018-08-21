@@ -9,6 +9,7 @@ tag:
   - editorial
 mathjax: true
 use_math: true
+show_meta: true
 ---
 
 O seguintes autores e seus respectivos projetos estarão contribuindo para o editorial do ajustetecnico:
