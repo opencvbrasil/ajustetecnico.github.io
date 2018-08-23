@@ -2,6 +2,7 @@
 layout: post
 title: Secador de Grãos - Parte 1
 author: Matheus Pessoa
+comments: true
 ---
 
 Nessa primeira série de postagens, iremos abordar um projeto
