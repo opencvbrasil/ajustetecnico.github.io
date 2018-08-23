@@ -38,7 +38,7 @@ esquemático do circuito para facilitar a visualização e montagem. Usei
 para isso o editor de circuito da [EasyEDA](https://www.easyeda.com) que é
 online e gratuito. O resultado foi está na imagem abaixo.
 
-![placeholder](/images/secador-graos/secador-esquematico.png
+![placeholder](/images/secador-graos/secador-esquematico.svg
  "Esquemático do circuito")
 
 O circuito acima mostra a pinagem do Atmega328p e não os pinos do

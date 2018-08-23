@@ -5,7 +5,7 @@
     <description>Divulgação de habilidades em Engenharia de Computação</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-08-23T15:58:52-03:00</updated>
+    <updated>2018-08-23T16:05:14-03:00</updated>
     <id></id>
     <author>
       <name>Ajuste Técnico</name>
@@ -51,7 +51,7 @@ esquemático do circuito para facilitar a visualização e montagem. Usei
 para isso o editor de circuito da &lt;a href=&quot;https://www.easyeda.com&quot;&gt;EasyEDA&lt;/a&gt; que é
 online e gratuito. O resultado foi está na imagem abaixo.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/secador-graos/secador-esquematico.png&quot; alt=&quot;placeholder&quot; title=&quot;Esquemático do circuito&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/secador-graos/secador-esquematico.svg&quot; alt=&quot;placeholder&quot; title=&quot;Esquemático do circuito&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;O circuito acima mostra a pinagem do Atmega328p e não os pinos do
 Arduino. Mas é fácil achar a referência do Arduino para as ligações.&lt;/p&gt;
