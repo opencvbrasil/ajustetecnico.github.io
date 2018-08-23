@@ -11,8 +11,8 @@ title:               Ajuste Técnico
 #tagline:             'foo's website
 description:         Divulgação de habilidades em Engenharia de Computação
 #
-url: "http://ajustetecnico.github.io"
-# url: ""
+#url: "http://ajustetecnico.github.io"
+url: ""
 baseurl: ""
 urlimg: "/images/"
 markdown: kramdown

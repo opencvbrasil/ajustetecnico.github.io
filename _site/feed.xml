@@ -3,13 +3,106 @@
   <channel>
     <title>Ajuste Técnico</title>
     <description>Divulgação de habilidades em Engenharia de Computação</description>
-    <link>http://ajustetecnico.github.io/</link>
-    <atom:link href="http://ajustetecnico.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-08-23T13:59:50-03:00</updated>
-    <id>http://ajustetecnico.github.io</id>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <updated>2018-08-23T15:56:31-03:00</updated>
+    <id></id>
     <author>
       <name>Ajuste Técnico</name>
     </author>
+    
+      <item>
+        <title>Secador de Grãos - Parte 1</title>
+        
+          <description>&lt;p&gt;Nessa primeira série de postagens, iremos abordar um projeto
+desenvolvido durante o curso de Sistemas Digitais da UFRN: um secador de grãos.&lt;/p&gt;
+
+&lt;p&gt;A estrutura de controle do secador foi embarcada em um processador
+&lt;a href=&quot;https://www.microchip.com/wwwproducts/en/ATmega328P&quot;&gt;ATmega328P&lt;/a&gt;,
+popularmente disseminado pela plataforma &lt;a href=&quot;https://arduino.cc&quot;&gt;Arduino&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Como o projeto é um pouco grande, vamos apresentá-lo por partes em
+(pelo menos) umas três postagens:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Objetivos e diagrama esquemático.&lt;/li&gt;
+  &lt;li&gt;Desenvolvimento do código fonte que controla o sistema.&lt;/li&gt;
+  &lt;li&gt;Seu funcionamento e apresentação do aplicativo Android que
+interagem com o secador.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;objetivos-do-projeto&quot;&gt;Objetivos do Projeto&lt;/h2&gt;
+
+&lt;p&gt;O sistema do secador de grãos precisava ter os seguintes requisitos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tempo de execução de 3 minutos&lt;/li&gt;
+  &lt;li&gt;Seguir uma curva de secagem definida&lt;/li&gt;
+  &lt;li&gt;Uso de sensores de temperatura e luminosidade que alteram a curva&lt;/li&gt;
+  &lt;li&gt;Velocidade do ventilador controlada pela velocidade de secagem&lt;/li&gt;
+  &lt;li&gt;Resposta em tempo real da alteração da curva&lt;/li&gt;
+  &lt;li&gt;LEDs de indicação para início de processo, nível de sensores e &lt;a href=&quot;https://pt.wikipedia.org/wiki/Modula%C3%A7%C3%A3o_por_largura_de_pulso&quot;&gt;PWM&lt;/a&gt; do ventilador.&lt;/li&gt;
+  &lt;li&gt;Botão para iniciar o processo&lt;/li&gt;
+  &lt;li&gt;Painel remoto para visualização de informações&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Definidas as especificações de funcionamento, decidimos montar um
+esquemático do circuito para facilitar a visualização e montagem. Usei
+para isso o editor de circuito da &lt;a href=&quot;https://www.easyeda.com&quot;&gt;EasyEDA&lt;/a&gt; que é
+online e gratuito. O resultado foi está na imagem abaixo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/secador-graos/secador-esquematico.png&quot; alt=&quot;placeholder&quot; title=&quot;Esquemático do circuito&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O circuito acima mostra a pinagem do Atmega328p e não os pinos do
+Arduino. Mas é fácil achar a referência do Arduino para as ligações.&lt;/p&gt;
+
+&lt;p&gt;A ativação do ventilador foi feita usando um transistor. Poderia ter
+sido um acoplador óptico (mais seguro), mas foi usado o que estava à
+mão naquele momento (hehe).&lt;/p&gt;
+
+&lt;p&gt;Os quatro LEDs são colocados cada um em um pino que gera PWM no
+Arduino. Dois são usados para indicar o nível dos sensores no momento
+da leitura; um é usado para indicar quando o processo de secagem é
+iniciado e o último é usado para indicar o PWM que está chegando no
+ventilador.&lt;/p&gt;
+
+&lt;p&gt;A curva de secagem que deve ser seguida é apresentada na imagem
+abaixo. A curva define para cada instante qual deve ser a configuração
+dos pulsos enviados ao ventilador.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/secador-graos/curva-secagem.svg&quot; alt=&quot;placeholder&quot; title=&quot;Curva de secagem&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A curva mostra o evento de secagem passando em apenas 60 segundos. O
+tempo foi reduzido apenas para fins de demonstração (originalmente
+eram 3 minutos). Porém, isso não afeta o funcionamento do
+sistema. Para voltar aos 3 minutos (ou até mais) basta recalcular os
+tempos em que se atingirão os percentuais de PWM indicados.&lt;/p&gt;
+
+&lt;p&gt;Nesse sistema, foram necessários vários periféricos para operarem em
+conjunto com o microcontrolador (além de entendimento de programação
+específica para este). Um conversor A/D, temporizadores e contadores,
+interrupções, gerador de PWM e comunicação serial via USART foram as
+usadas durante o desenvolvimento.&lt;/p&gt;
+
+&lt;p&gt;Ah, embora não tenha sido apresentado nesse diagrama esquemático, foi
+usado um módulo bluetooth para Arduino. Esse módulo serviu para fazer
+a comunicação com um aplicativo Android (também desenvolvido durante o
+projeto) e enviar informações do processo, como a curva de secagem e os
+sinais dos sensores. Os dados eram exibidos em um gráfico.&lt;/p&gt;
+
+&lt;p&gt;O objetivo desse primeiro post é apenas demonstrar qual o sistema,
+suas características e o que foi usado.&lt;/p&gt;
+
+&lt;p&gt;Detalhes da implementação serão mostrados no próximo post da série.&lt;/p&gt;
+
+&lt;p&gt;Até lá!&lt;/p&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Secador de Grãos - Parte 1&amp;url=/blog/2018/08/21/secador-graos-p1/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/21/secador-graos-p1/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Tue, 21 Aug 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/08/21/secador-graos-p1/</link>
+        <guid isPermaLink="true">/blog/2018/08/21/secador-graos-p1/</guid>
+      </item>
     
       <item>
         <title>Blogs contribuintes</title>
@@ -31,12 +124,12 @@
   &lt;li&gt;Luccas Bonato e a criação de um braço robótico para desenhar imagens através da técnica de pontilhismo.&lt;/li&gt;
   &lt;li&gt;Gabriel Signoretti e um moderno sistema de monitoramento de alimentação canina, para plugar na Internet uma tigela de alimentação convencional. A tigela será turbinada com um Raspberry pi, usando a API REST para controle e monitoramento (Django ou Flask), OpenCV para analisar o conteúdo presente na tigela. Esforços estão sendo feitos de modo a permitir o controle remoto do sistema.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Blogs contribuintes&amp;url=http://ajustetecnico.github.io/blog/2018/08/20/editorial/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=http://ajustetecnico.github.io/blog/2018/08/20/editorial/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Blogs contribuintes&amp;url=/blog/2018/08/20/editorial/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/20/editorial/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
 </description>
         
         <pubDate>Mon, 20 Aug 2018 00:00:00 -0300</pubDate>
-        <link>http://ajustetecnico.github.io/blog/2018/08/20/editorial/</link>
-        <guid isPermaLink="true">http://ajustetecnico.github.io/blog/2018/08/20/editorial/</guid>
+        <link>/blog/2018/08/20/editorial/</link>
+        <guid isPermaLink="true">/blog/2018/08/20/editorial/</guid>
       </item>
     
       <item>
@@ -165,12 +258,12 @@ futuro.&lt;/p&gt;
 sugerem sites como &lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;jekyllthemes.io/&lt;/a&gt;. O
 próprio &lt;a href=&quot;https://github.com&quot;&gt;github.com&lt;/a&gt; suporta Jekyll e, inclusive,
 ajuda a criação de blogs com alguns temas sugeridos.&lt;/p&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Instalando Jekyll...&amp;url=http://ajustetecnico.github.io/blog/2018/08/01/install-jekyll-blog/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=http://ajustetecnico.github.io/blog/2018/08/01/install-jekyll-blog/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Instalando Jekyll...&amp;url=/blog/2018/08/01/install-jekyll-blog/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/01/install-jekyll-blog/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
 </description>
         
         <pubDate>Wed, 01 Aug 2018 00:00:00 -0300</pubDate>
-        <link>http://ajustetecnico.github.io/blog/2018/08/01/install-jekyll-blog/</link>
-        <guid isPermaLink="true">http://ajustetecnico.github.io/blog/2018/08/01/install-jekyll-blog/</guid>
+        <link>/blog/2018/08/01/install-jekyll-blog/</link>
+        <guid isPermaLink="true">/blog/2018/08/01/install-jekyll-blog/</guid>
       </item>
     
       <item>
@@ -219,12 +312,12 @@ compreender como faz.&lt;/p&gt;
 dicas de uso.&lt;/p&gt;
 
 &lt;p&gt;Valeu!&lt;/p&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Alô, mundo!&amp;url=http://ajustetecnico.github.io/blog/2018/06/12/alo-mundo/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=http://ajustetecnico.github.io/blog/2018/06/12/alo-mundo/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Alô, mundo!&amp;url=/blog/2018/06/12/alo-mundo/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/06/12/alo-mundo/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
 </description>
         
         <pubDate>Tue, 12 Jun 2018 00:00:00 -0300</pubDate>
-        <link>http://ajustetecnico.github.io/blog/2018/06/12/alo-mundo/</link>
-        <guid isPermaLink="true">http://ajustetecnico.github.io/blog/2018/06/12/alo-mundo/</guid>
+        <link>/blog/2018/06/12/alo-mundo/</link>
+        <guid isPermaLink="true">/blog/2018/06/12/alo-mundo/</guid>
       </item>
     
   </channel>

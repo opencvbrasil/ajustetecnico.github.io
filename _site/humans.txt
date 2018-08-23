@@ -1,10 +1,10 @@
 /* TEAM */
 Primary Contact: foo
-Site: http://ajustetecnico.github.io/about/
+Site: /about/
 Twitter: https://twitter.com/ajustetecnico
 
 /* THANKS */
-Design Contributors: http://ajustetecnico.github.io/disclosure/
+Design Contributors: /disclosure/
 
 /* SITE */
 Last Updated: 2018/08/23
