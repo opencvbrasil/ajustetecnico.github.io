@@ -12,6 +12,8 @@ A estrutura de controle do secador foi embarcada em um processador
 [ATmega328P](https://www.microchip.com/wwwproducts/en/ATmega328P),
 popularmente disseminado pela plataforma [Arduino](https://arduino.cc)
 
+<!--more-->
+
 Como o projeto é um pouco grande, vamos apresentá-lo por partes em
 (pelo menos) umas três postagens:
 

@@ -5,7 +5,7 @@
     <description>Divulgação de habilidades em Engenharia de Computação</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-08-23T16:05:14-03:00</updated>
+    <updated>2018-08-23T16:28:39-03:00</updated>
     <id></id>
     <author>
       <name>Ajuste Técnico</name>
@@ -20,6 +20,8 @@ desenvolvido durante o curso de Sistemas Digitais da UFRN: um secador de grãos.
 &lt;p&gt;A estrutura de controle do secador foi embarcada em um processador
 &lt;a href=&quot;https://www.microchip.com/wwwproducts/en/ATmega328P&quot;&gt;ATmega328P&lt;/a&gt;,
 popularmente disseminado pela plataforma &lt;a href=&quot;https://arduino.cc&quot;&gt;Arduino&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;Como o projeto é um pouco grande, vamos apresentá-lo por partes em
 (pelo menos) umas três postagens:&lt;/p&gt;
