@@ -14,7 +14,7 @@ Os posts que aqui aparecem são normalmente fruto de trabalhos de
 disciplinas, projetos pessoais e gambiarras desenvolvidas para
 aprender ou divertir.
 
-Procuramos a presentar o conteúdo na forma de um blog para tornar a
+Procuramos apresentar o conteúdo na forma de um blog para tornar a
 interação mais dinâmica e transmitir as ideias de forma mais suscinta
 para o leitor.
 
