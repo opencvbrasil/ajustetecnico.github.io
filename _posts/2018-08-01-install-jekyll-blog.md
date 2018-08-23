@@ -9,6 +9,7 @@ tag:
   - ubuntu_setup
 mathjax: true
 use_math: true
+comments: true
 ---
 
 A criação de um blog com Jekyll pode ser feito com passos simples,
