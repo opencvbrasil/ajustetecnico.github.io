@@ -3,10 +3,10 @@
   <channel>
     <title>Ajuste Técnico</title>
     <description>Divulgação de habilidades em Engenharia de Computação</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-08-21T08:54:30-03:00</updated>
-    <id></id>
+    <link>http://ajustetecnico.github.io/</link>
+    <atom:link href="http://ajustetecnico.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <updated>2018-08-23T13:58:49-03:00</updated>
+    <id>http://ajustetecnico.github.io</id>
     <author>
       <name>Ajuste Técnico</name>
     </author>
@@ -31,12 +31,12 @@
   &lt;li&gt;Luccas Bonato e a criação de um braço robótico para desenhar imagens através da técnica de pontilhismo.&lt;/li&gt;
   &lt;li&gt;Gabriel Signoretti e um moderno sistema de monitoramento de alimentação canina, para plugar na Internet uma tigela de alimentação convencional. A tigela será turbinada com um Raspberry pi, usando a API REST para controle e monitoramento (Django ou Flask), OpenCV para analisar o conteúdo presente na tigela. Esforços estão sendo feitos de modo a permitir o controle remoto do sistema.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Blogs contribuintes&amp;url=/blog/2018/08/20/editorial/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/20/editorial/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Blogs contribuintes&amp;url=http://ajustetecnico.github.io/blog/2018/08/20/editorial/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=http://ajustetecnico.github.io/blog/2018/08/20/editorial/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
 </description>
         
         <pubDate>Mon, 20 Aug 2018 00:00:00 -0300</pubDate>
-        <link>/blog/2018/08/20/editorial/</link>
-        <guid isPermaLink="true">/blog/2018/08/20/editorial/</guid>
+        <link>http://ajustetecnico.github.io/blog/2018/08/20/editorial/</link>
+        <guid isPermaLink="true">http://ajustetecnico.github.io/blog/2018/08/20/editorial/</guid>
       </item>
     
       <item>
@@ -165,12 +165,12 @@ futuro.&lt;/p&gt;
 sugerem sites como &lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;jekyllthemes.io/&lt;/a&gt;. O
 próprio &lt;a href=&quot;https://github.com&quot;&gt;github.com&lt;/a&gt; suporta Jekyll e, inclusive,
 ajuda a criação de blogs com alguns temas sugeridos.&lt;/p&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Instalando Jekyll...&amp;url=/blog/2018/08/01/install-jekyll-blog/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/01/install-jekyll-blog/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Instalando Jekyll...&amp;url=http://ajustetecnico.github.io/blog/2018/08/01/install-jekyll-blog/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=http://ajustetecnico.github.io/blog/2018/08/01/install-jekyll-blog/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
 </description>
         
         <pubDate>Wed, 01 Aug 2018 00:00:00 -0300</pubDate>
-        <link>/blog/2018/08/01/install-jekyll-blog/</link>
-        <guid isPermaLink="true">/blog/2018/08/01/install-jekyll-blog/</guid>
+        <link>http://ajustetecnico.github.io/blog/2018/08/01/install-jekyll-blog/</link>
+        <guid isPermaLink="true">http://ajustetecnico.github.io/blog/2018/08/01/install-jekyll-blog/</guid>
       </item>
     
       <item>
@@ -219,12 +219,12 @@ compreender como faz.&lt;/p&gt;
 dicas de uso.&lt;/p&gt;
 
 &lt;p&gt;Valeu!&lt;/p&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Alô, mundo!&amp;url=/blog/2018/06/12/alo-mundo/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/06/12/alo-mundo/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Alô, mundo!&amp;url=http://ajustetecnico.github.io/blog/2018/06/12/alo-mundo/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=http://ajustetecnico.github.io/blog/2018/06/12/alo-mundo/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
 </description>
         
         <pubDate>Tue, 12 Jun 2018 00:00:00 -0300</pubDate>
-        <link>/blog/2018/06/12/alo-mundo/</link>
-        <guid isPermaLink="true">/blog/2018/06/12/alo-mundo/</guid>
+        <link>http://ajustetecnico.github.io/blog/2018/06/12/alo-mundo/</link>
+        <guid isPermaLink="true">http://ajustetecnico.github.io/blog/2018/06/12/alo-mundo/</guid>
       </item>
     
   </channel>

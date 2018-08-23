@@ -3,10 +3,10 @@
   <channel>
     <title>Ajuste Técnico</title>
     <description>Divulgação de habilidades em Engenharia de Computação</description>
-    <link>/</link>
-    <atom:link href="/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-08-21T08:54:30-03:00</updated>
-    <id></id>
+    <link>http://ajustetecnico.github.io/</link>
+    <atom:link href="http://ajustetecnico.github.io/rfeed.xml" rel="self" type="application/rss+xml" />
+    <updated>2018-08-23T13:58:49-03:00</updated>
+    <id>http://ajustetecnico.github.io</id>
     <author>
       <name>Ajuste Técnico</name>
     </author>

@@ -1,12 +1,12 @@
 /* TEAM */
 Primary Contact: foo
-Site: /about/
+Site: http://ajustetecnico.github.io/about/
 Twitter: https://twitter.com/ajustetecnico
 
 /* THANKS */
-Design Contributors: /disclosure/
+Design Contributors: http://ajustetecnico.github.io/disclosure/
 
 /* SITE */
-Last Updated: 2018/08/21
+Last Updated: 2018/08/23
 Standards: HTML5, CSS3
 Software: Sublime Text, Chrome, Jekyll, Git, Sass
