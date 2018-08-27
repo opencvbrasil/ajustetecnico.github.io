@@ -16,20 +16,52 @@ tags:
 ---
 Olá,
 
-Nesse post iremos iniciar uma discussão acerca de um trabalho desenvolvido durante nosso curso de graduação na UFRN.
+Nesse post iremos iniciar uma discussão acerca de um trabalho
+desenvolvido durante nosso curso de graduação na UFRN.
 
-Trata-se de um algoritmo de detecção de assinaturas em listas de presenças, muito utilizadas pelos professores para registrar para a presença dos alunos em sala de aula. 
+Trata-se de um algoritmo de detecção de assinaturas em listas de
+presenças, muito utilizadas pelos professores para registrar para a
+presença dos alunos em sala de aula.
+
 <!--more-->
 
 ## Motivações
 
-Existem diversas maneiras de obter as presenças dos alunos em uma sala de aula. O registro pode ser feito pelas assinatura dos alunos em uma lista de presença, preenchendo um formulário impresso, também conhecida como "chamada" (que também pode ser feita via web), por reconhecimento facial, detecção via ponto eletrônico. As possibilidades são muitas...
+Existem diversas maneiras de obter as presenças dos alunos em uma sala
+de aula. O registro pode ser feito pelas assinatura dos alunos em uma
+lista de presença, preenchendo um formulário impresso, também
+conhecida como "chamada" (que também pode ser feita via web), por
+reconhecimento facial, detecção via ponto eletrônico. As
+possibilidades são muitas...
 
-Focando no método pelas assinaturas dos alunos, é um método bastante utilizado em diversas instituições de ensino superior pelo Brasil (como na UFRN), onde é passado uma lista de assinaturas para os alunos preencherem.
-<br><br>
-O problema é quando precisa salvar essas assinaturas em algum outro lugar (como na Web), pois demanda um tempo considerável para o docente ter que conferir folha a folha, assinatura a assinatura, para salva-las no site da instutição (muitas vezes o mesmo opta por colocar presença em todos os alunos, todos os dias, para se livrar desse trabalho).
-<br><br>
-O algoritmo que irei começar a discutir nesse post visa um reconhecimento automático dessas assinaturas, utilizando de ferramentas como OpenCV (biblioteca multi-linguagem para algoritmos em Visão Computacional) e QR code (código de barras multidimensional bastante conhecido pela internet).
+Focando no método pelas assinaturas dos alunos, é um método bastante
+utilizado em diversas instituições de ensino superior pelo Brasil
+(como na UFRN), onde é passado uma lista de assinaturas para os alunos
+preencherem.
+
+O problema de processar as listas surge quando é necessário salvar
+essas assinaturas em algum outro lugar (como na Web), pois demanda um
+tempo considerável para o docente ter que conferir folha a folha,
+assinatura a assinatura, para salvá-las no sistema acadêmico. A
+existência de um mecanismo que torne facilite esse processo para o
+docente foi o motivador para o trabalho. E desenvolvê-lo usando
+técnicas de visão artificial foi o grande desafio.
+
+A foto abaixo ilustra um exemplo de lista de presença. Provavelmente,
+a maioria dos leitores já se deparou com uma.
+
+[Lista de presença](/images/detecao-assinaturas/listapresenca.jpg)
+
+Processar uma lista como essa esbarra em uma série de dificuldades
+técnicas que algoritmos simples não resolvem o problema com
+facilidade. 
+
+O algoritmo que irei começar a discutir nesse post visa um
+reconhecimento automático dessas assinaturas, utilizando de
+ferramentas como OpenCV (biblioteca multi-linguagem para algoritmos em
+Visão Computacional) e QR code (código de barras multidimensional
+bastante conhecido pela internet).
+
 <br>
 <h1>Modelo</h1>
 Abaixo segue um link para o modelo de lista de assinaturas sobre o qual o algoritmo foi construido:
