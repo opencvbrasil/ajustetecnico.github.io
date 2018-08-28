@@ -68,12 +68,7 @@ Abaixo segue um link para o modelo de lista de assinaturas sobre o
 qual o algoritmo foi construido: [Link para o
 modelo](https://github.com/teonacio/GIT_lista_de_presenca/blob/master/_pdf/qrnovo.pdf)
 
-Porque usar outro modelo? O algoritmo foi desenvolvido para reconhecer
-as assinaturas escritas nesse modelo, mas pode ser facilmente adaptado
-ou ajustado para qualquer instituição (preferencialmente de ensino
-superior).
-
-Note os QR codes nos cantos da folha, iremos discutir eles mais adiante. Não se preoculpem com a ordem alfabética dos nomes na folha, isso não interfere na detecção.
+Porque adaptar os modelos tradicionais? Para facilitar a tarefa do próprio algoritmo usando QR codes. Os códigos estão lá para ajudar no processo de 
 
 <h1>QR Codes e ZBar</h1>
 Acredito que vocês já devem estar familiarizados com QR codes, certo? De qualquer forma, segue abaixo um modelo de QR code:
