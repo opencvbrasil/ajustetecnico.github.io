@@ -18,6 +18,11 @@ callback([
   {
     "text": "Secador de Grãos - Parte 1",
     "href": "/blog/2018/08/21/secador-graos-p1/"
+  } ,
+
+  {
+    "text": "Detecção de assinaturas em listas de presenças - Parte 1",
+    "href": "/blog/2018/08/21/detecao-assinaturas-part1/"
   } 
 
 ])

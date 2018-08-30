@@ -3,6 +3,21 @@
   
     
     <url>
+      <loc>/blog/2018/08/21/detecao-assinaturas-part1/</loc>
+      
+        <lastmod>2018-08-21T05:44:21-03:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>/blog/2018/08/21/secador-graos-p1/</loc>
       
         <lastmod>2018-08-21T00:00:00-03:00</lastmod>
@@ -98,7 +113,7 @@
     <url>
       <loc>/archive/</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -160,7 +175,7 @@
     <url>
       <loc>/disclosure/</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -177,7 +192,7 @@
     <url>
       <loc>/feed.xml</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -192,7 +207,7 @@
     <url>
       <loc>/humans.txt</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -207,7 +222,7 @@
     <url>
       <loc>/blog/</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -222,22 +237,7 @@
     <url>
       <loc>/</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/</loc>
-      
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -252,7 +252,7 @@
     <url>
       <loc>/links.jsonp</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -286,7 +286,7 @@
     <url>
       <loc>/readme/</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -303,7 +303,7 @@
     <url>
       <loc>/rfeed.xml</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -320,7 +320,7 @@
     <url>
       <loc>/sitemap.xml</loc>
       
-        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+        <lastmod>2018-08-30T08:50:58-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
