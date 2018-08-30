@@ -98,7 +98,7 @@
     <url>
       <loc>/archive/</loc>
       
-        <lastmod>2018-08-23T17:05:27-03:00</lastmod>
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -160,7 +160,7 @@
     <url>
       <loc>/disclosure/</loc>
       
-        <lastmod>2018-08-23T17:05:27-03:00</lastmod>
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -177,7 +177,7 @@
     <url>
       <loc>/feed.xml</loc>
       
-        <lastmod>2018-08-23T17:05:27-03:00</lastmod>
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -192,7 +192,22 @@
     <url>
       <loc>/humans.txt</loc>
       
-        <lastmod>2018-08-23T17:05:27-03:00</lastmod>
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>/blog/</loc>
+      
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -207,7 +222,22 @@
     <url>
       <loc>/</loc>
       
-        <lastmod>2018-08-23T17:05:27-03:00</lastmod>
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>/</loc>
+      
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -222,7 +252,7 @@
     <url>
       <loc>/links.jsonp</loc>
       
-        <lastmod>2018-08-23T17:05:27-03:00</lastmod>
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -256,7 +286,7 @@
     <url>
       <loc>/readme/</loc>
       
-        <lastmod>2018-08-23T17:05:27-03:00</lastmod>
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -273,7 +303,7 @@
     <url>
       <loc>/rfeed.xml</loc>
       
-        <lastmod>2018-08-23T17:05:27-03:00</lastmod>
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -290,7 +320,7 @@
     <url>
       <loc>/sitemap.xml</loc>
       
-        <lastmod>2018-08-23T17:05:27-03:00</lastmod>
+        <lastmod>2018-08-30T08:16:52-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
