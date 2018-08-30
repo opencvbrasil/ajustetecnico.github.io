@@ -13,6 +13,7 @@ tags:
  - zbar
  - qrcode
  - assinaturas
+comments: true
 ---
 Olá,
 
