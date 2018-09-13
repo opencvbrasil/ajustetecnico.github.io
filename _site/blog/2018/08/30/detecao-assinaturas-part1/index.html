@@ -45,7 +45,7 @@ Credits: /disclosure
 <meta property="og:type" content="article">
 <meta property="og:title" content="Detecção de assinaturas em listas de presenças - Parte 1">
 <meta property="og:description" content="Olá, Nesse post iremos iniciar uma discussão acerca de um trabalho desenvolvido durante nosso curso de graduação na UFRN. Trata-se de um algoritmo de detecção de assinaturas em listas de presenças, muito utilizadas pelos professores para registrar para a presença dos alunos em sala de aula. Motivações Existem diversas maneiras...">
-<meta property="og:url" content="/blog/2018/08/21/detecao-assinaturas-part1/">
+<meta property="og:url" content="/blog/2018/08/30/detecao-assinaturas-part1/">
 <meta property="og:site_name" content="Ajuste Técnico">
 
 <meta property="og:image" content="/images/sitelogo.png">
@@ -89,7 +89,7 @@ Credits: /disclosure
 <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
 
 
-<link rel="canonical" href="/blog/2018/08/21/detecao-assinaturas-part1/">
+<link rel="canonical" href="/blog/2018/08/30/detecao-assinaturas-part1/">
 <link rel="author" href="https://plus.google.com/+ajustetecnico?rel=author">
 
 <!-- RSS -->
@@ -169,14 +169,14 @@ Credits: /disclosure
         <div class="post">
   <h1 itemprop="name" class="post-title">Detecção de assinaturas em listas de presenças - Parte 1 </h1>
 	<h3 itemprop="name" class="post-author">por Bruno Teonácio </h3>
-  <span class="post-date" itemprop="datePublished" content="2018-08-21"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/08/21/detecao-assinaturas-part1/" itemprop="url" title="Permanent link to this post">21 Aug 2018</a> </i></span>
+  <span class="post-date" itemprop="datePublished" content="2018-08-30"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/08/30/detecao-assinaturas-part1/" itemprop="url" title="Permanent link to this post">30 Aug 2018</a> </i></span>
   
   <span class="post-tags" itemprop="keywords" content="jekyll, pdi, visao_computacional, opencv, zbar, qrcode, and assinaturas"><i class="fa fa-tags" title="page tags"></i> <a href="/tags/#jekyll" title="Pages tagged jekyll" rel="tag">jekyll</a> •  <a href="/tags/#pdi" title="Pages tagged pdi" rel="tag">pdi</a> •  <a href="/tags/#visao_computacional" title="Pages tagged visao_computacional" rel="tag">visao_computacional</a> •  <a href="/tags/#opencv" title="Pages tagged opencv" rel="tag">opencv</a> •  <a href="/tags/#zbar" title="Pages tagged zbar" rel="tag">zbar</a> •  <a href="/tags/#qrcode" title="Pages tagged qrcode" rel="tag">qrcode</a> •  <a href="/tags/#assinaturas" title="Pages tagged assinaturas" rel="tag">assinaturas</a></span>
     
-      <span class="social-icons"><a href="https://twitter.com/share?text=Detec%C3%A7%C3%A3o%20de%20assinaturas%20em%20listas%20de%20presen%C3%A7as%20-%20Parte%201&amp;url=/blog/2018/08/21/detecao-assinaturas-part1/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
-<a href="https://plus.google.com/share?url=/blog/2018/08/21/detecao-assinaturas-part1/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
-<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/08/21/detecao-assinaturas-part1/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
-
+      <span class="social-icons"><a href="https://twitter.com/share?text=Detec%C3%A7%C3%A3o%20de%20assinaturas%20em%20listas%20de%20presen%C3%A7as%20-%20Parte%201&amp;url=/blog/2018/08/30/detecao-assinaturas-part1/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=/blog/2018/08/30/detecao-assinaturas-part1/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/08/30/detecao-assinaturas-part1/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+<a href="/blog/2018/08/30/detecao-assinaturas-part1/#disqus_thread" class="social-icons" title="Comments"><i class="fa fa-comments"></i></a>
 
 <a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
 </span>
@@ -270,14 +270,14 @@ dos alunos, que para a detecção não interferem no resultado).</p>
 
   <hr>
   
-  <span class="post-date metafoot" itemprop="datePublished" content="2018-08-21"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/08/21/detecao-assinaturas-part1/" itemprop="url" title="Permanent link to this post">21 Aug 2018</a> </i></span>
+  <span class="post-date metafoot" itemprop="datePublished" content="2018-08-30"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/08/30/detecao-assinaturas-part1/" itemprop="url" title="Permanent link to this post">30 Aug 2018</a> </i></span>
   
   <span class="post-tags" itemprop="keywords" content="jekyll, pdi, visao_computacional, opencv, zbar, qrcode, and assinaturas"><i class="fa fa-tags" title="page tags"></i> <a href="/tags/#jekyll" title="Pages tagged jekyll" rel="tag">jekyll</a> •  <a href="/tags/#pdi" title="Pages tagged pdi" rel="tag">pdi</a> •  <a href="/tags/#visao_computacional" title="Pages tagged visao_computacional" rel="tag">visao_computacional</a> •  <a href="/tags/#opencv" title="Pages tagged opencv" rel="tag">opencv</a> •  <a href="/tags/#zbar" title="Pages tagged zbar" rel="tag">zbar</a> •  <a href="/tags/#qrcode" title="Pages tagged qrcode" rel="tag">qrcode</a> •  <a href="/tags/#assinaturas" title="Pages tagged assinaturas" rel="tag">assinaturas</a></span>
     
-      <span class="social-icons"><a href="https://twitter.com/share?text=Detec%C3%A7%C3%A3o%20de%20assinaturas%20em%20listas%20de%20presen%C3%A7as%20-%20Parte%201&amp;url=/blog/2018/08/21/detecao-assinaturas-part1/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
-<a href="https://plus.google.com/share?url=/blog/2018/08/21/detecao-assinaturas-part1/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
-<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/08/21/detecao-assinaturas-part1/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
-
+      <span class="social-icons"><a href="https://twitter.com/share?text=Detec%C3%A7%C3%A3o%20de%20assinaturas%20em%20listas%20de%20presen%C3%A7as%20-%20Parte%201&amp;url=/blog/2018/08/30/detecao-assinaturas-part1/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=/blog/2018/08/30/detecao-assinaturas-part1/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/08/30/detecao-assinaturas-part1/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+<a href="/blog/2018/08/30/detecao-assinaturas-part1/#disqus_thread" class="social-icons" title="Comments"><i class="fa fa-comments"></i></a>
 
 <a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
 </span>
@@ -297,9 +297,9 @@ dos alunos, que para a detecção não interferem no resultado).</p>
   <tbody>
     <tr>
       <td>
-<i class="fa fa-anchor"> /blog/2018/08/21/detecao-assinaturas-part1/</i><br><i class="fa fa-calendar"> 21-Aug-18</i><br><i class="fa fa-creative-commons"> BY-NC-SA 4.0 /disclosure</i>
+<i class="fa fa-anchor"> /blog/2018/08/30/detecao-assinaturas-part1/</i><br><i class="fa fa-calendar"> 30-Aug-18</i><br><i class="fa fa-creative-commons"> BY-NC-SA 4.0 /disclosure</i>
 </td>
-      <td><img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=/blog/2018/08/21/detecao-assinaturas-part1/&amp;choe=UTF-8" alt="/blog/2018/08/21/detecao-assinaturas-part1/"></td>
+      <td><img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=/blog/2018/08/30/detecao-assinaturas-part1/&amp;choe=UTF-8" alt="/blog/2018/08/30/detecao-assinaturas-part1/"></td>
     </tr>
   </tbody>
 </table>
@@ -348,15 +348,15 @@ dos alunos, que para a detecção não interferem no resultado).</p>
       
     
   
+    
+  
      
        
         
           <li>
-<a href="/blog/2018/08/30/detecao-assinaturas-part1/">Detecção de assinaturas em listas de presenças - Parte 1</a><br>
+<a href="/blog/2018/08/21/detecao-assinaturas-part1/">Detecção de assinaturas em listas de presenças - Parte 1</a><br>
 </li>
           
-    
-  
     
   
      
@@ -490,16 +490,17 @@ dos alunos, que para a detecção não interferem no resultado).</p>
 
 <div class="prevnext">
   
-    <a class="prevnext-item older" href="/blog/2018/08/21/secador-graos-p1/" title="Secador de Grãos - Parte 1">Older</a>
+    <a class="prevnext-item older" href="/blog/2018/08/21/detecao-assinaturas-part1/" title="Detecção de assinaturas em listas de presenças - Parte 1">Older</a>
   
   
-    <a class="prevnext-item older" href="/blog/2018/08/30/detecao-assinaturas-part1/" title="Detecção de assinaturas em listas de presenças - Parte 1">Newer</a>
+    <a class="prevnext-item older" href="/blog/2018/09/18/equacoes-markdown/" title="Usando Equações em Markdown">Newer</a>
   
 </div>
 
 <div class="page-break"></div>
 
-
+<div id="disqus_thread"></div>
+<!-- /#disqus_thread -->
 
                     <div class="custom-footer" style="display: block;">
             <div class="footer-social-icons">
@@ -555,6 +556,20 @@ dos alunos, que para a detecção não interferem no resultado).</p>
 
 
 <!-- disqus comments -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ajustetecnico'; 
+    var disqus_identifier = '/blog/2018/08/30/detecao-assinaturas-part1/';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
 </body>
