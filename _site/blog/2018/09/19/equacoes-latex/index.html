@@ -265,14 +265,213 @@ expoente que se seguia. Polinômios em geral são construídos assim.</p>
 
 <h2 id="smbolos">Símbolos</h2>
 
-<p>Nas ciências exatas e tecnológicas as equações são repletas de
+<p>Em ciências exatas e tecnológicas as equações são repletas de
 símbolos e em LaTeX para cada símbolo há um código associado a
-este. E eles são muitos. Alguns são antigos e são definidos nos
-pacotes de padrões matemáticos que normalmente acompanha as
-distribuições. Outros dependem de instalação pelo usuário. A maioria,
-entretanto, é amplamente conhecida e suportada nativamente pelo LaTeX
-e também pelo MathJax</p>
+este… e eles são muitos.</p>
 
+<p>Alguns são antigos e são definidos nos pacotes de padrões matemáticos
+que normalmente acompanham as distribuições. Já outros dependem de
+instalação pelo usuário. A maioria, entretanto, é amplamente conhecida
+e suportada nativamente pelo LaTeX e também pelo MathJax.</p>
+
+<p>É fácil achar na Internet sites e livros gratuitos que listam os
+símbolos mais comuns usados em LaTeX. O wikibook de LaTeX tem
+uma seção
+de <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">matemática</a> que
+apresenta vários deles. Entretanto, o capítulo 8 do LaTeX Companion
+pode ser usado também.</p>
+
+<p>Ex: <code class="highlighter-rouge">\Delta x = \gamma \epsilon</code> produz <script type="math/tex">\Delta x = \gamma \epsilon</script>.</p>
+
+<h2 id="operadores">Operadores</h2>
+
+<p>Um operador é um tipo de função conhecida que opera sobre
+argumentos. Exemplos de operadores são as funções trigonométricas,
+logaritmos, exponenciais, integrais ou limites. Para cada uma existe
+uma palavra associada.</p>
+
+<p>Ex: <code class="highlighter-rouge">\tan(x) = \sin(x)/\cos(x)</code> produz</p>
+
+<script type="math/tex; mode=display">\tan(x) =
+\sin(x)/\cos(x)</script>
+
+<p>Ex: <code class="highlighter-rouge">y = \int_{x=0}^{x=1} \exp(x) dx</code> produz</p>
+
+<script type="math/tex; mode=display">y = \int_{x=0}^{x=1} \exp(x) dx</script>
+
+<p>Ex: <code class="highlighter-rouge">\lim_{x \to \infty} \exp(-x) = 0</code> produz</p>
+
+<script type="math/tex; mode=display">\lim_{x \to
+\infty} \exp(-x) = 0</script>
+
+<h2 id="expoentes-e-ndices">Expoentes e índices</h2>
+
+<p>Os expoentes são determinados pelo que se segue ao caractere <code class="highlighter-rouge">^</code> e
+os índices pelo que se segue ao caractere <code class="highlighter-rouge">_</code>. Se a expressão do
+expoente ou índice tiver mais de um símbolo, deve ser colocada dentro
+de chaves <code class="highlighter-rouge"><span class="p">{</span></code> e  <code class="highlighter-rouge">}</code></p>
+
+<p>Ex: <code class="highlighter-rouge">x^{a+b}</code> produz</p>
+
+<script type="math/tex; mode=display">x^{a+b}</script>
+
+<p>Ex: <code class="highlighter-rouge">x_{a+b}</code> produz</p>
+
+<script type="math/tex; mode=display">x_{a+b}</script>
+
+<p>Ex: <code class="highlighter-rouge">x_{a+b}^{c+d}</code> produz</p>
+
+<script type="math/tex; mode=display">x_{a+b}^{c+d}</script>
+
+<h2 id="fraes">Frações</h2>
+
+<p>As frações são criadas com o comando <code class="highlighter-rouge">\frac{}{}</code>, que demanda dois
+argumentos: numerador e denominador.</p>
+
+<p>Ex: <code class="highlighter-rouge">\tan(x) = \frac{\sin(x)}{\cos{x}}</code> produz</p>
+
+<script type="math/tex; mode=display">\tan(x) = \frac{\sin(x)}{\cos{x}}</script>
+
+<p>Ex: <code class="highlighter-rouge">y = x^\frac{1}{1+x}</code> produz</p>
+
+<script type="math/tex; mode=display">y = x^\frac{1}{1+x}</script>
+
+<p>E que tal essa… <code class="highlighter-rouge">\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}</code></p>
+
+<script type="math/tex; mode=display">\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}</script>
+
+<p>Mas ficam melhor com o comando <code class="highlighter-rouge">cfrac</code>, como em <code class="highlighter-rouge">y = \cfrac{1}{1 +\cfrac{1}{1 + \cfrac{1}{1+x}}}</code> que produz</p>
+
+<script type="math/tex; mode=display">y = \cfrac{1}{1 +\cfrac{1}{1 + \cfrac{1}{1+x}}}</script>
+
+<h2 id="somas-e-integrais">Somas e integrais</h2>
+
+<p>Somas e integrais também são definidas por palavras reservadas e podem
+ser exibidas de diversas formas</p>
+
+<p>Ex: <code class="highlighter-rouge">\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x</code> produz</p>
+
+<script type="math/tex; mode=display">\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x</script>
+
+<p>Ex: <code class="highlighter-rouge">\int\limits_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x</code> produz</p>
+
+<script type="math/tex; mode=display">\int\limits_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x</script>
+
+<p>Ex: <code class="highlighter-rouge">\sum_{x=0}^{100} f(x)</code> produz <script type="math/tex">\sum_{x=0}^{100} f(x)</script> se
+estiver na mesma linha.</p>
+
+<p>Ex: <code class="highlighter-rouge">\sum_{x=0}^{100} f(x)</code> produz</p>
+
+<script type="math/tex; mode=display">\displaystyle \sum_{x=0}^{100} f(x)</script>
+
+<p>se estiver em um parágrafo separado</p>
+
+<h2 id="delimitadores">Delimitadores</h2>
+
+<p>Os delimitadores são símbolos que marcam um pedaço de uma equação que
+deve ser calculado antes de outro. Exemplos de símbolos sao as chaves,
+colchetes e parêntesis.</p>
+
+<p>Os delimitadores podem inclusive ter dimensionamento automático usando
+os comandos <code class="highlighter-rouge">\left</code>, <code class="highlighter-rouge">\middle</code> e  <code class="highlighter-rouge">\right</code>. Assim,
+equações de tamanho grande verticalmente podem ser ajustados.</p>
+
+<p>Ex: <code class="highlighter-rouge">y = \cfrac{1}{(1 +\cfrac{1}{1 + \cfrac{1}{1+x}})}</code> produz</p>
+
+<script type="math/tex; mode=display">y = \cfrac{1}{(1 +\cfrac{1}{1 + \cfrac{1}{1+x}})}</script>
+
+<p>Ex: <code class="highlighter-rouge">y = \cfrac{1}{\left(1 +\cfrac{1}{1 + \cfrac{1}{1+x}}\right)}</code>
+produz</p>
+
+<script type="math/tex; mode=display">y = \cfrac{1}{\left(1 +\cfrac{1}{1 + \cfrac{1}{1+x}}\right)}</script>
+
+<h2 id="matrizes">Matrizes</h2>
+
+<p>Matrizes em LaTeX são criadas com os comandos <code class="highlighter-rouge">matrix</code> e
+<code class="highlighter-rouge">array</code>. Há outros também, mas esse são os mais comuns e utilizados.</p>
+
+<p>Ex: 
+<code class="highlighter-rouge">x = \left[\begin{matrix}
+  1 &amp; 2 &amp; 3 \\
+  4 &amp; 5 &amp; 6 \\
+  7 &amp; 8 &amp; 9
+ \end{matrix}\right]
+</code></p>
+
+<p>produz</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+x = \left[\begin{matrix}
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9
+ \end{matrix}\right] %]]></script>
+
+<p>O comando <code class="highlighter-rouge">array</code> permite que as matrizes possam ser trabalhadas
+  na forma do <em>environment</em> tabular usado para criar tabelas em LaTeX.</p>
+
+<p>Ex: 
+<code class="highlighter-rouge">y = \begin{array}{c|c|c}
+\sin(x) &amp; x^2 &amp; x_3 \\ \hline
+  \frac{1}{3} &amp; \int_1^3 f(x) dx &amp; 6 \\ \hline
+  7 &amp; 8 &amp; 9 \\
+ \end{array}
+</code></p>
+
+<p>produz</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+y = \begin{array}{c|c|c}
+\sin(x) & x^2 & x_3 \\ \hline
+  \frac{1}{3} & \int_1^3 f(x) dx & 6 \\ \hline
+  7 & 8 & 9 \\
+ \end{array} %]]></script>
+
+<h2 id="pontos">Pontos</h2>
+
+<p>Os pontos servem para representar a continuidade de valores em um
+array ou uma sequência a ser completada. Os comandos são o da família
+<code class="highlighter-rouge">dots</code>, e podem representar continuidades verticais, horizontais
+ou diagonais.</p>
+
+<p>Ex:
+<code class="highlighter-rouge">
+x = [\begin{matrix} x_1 &amp; x_2 &amp; x_3 &amp; \dots &amp; x_n \end{matrix}]
+</code></p>
+
+<p>produz</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+x = [\begin{matrix} x_1 & x_2 & x_3 & \dots & x_n \end{matrix}] %]]></script>
+
+<p>Ex:
+<code class="highlighter-rouge">
+\mathrm{A} = \left[\begin{matrix}
+a_{11} &amp; a_{12} &amp; \dots &amp; a_{1N} \\
+a_{21} &amp; a_{22} &amp; \dots &amp; a_{2N} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{M1} &amp; a_{M2} &amp; \dots &amp; a_{MN} 
+\end{matrix} \right]
+</code></p>
+
+<p>produz</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\mathrm{A} = \left[\begin{matrix}
+a_{11} & a_{12} & \dots & a_{1N} \\
+a_{21} & a_{22} & \dots & a_{2N} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{M1} & a_{M2} & \dots & a_{MN} 
+\end{matrix} \right] %]]></script>
+
+<p>Esses são os usos mais comuns de equações em LaTeX. Recursos mais
+avançados da linguagem devem ser consultados em guias de referência e
+em sites como <a href="https://tex.stackexchange.com/">tex.stackexchange.com</a>
+ou <a href="https://stackoverflow.com">stackoverflow.com</a>.</p>
+
+<p>Entretanto, para quem está começando, pode tentar sites como 
+um <a href="http://www.codecogs.com/latex/eqneditor.php">editor online</a> para
+agilizar a criação de equações.</p>
 
   <hr>
   

@@ -5,7 +5,7 @@
     <description>Divulgação de habilidades em Engenharia de Computação</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-09-13T16:51:38-03:00</updated>
+    <updated>2018-09-17T14:00:15-03:00</updated>
     <id></id>
     <author>
       <name>Ajuste Técnico</name>
@@ -50,14 +50,213 @@ expoente que se seguia. Polinômios em geral são construídos assim.&lt;/p&gt;
 
 &lt;h2 id=&quot;smbolos&quot;&gt;Símbolos&lt;/h2&gt;
 
-&lt;p&gt;Nas ciências exatas e tecnológicas as equações são repletas de
+&lt;p&gt;Em ciências exatas e tecnológicas as equações são repletas de
 símbolos e em LaTeX para cada símbolo há um código associado a
-este. E eles são muitos. Alguns são antigos e são definidos nos
-pacotes de padrões matemáticos que normalmente acompanha as
-distribuições. Outros dependem de instalação pelo usuário. A maioria,
-entretanto, é amplamente conhecida e suportada nativamente pelo LaTeX
-e também pelo MathJax&lt;/p&gt;
+este… e eles são muitos.&lt;/p&gt;
 
+&lt;p&gt;Alguns são antigos e são definidos nos pacotes de padrões matemáticos
+que normalmente acompanham as distribuições. Já outros dependem de
+instalação pelo usuário. A maioria, entretanto, é amplamente conhecida
+e suportada nativamente pelo LaTeX e também pelo MathJax.&lt;/p&gt;
+
+&lt;p&gt;É fácil achar na Internet sites e livros gratuitos que listam os
+símbolos mais comuns usados em LaTeX. O wikibook de LaTeX tem
+uma seção
+de &lt;a href=&quot;https://en.wikibooks.org/wiki/LaTeX/Mathematics&quot;&gt;matemática&lt;/a&gt; que
+apresenta vários deles. Entretanto, o capítulo 8 do LaTeX Companion
+pode ser usado também.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\Delta x = \gamma \epsilon&lt;/code&gt; produz &lt;script type=&quot;math/tex&quot;&gt;\Delta x = \gamma \epsilon&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;operadores&quot;&gt;Operadores&lt;/h2&gt;
+
+&lt;p&gt;Um operador é um tipo de função conhecida que opera sobre
+argumentos. Exemplos de operadores são as funções trigonométricas,
+logaritmos, exponenciais, integrais ou limites. Para cada uma existe
+uma palavra associada.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\tan(x) = \sin(x)/\cos(x)&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tan(x) =
+\sin(x)/\cos(x)&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;y = \int_{x=0}^{x=1} \exp(x) dx&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = \int_{x=0}^{x=1} \exp(x) dx&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\lim_{x \to \infty} \exp(-x) = 0&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lim_{x \to
+\infty} \exp(-x) = 0&lt;/script&gt;
+
+&lt;h2 id=&quot;expoentes-e-ndices&quot;&gt;Expoentes e índices&lt;/h2&gt;
+
+&lt;p&gt;Os expoentes são determinados pelo que se segue ao caractere &lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt; e
+os índices pelo que se segue ao caractere &lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;. Se a expressão do
+expoente ou índice tiver mais de um símbolo, deve ser colocada dentro
+de chaves &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;/code&gt; e  &lt;code class=&quot;highlighter-rouge&quot;&gt;}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;x^{a+b}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x^{a+b}&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;x_{a+b}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x_{a+b}&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;x_{a+b}^{c+d}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x_{a+b}^{c+d}&lt;/script&gt;
+
+&lt;h2 id=&quot;fraes&quot;&gt;Frações&lt;/h2&gt;
+
+&lt;p&gt;As frações são criadas com o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;\frac{}{}&lt;/code&gt;, que demanda dois
+argumentos: numerador e denominador.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\tan(x) = \frac{\sin(x)}{\cos{x}}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tan(x) = \frac{\sin(x)}{\cos{x}}&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;y = x^\frac{1}{1+x}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = x^\frac{1}{1+x}&lt;/script&gt;
+
+&lt;p&gt;E que tal essa… &lt;code class=&quot;highlighter-rouge&quot;&gt;\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}&lt;/code&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}&lt;/script&gt;
+
+&lt;p&gt;Mas ficam melhor com o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;cfrac&lt;/code&gt;, como em &lt;code class=&quot;highlighter-rouge&quot;&gt;y = \cfrac{1}{1 +\cfrac{1}{1 + \cfrac{1}{1+x}}}&lt;/code&gt; que produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = \cfrac{1}{1 +\cfrac{1}{1 + \cfrac{1}{1+x}}}&lt;/script&gt;
+
+&lt;h2 id=&quot;somas-e-integrais&quot;&gt;Somas e integrais&lt;/h2&gt;
+
+&lt;p&gt;Somas e integrais também são definidas por palavras reservadas e podem
+ser exibidas de diversas formas&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\int\limits_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int\limits_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\sum_{x=0}^{100} f(x)&lt;/code&gt; produz &lt;script type=&quot;math/tex&quot;&gt;\sum_{x=0}^{100} f(x)&lt;/script&gt; se
+estiver na mesma linha.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\sum_{x=0}^{100} f(x)&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\displaystyle \sum_{x=0}^{100} f(x)&lt;/script&gt;
+
+&lt;p&gt;se estiver em um parágrafo separado&lt;/p&gt;
+
+&lt;h2 id=&quot;delimitadores&quot;&gt;Delimitadores&lt;/h2&gt;
+
+&lt;p&gt;Os delimitadores são símbolos que marcam um pedaço de uma equação que
+deve ser calculado antes de outro. Exemplos de símbolos sao as chaves,
+colchetes e parêntesis.&lt;/p&gt;
+
+&lt;p&gt;Os delimitadores podem inclusive ter dimensionamento automático usando
+os comandos &lt;code class=&quot;highlighter-rouge&quot;&gt;\left&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;\middle&lt;/code&gt; e  &lt;code class=&quot;highlighter-rouge&quot;&gt;\right&lt;/code&gt;. Assim,
+equações de tamanho grande verticalmente podem ser ajustados.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;y = \cfrac{1}{(1 +\cfrac{1}{1 + \cfrac{1}{1+x}})}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = \cfrac{1}{(1 +\cfrac{1}{1 + \cfrac{1}{1+x}})}&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;y = \cfrac{1}{\left(1 +\cfrac{1}{1 + \cfrac{1}{1+x}}\right)}&lt;/code&gt;
+produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = \cfrac{1}{\left(1 +\cfrac{1}{1 + \cfrac{1}{1+x}}\right)}&lt;/script&gt;
+
+&lt;h2 id=&quot;matrizes&quot;&gt;Matrizes&lt;/h2&gt;
+
+&lt;p&gt;Matrizes em LaTeX são criadas com os comandos &lt;code class=&quot;highlighter-rouge&quot;&gt;matrix&lt;/code&gt; e
+&lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt;. Há outros também, mas esse são os mais comuns e utilizados.&lt;/p&gt;
+
+&lt;p&gt;Ex: 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;x = \left[\begin{matrix}
+  1 &amp;amp; 2 &amp;amp; 3 \\
+  4 &amp;amp; 5 &amp;amp; 6 \\
+  7 &amp;amp; 8 &amp;amp; 9
+ \end{matrix}\right]
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+x = \left[\begin{matrix}
+  1 &amp; 2 &amp; 3 \\
+  4 &amp; 5 &amp; 6 \\
+  7 &amp; 8 &amp; 9
+ \end{matrix}\right] %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;O comando &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt; permite que as matrizes possam ser trabalhadas
+  na forma do &lt;em&gt;environment&lt;/em&gt; tabular usado para criar tabelas em LaTeX.&lt;/p&gt;
+
+&lt;p&gt;Ex: 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;y = \begin{array}{c|c|c}
+\sin(x) &amp;amp; x^2 &amp;amp; x_3 \\ \hline
+  \frac{1}{3} &amp;amp; \int_1^3 f(x) dx &amp;amp; 6 \\ \hline
+  7 &amp;amp; 8 &amp;amp; 9 \\
+ \end{array}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+y = \begin{array}{c|c|c}
+\sin(x) &amp; x^2 &amp; x_3 \\ \hline
+  \frac{1}{3} &amp; \int_1^3 f(x) dx &amp; 6 \\ \hline
+  7 &amp; 8 &amp; 9 \\
+ \end{array} %]]&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;pontos&quot;&gt;Pontos&lt;/h2&gt;
+
+&lt;p&gt;Os pontos servem para representar a continuidade de valores em um
+array ou uma sequência a ser completada. Os comandos são o da família
+&lt;code class=&quot;highlighter-rouge&quot;&gt;dots&lt;/code&gt;, e podem representar continuidades verticais, horizontais
+ou diagonais.&lt;/p&gt;
+
+&lt;p&gt;Ex:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+x = [\begin{matrix} x_1 &amp;amp; x_2 &amp;amp; x_3 &amp;amp; \dots &amp;amp; x_n \end{matrix}]
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+x = [\begin{matrix} x_1 &amp; x_2 &amp; x_3 &amp; \dots &amp; x_n \end{matrix}] %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Ex:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+\mathrm{A} = \left[\begin{matrix}
+a_{11} &amp;amp; a_{12} &amp;amp; \dots &amp;amp; a_{1N} \\
+a_{21} &amp;amp; a_{22} &amp;amp; \dots &amp;amp; a_{2N} \\
+\vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
+a_{M1} &amp;amp; a_{M2} &amp;amp; \dots &amp;amp; a_{MN} 
+\end{matrix} \right]
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\mathrm{A} = \left[\begin{matrix}
+a_{11} &amp; a_{12} &amp; \dots &amp; a_{1N} \\
+a_{21} &amp; a_{22} &amp; \dots &amp; a_{2N} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{M1} &amp; a_{M2} &amp; \dots &amp; a_{MN} 
+\end{matrix} \right] %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Esses são os usos mais comuns de equações em LaTeX. Recursos mais
+avançados da linguagem devem ser consultados em guias de referência e
+em sites como &lt;a href=&quot;https://tex.stackexchange.com/&quot;&gt;tex.stackexchange.com&lt;/a&gt;
+ou &lt;a href=&quot;https://stackoverflow.com&quot;&gt;stackoverflow.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Entretanto, para quem está começando, pode tentar sites como 
+um &lt;a href=&quot;http://www.codecogs.com/latex/eqneditor.php&quot;&gt;editor online&lt;/a&gt; para
+agilizar a criação de equações.&lt;/p&gt;
 &lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Criando Equações em LaTeX&amp;url=/blog/2018/09/19/equacoes-latex/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/09/19/equacoes-latex/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
 </description>
         
