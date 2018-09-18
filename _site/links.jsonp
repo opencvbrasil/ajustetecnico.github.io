@@ -46,6 +46,11 @@ callback([
   } ,
 
   {
+    "text": "Traçado de gráficos em Jekyll",
+    "href": "/blog/2018/09/18/plots-and-charts/"
+  } ,
+
+  {
     "text": "Usando Equações em Markdown",
     "href": "/blog/2018/09/18/equacoes-markdown/"
   } ,

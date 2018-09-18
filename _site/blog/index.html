@@ -206,6 +206,123 @@ que lidam equações e precisam apresentá-las para divulgar suas ideias.
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blog/2018/09/18/plots-and-charts/">
+        Traçado de gráficos em Jekyll
+      </a>
+    </h1>
+
+  <span class="post-date indexpg" itemprop="datePublished" content="2018-09-18"><i class="fa fa-calendar" title="Date published"> 18 Sep 2018</i> </span>
+
+ Diversas são as formas de traçar gráficos usando Jekyll e Javascript. Nesse post, testamos duas bibliotecas: <a href="https://chartjs.org">chart.js</a> e <a href="https://plot.ly">plot.ly</a>
+
+<h2 id="usando-chartjshttpschartjsorg">Usando <a href="https://chartjs.org">chart.js</a>
+</h2>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+<canvas id="myChart" width="400" height="300"></canvas>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: 'Número de Votos',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+Quebra de linha
+
+<canvas id="lineplot" width="400" height="300"></canvas>
+
+<script>
+		var ctx = document.getElementById("lineplot").getContext('2d');
+var myChart = new Chart(ctx, {
+		type: 'line',
+		data: {
+				labels: [10, 20, 30, 40, 50],
+				datasets: [{
+						data: [1, 2, 5, 4, 3],
+						label: "Experimento 1",
+						borderColor: "#ff0000",
+						fill: false
+				},
+				{
+				 data: [4, 5, 3, 3, 0],
+						label: "Experimento 2",
+						borderColor: "#00ff00",
+						fill: false
+				}]
+		},
+		options: {
+				scales:{
+						yAxes: [{
+								scaleLabel: {
+										display: true,
+										labelString: "Temperatura (Celsius)"
+								}
+						}
+									 ],
+						xAxes: [{
+								scaleLabel: {
+										display: true,
+										labelString: "Tempo (s)"
+								}
+						}
+						]
+
+						
+				},
+				elements: {
+						line: { tension: 0.5,}
+				},
+				title: {
+						display: true,
+						text: "Temperatura x tempo"
+				}
+		}
+});
+
+## Usando [plot.ly](https://plot.ly)
+
+</script>
+
+ <a href="/blog/2018/09/18/plots-and-charts/" title="Read more"><strong>Read more...</strong></a>
+  </div>
+  <hr class="transp">
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blog/2018/08/30/detecao-assinaturas-part1/">
         Detecção de assinaturas em listas de presenças - Parte 1
       </a>
@@ -245,26 +362,6 @@ presenças, muito utilizadas pelos professores para registrar para a
 presença dos alunos em sala de aula.
 
  <a href="/blog/2018/08/21/detecao-assinaturas-part1/" title="Read more"><strong>Read more...</strong></a>
-  </div>
-  <hr class="transp">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2018/08/21/secador-graos-p1/">
-        Secador de Grãos - Parte 1
-      </a>
-    </h1>
-
-  <span class="post-date indexpg" itemprop="datePublished" content="2018-08-21"><i class="fa fa-calendar" title="Date published"> 21 Aug 2018</i> </span>
-
- Nessa primeira série de postagens, iremos abordar um projeto
-desenvolvido durante o curso de Sistemas Digitais da UFRN: um secador de grãos.
-
-A estrutura de controle do secador foi embarcada em um processador
-<a href="https://www.microchip.com/wwwproducts/en/ATmega328P">ATmega328P</a>,
-popularmente disseminado pela plataforma <a href="https://arduino.cc">Arduino</a>
-
- <a href="/blog/2018/08/21/secador-graos-p1/" title="Read more"><strong>Read more...</strong></a>
   </div>
   
   
