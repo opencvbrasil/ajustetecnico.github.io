@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<!--  
+====================================================
+Homepage: 
+Credits: /disclosure
+====================================================
+-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<!-- link href="http://gmpg.org/xfn/11" rel="profile" -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<title>
+  
+    Criando Equações em LaTeX · Ajuste Técnico
+  
+</title>
+
+<!-- Search Engine Optimization -->
+<meta name="description" content="Escrever equações em LaTeX não é trivial. Normalmente, requer estudo de documentação pertinente e consulta constante a guias de símbolos. Isso vale inclusive para usuários que já usam a linguagem há um bom tempo, justo pelo fato de a quantidade de símbolos e formas de criar as equações ser muito...">
+<meta name="keywords" content="equacoes, LaTeX">
+
+
+
+
+<!-- Twitter Cards -->
+  
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ajustetecnico">
+<meta name="twitter:image" content="/images/sitelogo.png">
+
+
+<meta name="twitter:title" content="Criando Equações em LaTeX">
+<meta name="twitter:description" content="Escrever equações em LaTeX não é trivial. Normalmente, requer estudo de documentação pertinente e consulta constante a guias de símbolos. Isso vale inclusive para usuários que já usam a linguagem há um bom tempo, justo pelo fato de a quantidade de símbolos e formas de criar as equações ser muito...">
+<meta name="twitter:creator" content="@ajustetecnico">
+<!-- End Twitter Cards -->
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Criando Equações em LaTeX">
+<meta property="og:description" content="Escrever equações em LaTeX não é trivial. Normalmente, requer estudo de documentação pertinente e consulta constante a guias de símbolos. Isso vale inclusive para usuários que já usam a linguagem há um bom tempo, justo pelo fato de a quantidade de símbolos e formas de criar as equações ser muito...">
+<meta property="og:url" content="/blog/2018/09/19/equacoes-latex/">
+<meta property="og:site_name" content="Ajuste Técnico">
+
+<meta property="og:image" content="/images/sitelogo.png">
+
+<meta property="fb:app_id" content="1003108156422006">
+<meta property="fb:admins" content="817465054">
+
+<!-- Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400%7CTangerine%7CInconsolata">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/public/css/iconmoon.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/public/css/style.min.css">
+
+<!-- Add-on CSS to override system-wide defaults -->
+<link rel="stylesheet" href="/public/css/addon.css">
+
+<!-- CSS override per page -->
+
+
+<!-- Java scripts -->
+<!-- <script src="/public/js/jquery.min.js"></script> -->
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/icons/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/icons/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/icons/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/icons/apple-touch-icon-144x144-precomposed.png">
+<!-- 180x180 (precomposed) for iPhone 6 -->
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/images/icons/apple-touch-icon-180x180.png">
+<!-- 192x192 (precomposed) for Android -->
+<link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
+
+
+<link rel="canonical" href="/blog/2018/09/19/equacoes-latex/">
+<link rel="author" href="https://plus.google.com/+ajustetecnico?rel=author">
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+
+  <!--Load Mathjax-->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'" 
+                }
+            },
+            showProcessingMessages: false
+        });
+    </script>
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ['\(', '\)'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+
+
+
+</head>
+
+
+<body>
+
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+<!--   <div class="sidebar-item">
+    <p>Divulgação de habilidades em Engenharia de Computação</p>
+  </div> -->
+
+  <nav class="sidebar-nav">
+    <!-- a class="sidebar-nav-item" href="/">Home</a-->
+
+    
+
+    
+
+    
+            
+                    <a class="sidebar-nav-item" href="/"><i class="iconside iconm-home"></i> Home</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="/about/"><i class="iconside iconm-user"></i> About</a>
+                
+         
+
+    
+  </nav>
+
+<hr class="gh">
+
+
+<div id="searchbox2" style="margin:0 auto; display: table;">
+<div class="searchcont2">
+    <!-- span class="searchicon2"><i class="fa fa-search fa-2x"></i></span -->
+    <form role="search" method="get" action="/cse/">
+        <input id="searchString2" name="searchString2" placeholder=" Search" type="text">
+    </form>
+</div>
+</div>
+
+
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Ajuste Técnico</a>
+            <!-- <small></small> -->
+            <div class="headicons">
+              <small><a href="/about" rel="me" title="About"><i class="iconm iconm-user"></i></a></small>
+              <small><a href="/blog" rel="me" title="Blog"><i class="iconm iconm-quill"></i></a></small>
+              <small><a href="/contact" rel="me" title="Contact"><i class="iconm iconm-envelop"></i></a></small> 
+            </div>           
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 itemprop="name" class="post-title">Criando Equações em LaTeX </h1>
+	<h3 itemprop="name" class="post-author">por Agostinho Brito </h3>
+  <span class="post-date" itemprop="datePublished" content="2018-09-19"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/09/19/equacoes-latex/" itemprop="url" title="Permanent link to this post">19 Sep 2018</a> </i></span>
+  
+  <span class="post-tags" itemprop="keywords" content="equacoes and LaTeX"><i class="fa fa-tags" title="page tags"></i> <a href="/tags/#equacoes" title="Pages tagged equacoes" rel="tag">equacoes</a> •  <a href="/tags/#LaTeX" title="Pages tagged LaTeX" rel="tag">LaTeX</a></span>
+    
+      <span class="social-icons"><a href="https://twitter.com/share?text=Criando%20Equa%C3%A7%C3%B5es%20em%20LaTeX&amp;url=/blog/2018/09/19/equacoes-latex/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=/blog/2018/09/19/equacoes-latex/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/09/19/equacoes-latex/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+
+
+<a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
+</span>
+
+    
+  <p>Escrever equações em LaTeX não é trivial. Normalmente, requer estudo
+de documentação pertinente e consulta constante a guias de
+símbolos. Isso vale inclusive para usuários que já usam a linguagem há
+um bom tempo, justo pelo fato de a quantidade de símbolos e formas de
+criar as equações ser muito grande para se aprender.</p>
+
+<!--more-->
+
+<p>A dificuldade inicial na forma de criar a equação. Ela é criada na
+forma de um texto a ser interpretado por um processador, que gera uma
+imagem bitmap ou vetorial da equação criada. Editores do tipo
+<a href="https://pt.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>, como Word ou
+LibreOffice Writer ajudam o usuário iniciante, mas são pouco ágeis, de
+sorte que o melhor é aprender a codificar a equação manualmente.</p>
+
+<p>Uma das melhores referências é o <a href="http://www.macrotex.net/texbooks/latexcomp-ch8.pdf">Capítulo
+8</a> do livro The
+LaTeX Companion, do Leslie Lamport. Ele encontra-se disponível online
+pelo próprio autor.</p>
+
+<h2 id="a-primeira-equao">A primeira equação</h2>
+
+<p>Vamos começar com uma equação bem conhecida, a equação de uma curva de
+segundo grau: <script type="math/tex">f(x) = ax^2 + bx + c</script>.</p>
+
+<p>Em LaTeX, essa equação é escrita da forma</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>f(x) = ax^2 + bx + c
+</code></pre>
+</div>
+
+<p>O interpretador conheceu o símbolo <code class="highlighter-rouge">^</code> como sinalizador de um
+expoente que se seguia. Polinômios em geral são construídos assim.</p>
+
+<h2 id="smbolos">Símbolos</h2>
+
+<p>Em ciências exatas e tecnológicas as equações são repletas de
+símbolos e em LaTeX para cada símbolo há um código associado a
+este… e eles são muitos.</p>
+
+<p>Alguns são antigos e são definidos nos pacotes de padrões matemáticos
+que normalmente acompanham as distribuições. Já outros dependem de
+instalação pelo usuário. A maioria, entretanto, é amplamente conhecida
+e suportada nativamente pelo LaTeX e também pelo MathJax.</p>
+
+<p>É fácil achar na Internet sites e livros gratuitos que listam os
+símbolos mais comuns usados em LaTeX. O wikibook de LaTeX tem
+uma seção
+de <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">matemática</a> que
+apresenta vários deles. Entretanto, o capítulo 8 do LaTeX Companion
+pode ser usado também.</p>
+
+<p>Ex: <code class="highlighter-rouge">\Delta x = \gamma \epsilon</code> produz <script type="math/tex">\Delta x = \gamma \epsilon</script>.</p>
+
+<h2 id="operadores">Operadores</h2>
+
+<p>Um operador é um tipo de função conhecida que opera sobre
+argumentos. Exemplos de operadores são as funções trigonométricas,
+logaritmos, exponenciais, integrais ou limites. Para cada uma existe
+uma palavra associada.</p>
+
+<p>Ex: <code class="highlighter-rouge">\tan(x) = \sin(x)/\cos(x)</code> produz</p>
+
+<script type="math/tex; mode=display">\tan(x) =
+\sin(x)/\cos(x)</script>
+
+<p>Ex: <code class="highlighter-rouge">y = \int_{x=0}^{x=1} \exp(x) dx</code> produz</p>
+
+<script type="math/tex; mode=display">y = \int_{x=0}^{x=1} \exp(x) dx</script>
+
+<p>Ex: <code class="highlighter-rouge">\lim_{x \to \infty} \exp(-x) = 0</code> produz</p>
+
+<script type="math/tex; mode=display">\lim_{x \to
+\infty} \exp(-x) = 0</script>
+
+<h2 id="expoentes-e-ndices">Expoentes e índices</h2>
+
+<p>Os expoentes são determinados pelo que se segue ao caractere <code class="highlighter-rouge">^</code> e
+os índices pelo que se segue ao caractere <code class="highlighter-rouge">_</code>. Se a expressão do
+expoente ou índice tiver mais de um símbolo, deve ser colocada dentro
+de chaves <code class="highlighter-rouge"><span class="p">{</span></code> e  <code class="highlighter-rouge">}</code></p>
+
+<p>Ex: <code class="highlighter-rouge">x^{a+b}</code> produz</p>
+
+<script type="math/tex; mode=display">x^{a+b}</script>
+
+<p>Ex: <code class="highlighter-rouge">x_{a+b}</code> produz</p>
+
+<script type="math/tex; mode=display">x_{a+b}</script>
+
+<p>Ex: <code class="highlighter-rouge">x_{a+b}^{c+d}</code> produz</p>
+
+<script type="math/tex; mode=display">x_{a+b}^{c+d}</script>
+
+<h2 id="fraes">Frações</h2>
+
+<p>As frações são criadas com o comando <code class="highlighter-rouge">\frac{}{}</code>, que demanda dois
+argumentos: numerador e denominador.</p>
+
+<p>Ex: <code class="highlighter-rouge">\tan(x) = \frac{\sin(x)}{\cos{x}}</code> produz</p>
+
+<script type="math/tex; mode=display">\tan(x) = \frac{\sin(x)}{\cos{x}}</script>
+
+<p>Ex: <code class="highlighter-rouge">y = x^\frac{1}{1+x}</code> produz</p>
+
+<script type="math/tex; mode=display">y = x^\frac{1}{1+x}</script>
+
+<p>E que tal essa… <code class="highlighter-rouge">\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}</code></p>
+
+<script type="math/tex; mode=display">\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}</script>
+
+<p>Mas ficam melhor com o comando <code class="highlighter-rouge">cfrac</code>, como em <code class="highlighter-rouge">y = \cfrac{1}{1 +\cfrac{1}{1 + \cfrac{1}{1+x}}}</code> que produz</p>
+
+<script type="math/tex; mode=display">y = \cfrac{1}{1 +\cfrac{1}{1 + \cfrac{1}{1+x}}}</script>
+
+<h2 id="somas-e-integrais">Somas e integrais</h2>
+
+<p>Somas e integrais também são definidas por palavras reservadas e podem
+ser exibidas de diversas formas</p>
+
+<p>Ex: <code class="highlighter-rouge">\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x</code> produz</p>
+
+<script type="math/tex; mode=display">\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x</script>
+
+<p>Ex: <code class="highlighter-rouge">\int\limits_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x</code> produz</p>
+
+<script type="math/tex; mode=display">\int\limits_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x</script>
+
+<p>Ex: <code class="highlighter-rouge">\sum_{x=0}^{100} f(x)</code> produz <script type="math/tex">\sum_{x=0}^{100} f(x)</script> se
+estiver na mesma linha.</p>
+
+<p>Ex: <code class="highlighter-rouge">\sum_{x=0}^{100} f(x)</code> produz</p>
+
+<script type="math/tex; mode=display">\displaystyle \sum_{x=0}^{100} f(x)</script>
+
+<p>se estiver em um parágrafo separado</p>
+
+<h2 id="delimitadores">Delimitadores</h2>
+
+<p>Os delimitadores são símbolos que marcam um pedaço de uma equação que
+deve ser calculado antes de outro. Exemplos de símbolos sao as chaves,
+colchetes e parêntesis.</p>
+
+<p>Os delimitadores podem inclusive ter dimensionamento automático usando
+os comandos <code class="highlighter-rouge">\left</code>, <code class="highlighter-rouge">\middle</code> e  <code class="highlighter-rouge">\right</code>. Assim,
+equações de tamanho grande verticalmente podem ser ajustados.</p>
+
+<p>Ex: <code class="highlighter-rouge">y = \cfrac{1}{(1 +\cfrac{1}{1 + \cfrac{1}{1+x}})}</code> produz</p>
+
+<script type="math/tex; mode=display">y = \cfrac{1}{(1 +\cfrac{1}{1 + \cfrac{1}{1+x}})}</script>
+
+<p>Ex: <code class="highlighter-rouge">y = \cfrac{1}{\left(1 +\cfrac{1}{1 + \cfrac{1}{1+x}}\right)}</code>
+produz</p>
+
+<script type="math/tex; mode=display">y = \cfrac{1}{\left(1 +\cfrac{1}{1 + \cfrac{1}{1+x}}\right)}</script>
+
+<h2 id="matrizes">Matrizes</h2>
+
+<p>Matrizes em LaTeX são criadas com os comandos <code class="highlighter-rouge">matrix</code> e
+<code class="highlighter-rouge">array</code>. Há outros também, mas esse são os mais comuns e utilizados.</p>
+
+<p>Ex:</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>	x = \left[\begin{matrix}
+  1 &amp; 2 &amp; 3 \\
+  4 &amp; 5 &amp; 6 \\
+  7 &amp; 8 &amp; 9
+ \end{matrix}\right]
+</code></pre>
+</div>
+
+<p>produz</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+x = \left[\begin{matrix}
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9
+ \end{matrix}\right] %]]></script>
+
+<p>O comando <code class="highlighter-rouge">array</code> permite que as matrizes possam ser trabalhadas
+  na forma do <em>environment</em> tabular usado para criar tabelas em LaTeX.</p>
+
+<p>Ex:</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>y = \begin{array}{c|c|c}
+\sin(x) &amp; x^2 &amp; x_3 \\ \hline
+  \frac{1}{3} &amp; \int_1^3 f(x) dx &amp; 6 \\ \hline
+  7 &amp; 8 &amp; 9 \\
+ \end{array}
+</code></pre>
+</div>
+
+<p>produz</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+y = \begin{array}{c|c|c}
+\sin(x) & x^2 & x_3 \\ \hline
+  \frac{1}{3} & \int_1^3 f(x) dx & 6 \\ \hline
+  7 & 8 & 9 \\
+ \end{array} %]]></script>
+
+<h2 id="pontos">Pontos</h2>
+
+<p>Os pontos servem para representar a continuidade de valores em um
+array ou uma sequência a ser completada. Os comandos são o da família
+<code class="highlighter-rouge">dots</code>, e podem representar continuidades verticais, horizontais
+ou diagonais.</p>
+
+<p>Ex:</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>x = [\begin{matrix} x_1 &amp; x_2 &amp; x_3 &amp; \dots &amp; x_n \end{matrix}]
+</code></pre>
+</div>
+
+<p>produz</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+x = [\begin{matrix} x_1 & x_2 & x_3 & \dots & x_n \end{matrix}] %]]></script>
+
+<p>Ex:</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>\mathrm{A} = \left[\begin{matrix}
+a_{11} &amp; a_{12} &amp; \dots &amp; a_{1N} \\
+a_{21} &amp; a_{22} &amp; \dots &amp; a_{2N} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{M1} &amp; a_{M2} &amp; \dots &amp; a_{MN} 
+\end{matrix} \right]
+</code></pre>
+</div>
+
+<p>produz</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\mathrm{A} = \left[\begin{matrix}
+a_{11} & a_{12} & \dots & a_{1N} \\
+a_{21} & a_{22} & \dots & a_{2N} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{M1} & a_{M2} & \dots & a_{MN} 
+\end{matrix} \right] %]]></script>
+
+<p>Esses são os usos mais comuns de equações em LaTeX. Recursos mais
+avançados da linguagem devem ser consultados em guias de referência e
+em sites como <a href="https://tex.stackexchange.com/">tex.stackexchange.com</a>
+ou <a href="https://stackoverflow.com">stackoverflow.com</a>.</p>
+
+<p>Entretanto, para quem está começando, pode tentar sites como 
+um <a href="http://www.codecogs.com/latex/eqneditor.php">editor online</a> para
+agilizar a criação de equações.</p>
+
+  <hr>
+  
+  <span class="post-date metafoot" itemprop="datePublished" content="2018-09-19"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/09/19/equacoes-latex/" itemprop="url" title="Permanent link to this post">19 Sep 2018</a> </i></span>
+  
+  <span class="post-tags" itemprop="keywords" content="equacoes and LaTeX"><i class="fa fa-tags" title="page tags"></i> <a href="/tags/#equacoes" title="Pages tagged equacoes" rel="tag">equacoes</a> •  <a href="/tags/#LaTeX" title="Pages tagged LaTeX" rel="tag">LaTeX</a></span>
+    
+      <span class="social-icons"><a href="https://twitter.com/share?text=Criando%20Equa%C3%A7%C3%B5es%20em%20LaTeX&amp;url=/blog/2018/09/19/equacoes-latex/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=/blog/2018/09/19/equacoes-latex/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/09/19/equacoes-latex/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+
+
+<a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
+</span>
+
+    
+</div>
+
+
+  <div class="printMsg">
+<table>
+  <thead>
+    <tr>
+      <th><i class="fa fa-twitter"><a href="https://twitter.com/ajustetecnico" class="user-mention">@ajustetecnico</a></i></th>
+      <th>QR code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<i class="fa fa-anchor"> /blog/2018/09/19/equacoes-latex/</i><br><i class="fa fa-calendar"> 19-Sep-18</i><br><i class="fa fa-creative-commons"> BY-NC-SA 4.0 /disclosure</i>
+</td>
+      <td><img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=/blog/2018/09/19/equacoes-latex/&amp;choe=UTF-8" alt="/blog/2018/09/19/equacoes-latex/"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<div class="page-break"></div>
+<div class="related">
+  <h2>Related Posts</h2>
+<ul>
+  
+    
+  
+     
+       
+        
+          <li>
+<a href="/blog/2018/09/18/equacoes-markdown/">Usando Equações em Markdown</a><br>
+</li>
+          
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+</ul>
+</div>
+
+<div class="prevnext">
+  
+    <a class="prevnext-item older" href="/blog/2018/09/18/equacoes-markdown/" title="Usando Equações em Markdown">Older</a>
+  
+  
+    <span class="prevnext-item older">Newer</span>
+  
+</div>
+
+<div class="page-break"></div>
+
+
+
+                    <div class="custom-footer" style="display: block;">
+            <div class="footer-social-icons">
+            <ul class="social-icons">
+            
+              
+            <li><a href="https://twitter.com/ajustetecnico" rel="me" target="_blank" class="social-icons" title="Follow me @foo"> <i class="fa fa-twitter-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://plus.google.com/+AjusteTecnico" rel="me" target="_blank" class="social-icons" title="Follow me +foo"> <i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://github.com/ajustetecnico" rel="me" target="_blank" class="social-icons" title="Code repository"> <i class="fa fa-github-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="/contact/" rel="me" class="social-icons" title="Reach Us"> <i class="fa fa-envelope-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="/feed.xml" rel="me" class="social-icons" title="Subscribe to RSS"> <i class="fa fa-rss-square fa-2x"></i></a></li>
+                      
+            </ul>
+            </div>
+            <h6 class="text-footer">
+<a rel="license" href="/disclosure/" title="CC BY-NC-SA 4.0 License, link to site disclosure" class="social-icon"><i class="fa fa-creative-commons"></i></a> <a rel="license" href="/disclosure/" title="CC BY-NC-SA 4.0 License, link to site disclosure">2018</a>: <a href="" title="Home">ajustetecnico.github.io</a> | <a href="/about/" rel="me">About</a>
+</h6>
+            </div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    
+
+<!-- gist embed -->
+
+
+<!-- disqus comments -->
+
+
+</body>
+</html>

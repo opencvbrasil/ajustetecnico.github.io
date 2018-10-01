@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ajuste Técnico</title>
+    <description>Divulgação de habilidades em Engenharia de Computação</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <updated>2018-10-01T16:21:11-03:00</updated>
+    <id></id>
+    <author>
+      <name>Ajuste Técnico</name>
+    </author>
+    
+      <item>
+        <title>Criando Equações em LaTeX</title>
+        
+          <description>&lt;p&gt;Escrever equações em LaTeX não é trivial. Normalmente, requer estudo
+de documentação pertinente e consulta constante a guias de
+símbolos. Isso vale inclusive para usuários que já usam a linguagem há
+um bom tempo, justo pelo fato de a quantidade de símbolos e formas de
+criar as equações ser muito grande para se aprender.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;A dificuldade inicial na forma de criar a equação. Ela é criada na
+forma de um texto a ser interpretado por um processador, que gera uma
+imagem bitmap ou vetorial da equação criada. Editores do tipo
+&lt;a href=&quot;https://pt.wikipedia.org/wiki/WYSIWYG&quot;&gt;WYSIWYG&lt;/a&gt;, como Word ou
+LibreOffice Writer ajudam o usuário iniciante, mas são pouco ágeis, de
+sorte que o melhor é aprender a codificar a equação manualmente.&lt;/p&gt;
+
+&lt;p&gt;Uma das melhores referências é o &lt;a href=&quot;http://www.macrotex.net/texbooks/latexcomp-ch8.pdf&quot;&gt;Capítulo
+8&lt;/a&gt; do livro The
+LaTeX Companion, do Leslie Lamport. Ele encontra-se disponível online
+pelo próprio autor.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-primeira-equao&quot;&gt;A primeira equação&lt;/h2&gt;
+
+&lt;p&gt;Vamos começar com uma equação bem conhecida, a equação de uma curva de
+segundo grau: &lt;script type=&quot;math/tex&quot;&gt;f(x) = ax^2 + bx + c&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Em LaTeX, essa equação é escrita da forma&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;f(x) = ax^2 + bx + c
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;O interpretador conheceu o símbolo &lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt; como sinalizador de um
+expoente que se seguia. Polinômios em geral são construídos assim.&lt;/p&gt;
+
+&lt;h2 id=&quot;smbolos&quot;&gt;Símbolos&lt;/h2&gt;
+
+&lt;p&gt;Em ciências exatas e tecnológicas as equações são repletas de
+símbolos e em LaTeX para cada símbolo há um código associado a
+este… e eles são muitos.&lt;/p&gt;
+
+&lt;p&gt;Alguns são antigos e são definidos nos pacotes de padrões matemáticos
+que normalmente acompanham as distribuições. Já outros dependem de
+instalação pelo usuário. A maioria, entretanto, é amplamente conhecida
+e suportada nativamente pelo LaTeX e também pelo MathJax.&lt;/p&gt;
+
+&lt;p&gt;É fácil achar na Internet sites e livros gratuitos que listam os
+símbolos mais comuns usados em LaTeX. O wikibook de LaTeX tem
+uma seção
+de &lt;a href=&quot;https://en.wikibooks.org/wiki/LaTeX/Mathematics&quot;&gt;matemática&lt;/a&gt; que
+apresenta vários deles. Entretanto, o capítulo 8 do LaTeX Companion
+pode ser usado também.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\Delta x = \gamma \epsilon&lt;/code&gt; produz &lt;script type=&quot;math/tex&quot;&gt;\Delta x = \gamma \epsilon&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;operadores&quot;&gt;Operadores&lt;/h2&gt;
+
+&lt;p&gt;Um operador é um tipo de função conhecida que opera sobre
+argumentos. Exemplos de operadores são as funções trigonométricas,
+logaritmos, exponenciais, integrais ou limites. Para cada uma existe
+uma palavra associada.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\tan(x) = \sin(x)/\cos(x)&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tan(x) =
+\sin(x)/\cos(x)&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;y = \int_{x=0}^{x=1} \exp(x) dx&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = \int_{x=0}^{x=1} \exp(x) dx&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\lim_{x \to \infty} \exp(-x) = 0&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lim_{x \to
+\infty} \exp(-x) = 0&lt;/script&gt;
+
+&lt;h2 id=&quot;expoentes-e-ndices&quot;&gt;Expoentes e índices&lt;/h2&gt;
+
+&lt;p&gt;Os expoentes são determinados pelo que se segue ao caractere &lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt; e
+os índices pelo que se segue ao caractere &lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;. Se a expressão do
+expoente ou índice tiver mais de um símbolo, deve ser colocada dentro
+de chaves &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;/code&gt; e  &lt;code class=&quot;highlighter-rouge&quot;&gt;}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;x^{a+b}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x^{a+b}&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;x_{a+b}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x_{a+b}&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;x_{a+b}^{c+d}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x_{a+b}^{c+d}&lt;/script&gt;
+
+&lt;h2 id=&quot;fraes&quot;&gt;Frações&lt;/h2&gt;
+
+&lt;p&gt;As frações são criadas com o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;\frac{}{}&lt;/code&gt;, que demanda dois
+argumentos: numerador e denominador.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\tan(x) = \frac{\sin(x)}{\cos{x}}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tan(x) = \frac{\sin(x)}{\cos{x}}&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;y = x^\frac{1}{1+x}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = x^\frac{1}{1+x}&lt;/script&gt;
+
+&lt;p&gt;E que tal essa… &lt;code class=&quot;highlighter-rouge&quot;&gt;\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}&lt;/code&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}&lt;/script&gt;
+
+&lt;p&gt;Mas ficam melhor com o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;cfrac&lt;/code&gt;, como em &lt;code class=&quot;highlighter-rouge&quot;&gt;y = \cfrac{1}{1 +\cfrac{1}{1 + \cfrac{1}{1+x}}}&lt;/code&gt; que produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = \cfrac{1}{1 +\cfrac{1}{1 + \cfrac{1}{1+x}}}&lt;/script&gt;
+
+&lt;h2 id=&quot;somas-e-integrais&quot;&gt;Somas e integrais&lt;/h2&gt;
+
+&lt;p&gt;Somas e integrais também são definidas por palavras reservadas e podem
+ser exibidas de diversas formas&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\int\limits_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int\limits_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\sum_{x=0}^{100} f(x)&lt;/code&gt; produz &lt;script type=&quot;math/tex&quot;&gt;\sum_{x=0}^{100} f(x)&lt;/script&gt; se
+estiver na mesma linha.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;\sum_{x=0}^{100} f(x)&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\displaystyle \sum_{x=0}^{100} f(x)&lt;/script&gt;
+
+&lt;p&gt;se estiver em um parágrafo separado&lt;/p&gt;
+
+&lt;h2 id=&quot;delimitadores&quot;&gt;Delimitadores&lt;/h2&gt;
+
+&lt;p&gt;Os delimitadores são símbolos que marcam um pedaço de uma equação que
+deve ser calculado antes de outro. Exemplos de símbolos sao as chaves,
+colchetes e parêntesis.&lt;/p&gt;
+
+&lt;p&gt;Os delimitadores podem inclusive ter dimensionamento automático usando
+os comandos &lt;code class=&quot;highlighter-rouge&quot;&gt;\left&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;\middle&lt;/code&gt; e  &lt;code class=&quot;highlighter-rouge&quot;&gt;\right&lt;/code&gt;. Assim,
+equações de tamanho grande verticalmente podem ser ajustados.&lt;/p&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;y = \cfrac{1}{(1 +\cfrac{1}{1 + \cfrac{1}{1+x}})}&lt;/code&gt; produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = \cfrac{1}{(1 +\cfrac{1}{1 + \cfrac{1}{1+x}})}&lt;/script&gt;
+
+&lt;p&gt;Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;y = \cfrac{1}{\left(1 +\cfrac{1}{1 + \cfrac{1}{1+x}}\right)}&lt;/code&gt;
+produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = \cfrac{1}{\left(1 +\cfrac{1}{1 + \cfrac{1}{1+x}}\right)}&lt;/script&gt;
+
+&lt;h2 id=&quot;matrizes&quot;&gt;Matrizes&lt;/h2&gt;
+
+&lt;p&gt;Matrizes em LaTeX são criadas com os comandos &lt;code class=&quot;highlighter-rouge&quot;&gt;matrix&lt;/code&gt; e
+&lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt;. Há outros também, mas esse são os mais comuns e utilizados.&lt;/p&gt;
+
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	x = \left[\begin{matrix}
+  1 &amp;amp; 2 &amp;amp; 3 \\
+  4 &amp;amp; 5 &amp;amp; 6 \\
+  7 &amp;amp; 8 &amp;amp; 9
+ \end{matrix}\right]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+x = \left[\begin{matrix}
+  1 &amp; 2 &amp; 3 \\
+  4 &amp; 5 &amp; 6 \\
+  7 &amp; 8 &amp; 9
+ \end{matrix}\right] %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;O comando &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt; permite que as matrizes possam ser trabalhadas
+  na forma do &lt;em&gt;environment&lt;/em&gt; tabular usado para criar tabelas em LaTeX.&lt;/p&gt;
+
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;y = \begin{array}{c|c|c}
+\sin(x) &amp;amp; x^2 &amp;amp; x_3 \\ \hline
+  \frac{1}{3} &amp;amp; \int_1^3 f(x) dx &amp;amp; 6 \\ \hline
+  7 &amp;amp; 8 &amp;amp; 9 \\
+ \end{array}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+y = \begin{array}{c|c|c}
+\sin(x) &amp; x^2 &amp; x_3 \\ \hline
+  \frac{1}{3} &amp; \int_1^3 f(x) dx &amp; 6 \\ \hline
+  7 &amp; 8 &amp; 9 \\
+ \end{array} %]]&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;pontos&quot;&gt;Pontos&lt;/h2&gt;
+
+&lt;p&gt;Os pontos servem para representar a continuidade de valores em um
+array ou uma sequência a ser completada. Os comandos são o da família
+&lt;code class=&quot;highlighter-rouge&quot;&gt;dots&lt;/code&gt;, e podem representar continuidades verticais, horizontais
+ou diagonais.&lt;/p&gt;
+
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;x = [\begin{matrix} x_1 &amp;amp; x_2 &amp;amp; x_3 &amp;amp; \dots &amp;amp; x_n \end{matrix}]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+x = [\begin{matrix} x_1 &amp; x_2 &amp; x_3 &amp; \dots &amp; x_n \end{matrix}] %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\mathrm{A} = \left[\begin{matrix}
+a_{11} &amp;amp; a_{12} &amp;amp; \dots &amp;amp; a_{1N} \\
+a_{21} &amp;amp; a_{22} &amp;amp; \dots &amp;amp; a_{2N} \\
+\vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
+a_{M1} &amp;amp; a_{M2} &amp;amp; \dots &amp;amp; a_{MN} 
+\end{matrix} \right]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;produz&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\mathrm{A} = \left[\begin{matrix}
+a_{11} &amp; a_{12} &amp; \dots &amp; a_{1N} \\
+a_{21} &amp; a_{22} &amp; \dots &amp; a_{2N} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{M1} &amp; a_{M2} &amp; \dots &amp; a_{MN} 
+\end{matrix} \right] %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Esses são os usos mais comuns de equações em LaTeX. Recursos mais
+avançados da linguagem devem ser consultados em guias de referência e
+em sites como &lt;a href=&quot;https://tex.stackexchange.com/&quot;&gt;tex.stackexchange.com&lt;/a&gt;
+ou &lt;a href=&quot;https://stackoverflow.com&quot;&gt;stackoverflow.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Entretanto, para quem está começando, pode tentar sites como 
+um &lt;a href=&quot;http://www.codecogs.com/latex/eqneditor.php&quot;&gt;editor online&lt;/a&gt; para
+agilizar a criação de equações.&lt;/p&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Criando Equações em LaTeX&amp;url=/blog/2018/09/19/equacoes-latex/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/09/19/equacoes-latex/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Wed, 19 Sep 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/09/19/equacoes-latex/</link>
+        <guid isPermaLink="true">/blog/2018/09/19/equacoes-latex/</guid>
+      </item>
+    
+      <item>
+        <title>Usando Equações em Markdown</title>
+        
+          <description>&lt;p&gt;Publicar texto científico em navegadores durante muito tempo foi um
+calo no pé de matemáticos, engenheiros, físicos e demais profissionais
+que lidam equações e precisam apresentá-las para divulgar suas ideias.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Muitas soluções já foram tentadas, mas ora dependiam do desenvolvedor
+do navegador para inserir suporte, ora dependia das condições de
+apresentação do texto (figuras de alta/baixa qualidade, por exemplo).&lt;/p&gt;
+
+&lt;p&gt;A primeira das tentativas de inserir equações em páginas web foi feita
+com imagens. Nessa abordagem, cada equação era substituída por uma
+imagem, tipo &lt;img style=&quot;vertical-align=middle; display: inline&quot; src=&quot;/images/equacoes-markdown/equacao.png&quot; /&gt;, mas a exibição muitas vezes
+ficava comprometida, desalinhada ou com péssima qualidade visual.&lt;/p&gt;
+
+&lt;p&gt;Um exemplo de ferramenta que criava equações dessa maneira era
+&lt;a href=&quot;http://www.latex2html.org&quot;&gt;latex2html&lt;/a&gt;. Embora antiga, transformava com
+algum sucesso documentos escritos em &lt;a href=&quot;http://www.latex-project.org&quot;&gt;LaTeX&lt;/a&gt;
+para HTML. As equações surgiam na forma de imagens no fluxo do texto.&lt;/p&gt;
+
+&lt;p&gt;Com o tempo, tentativas de padronização foram surgindo, como
+&lt;a href=&quot;https://www.w3.org/Math/&quot;&gt;MathML&lt;/a&gt; proposta pelo W3
+Consortium. Trata-se de uma especificação em &lt;a href=&quot;www.w3.org/XML&quot;&gt;XML&lt;/a&gt; que
+descreve como conteúdos matemáticos e científicos devem ser
+interpretados por um navegador. O problema é que nem todos suportam a
+especificação, tal como o &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Google Chrome&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;mathjax&quot;&gt;MathJax&lt;/h2&gt;
+
+&lt;p&gt;Recentemente, uma solução definitiva parece ter sido encontrada:
+&lt;a href=&quot;http://www.mathjax.org&quot;&gt;MathJax&lt;/a&gt;. A proposta do projeto é permitir que
+equações escritas em LaTeX possam ser desenhadas diretamente no fluxo
+do texto usando um motor desenvolvido em javascript para esse fim.&lt;/p&gt;
+
+&lt;p&gt;O uso de fontes matemáticas de alta qualidade aliadas à versatilidade
+e simplicidade de inserção de equações científicas faz do MathJax uma
+escolha que simplesmente funciona. O projeto é
+&lt;a href=&quot;https://www.mathjax.org/#sponsors&quot;&gt;amplamente suportado&lt;/a&gt; por diversos
+parceiros, sugerindo que deverá ser algo duradouro.&lt;/p&gt;
+
+&lt;p&gt;Inserir o suporte ao mathjax, basta inserir a seguinte linha de código
+em um documento html:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;O script suporta alguns parâmetros adicionais que permitem ajustar as
+tags usadas para delinear as equações no código em HTML.&lt;/p&gt;
+
+&lt;p&gt;A boa notícia é que Markdown suporta a inserção de equações
+diretamente no texto. Basicamente, há duas maneiras de fazer:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inline &lt;script type=&quot;math/tex&quot;&gt;f(x,y) = \sin(x+y)&lt;/script&gt;; ou&lt;/li&gt;
+  &lt;li&gt;Na forma de um bloco separado&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(x,y) = \sin(x+y)&lt;/script&gt;
+
+&lt;p&gt;Em ambos os casos, duas coisas precisam ser aprendidas: a primeira,
+bem mais simples, é entender como inserir a equação. A segunda, bem
+mais trabalhosa, é aprender como criar equações em &lt;script type=&quot;math/tex&quot;&gt;\LaTeX&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;inserindo-equaes-em-markdown&quot;&gt;Inserindo equações em Markdown&lt;/h2&gt;
+
+&lt;p&gt;Equações em Markdown podem ser inseridas entre os pares de strings
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$$&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;$$&lt;/code&gt;. Se a equação for inline, basta inseri-la seguindo
+o fluxo do texto, como em &lt;code class=&quot;highlighter-rouge&quot;&gt;$$f(x) = \sin(x+y)$$&lt;/code&gt;. Se a equação for
+em bloco, adicione quebras de linha no fluxo do texto antes e depois
+da equação que o Jekyll entenderá como proceder para desenhar
+corretamente:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fluxo do texto...
+
+$$
+   f(x,y) = \sin(x+y)
+$$
+
+fluxo do texto...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Além disso, deve-se incluir a linha&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mathjax: true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;no preâmbulo do post para que o Jekyll insira o código em Javascript
+para ativar o Mathjax. Esse post, por exemplo, teve o seguinte
+preâmbulo contendo a linha supra-citada.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+title: Usando Equações em Markdown
+author: Agostinho Brito
+tag:
+  - equacoes
+  - LaTeX
+mathjax: true
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As equações devem necessariamente ser escritas em LaTeX para que sejam
+apresentadas no navegador.&lt;/p&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Usando Equações em Markdown&amp;url=/blog/2018/09/18/equacoes-markdown/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/09/18/equacoes-markdown/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Tue, 18 Sep 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/09/18/equacoes-markdown/</link>
+        <guid isPermaLink="true">/blog/2018/09/18/equacoes-markdown/</guid>
+      </item>
+    
+      <item>
+        <title>Traçando gráficos</title>
+        
+          <description>&lt;h2 id=&quot;traando-grficos-de-barra-com-chartsjshttpschartjsorg&quot;&gt;Traçando gráficos de barra com &lt;a href=&quot;https://chartjs.org&quot;&gt;charts.js&lt;/a&gt;&lt;/h2&gt;
+
+&lt;canvas id=&quot;myChart-bar&quot; width=&quot;600&quot; height=&quot;380&quot;&gt;&lt;/canvas&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var ctx = document.getElementById(&quot;myChart-bar&quot;);
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [&quot;Azul&quot;, &quot;Vermelho&quot;, &quot;Amarelo&quot;, &quot;Verde&quot;, &quot;Purpura&quot;, &quot;Laranja&quot;],
+        datasets: [{
+            label: 'probabilidade de ocorrência',
+            data: [3, 15, 1, 2, 2, 20],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                },
+                  scaleLabel: {
+       			  display: true,
+        		  labelString: 'probabilidade'
+				}			 
+            }],
+			xAxes:
+			[{
+			      scaleLabel:{
+				  display: true,
+				labelString: 'cor'
+			}}
+			]
+        }
+    }
+});
+&lt;/script&gt;
+
+&lt;h2 id=&quot;traando-grficos-de-linha-com-chartjs&quot;&gt;Traçando gráficos de linha com chart.js&lt;/h2&gt;
+
+&lt;canvas id=&quot;myChart-line&quot; width=&quot;600&quot; height=&quot;380&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+var ctx = document.getElementById(&quot;myChart-line&quot;);
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+				labels: [1950, 1960, 1970, 1980, 1991, 2000, 2010],
+        datasets:
+				[
+						{
+								data: [51,70,94,121,146,169,190],
+				  			label: &quot;Crescimento populacional&quot;,
+								borderColor: &quot;#3e95cd&quot;,
+								fill: false
+						}, {
+								data: [48,52,57,62,66,69,73],
+								label: &quot;Expectativa de vida&quot;,
+								borderColor: &quot;#3cba9f&quot;,
+								fill: false
+						}
+				]
+    },
+    options: {
+				title:{
+						display: true,
+						text: 'crescimento populacional'
+				}
+     }
+});
+&lt;/script&gt;
+
+&lt;h2 id=&quot;traando-grficos-com-plotly&quot;&gt;Traçando gráficos com plot.ly&lt;/h2&gt;
+
+&lt;div id=&quot;tester&quot; style=&quot;width:600px;height:380px;&quot;&gt;&lt;/div&gt;
+
+&lt;script src=&quot;https://cdn.plot.ly/plotly-latest.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+
+var trace1 = {
+  x: [1, 2, 3, 4],
+  y: [16, 11, 12, 21],
+  type: 'scatter'
+};
+
+var trace2 = {
+  x: [1, 2, 3, 4],
+  y: [10, 5, 11, 9],
+  line: {shape: 'spline'},
+  type: 'scatter'
+};
+
+var data = [trace1, trace2];
+
+Plotly.newPlot('tester', data);
+&lt;/script&gt;
+
+&lt;h2 id=&quot;tranando-grficos-3d-com-plotly&quot;&gt;Trançando gráficos 3d com plot.ly&lt;/h2&gt;
+&lt;div id=&quot;plotit-3d&quot; style=&quot;width:600px;height:380px;&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+Plotly.d3.csv('https://raw.githubusercontent.com/ajustetecnico/ajustetecnico.github.io/master/images/plots/myplot.csv', function(err, rows){
+function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
+  
+var z_data=[ ]
+for(i=0;i&lt;40;i++)
+{
+  z_data.push(unpack(rows,i));
+}
+
+var data = [{
+           z: z_data,
+           type: 'surface'
+        }];
+  
+var layout = {
+  title: 'Funcao',
+  autosize: false,
+  width: 500,
+  height: 500,
+  margin: {
+    l: 65,
+    r: 50,
+    b: 65,
+    t: 90,
+  }
+};
+Plotly.newPlot('plotit-3d', data, layout);
+});
+&lt;/script&gt;
+
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Traçando gráficos&amp;url=/blog/2018/09/18/plots/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/09/18/plots/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Tue, 18 Sep 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/09/18/plots/</link>
+        <guid isPermaLink="true">/blog/2018/09/18/plots/</guid>
+      </item>
+    
+      <item>
+        <title>Traçado de gráficos em Jekyll</title>
+        
+          <description>&lt;p&gt;Diversas são as formas de traçar gráficos usando Jekyll e Javascript. Nesse post, testamos duas bibliotecas: &lt;a href=&quot;https://chartjs.org&quot;&gt;chart.js&lt;/a&gt; e &lt;a href=&quot;https://plot.ly&quot;&gt;plot.ly&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;usando-chartjshttpschartjsorg&quot;&gt;Usando &lt;a href=&quot;https://chartjs.org&quot;&gt;chart.js&lt;/a&gt;&lt;/h2&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js&quot;&gt;&lt;/script&gt;
+
+&lt;canvas id=&quot;myChart&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+var ctx = document.getElementById(&quot;myChart&quot;).getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [&quot;Red&quot;, &quot;Blue&quot;, &quot;Yellow&quot;, &quot;Green&quot;, &quot;Purple&quot;, &quot;Orange&quot;],
+        datasets: [{
+            label: 'Número de Votos',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+&lt;/script&gt;
+
+&lt;p&gt;Quebra de linha&lt;/p&gt;
+
+&lt;canvas id=&quot;lineplot&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+		var ctx = document.getElementById(&quot;lineplot&quot;).getContext('2d');
+var myChart = new Chart(ctx, {
+		type: 'line',
+		data: {
+				labels: [10, 20, 30, 40, 50],
+				datasets: [{
+						data: [1, 2, 5, 4, 3],
+						label: &quot;Experimento 1&quot;,
+						borderColor: &quot;#ff0000&quot;,
+						fill: false
+				},
+				{
+				 data: [4, 5, 3, 3, 0],
+						label: &quot;Experimento 2&quot;,
+						borderColor: &quot;#00ff00&quot;,
+						fill: false
+				}]
+		},
+		options: {
+				scales:{
+						yAxes: [{
+								scaleLabel: {
+										display: true,
+										labelString: &quot;Temperatura (Celsius)&quot;
+								}
+						}
+									 ],
+						xAxes: [{
+								scaleLabel: {
+										display: true,
+										labelString: &quot;Tempo (s)&quot;
+								}
+						}
+						]
+
+						
+				},
+				elements: {
+						line: { tension: 0.5,}
+				},
+				title: {
+						display: true,
+						text: &quot;Temperatura x tempo&quot;
+				}
+		}
+});
+
+## Usando [plot.ly](https://plot.ly)
+
+&lt;/script&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Traçado de gráficos em Jekyll&amp;url=/blog/2018/09/18/plots-and-charts/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/09/18/plots-and-charts/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Tue, 18 Sep 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/09/18/plots-and-charts/</link>
+        <guid isPermaLink="true">/blog/2018/09/18/plots-and-charts/</guid>
+      </item>
+    
+      <item>
+        <title>Detecção de assinaturas em listas de presenças - Parte 1</title>
+        
+          <description>&lt;p&gt;Olá,&lt;/p&gt;
+
+&lt;p&gt;Nesse post iremos iniciar uma discussão acerca de um trabalho
+desenvolvido durante nosso curso de graduação na UFRN.&lt;/p&gt;
+
+&lt;p&gt;Trata-se de um algoritmo de detecção de assinaturas em listas de
+presenças, muito utilizadas pelos professores para registrar para a
+presença dos alunos em sala de aula.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;motivaes&quot;&gt;Motivações&lt;/h2&gt;
+
+&lt;p&gt;Existem diversas maneiras de obter as presenças dos alunos em uma sala
+de aula. O registro pode ser feito pelas assinatura dos alunos em uma
+lista de presença, preenchendo um formulário impresso, também
+conhecida como “chamada” (que também pode ser feita via web), por
+reconhecimento facial, detecção via ponto eletrônico. As
+possibilidades são muitas…&lt;/p&gt;
+
+&lt;p&gt;Focando no método pelas assinaturas dos alunos, é um método bastante
+utilizado em diversas instituições de ensino superior pelo Brasil
+(como na UFRN), onde é passado uma lista de assinaturas para os alunos
+preencherem.&lt;/p&gt;
+
+&lt;p&gt;O problema de processar as listas surge quando é necessário salvar
+essas assinaturas em algum outro lugar (como na Web), pois demanda um
+tempo considerável para o docente ter que conferir folha a folha,
+assinatura a assinatura, para salvá-las no sistema acadêmico. A
+existência de um mecanismo que torne facilite esse processo para o
+docente foi o motivador para o trabalho. E desenvolvê-lo usando
+técnicas de visão artificial foi o grande desafio.&lt;/p&gt;
+
+&lt;p&gt;A foto abaixo ilustra um exemplo de lista de presença. Provavelmente,
+a maioria dos leitores já se deparou com uma.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/deteccao-assinaturas/lista-assinaturas.jpg&quot; alt=&quot;Lista de presença&quot; title=&quot;Lista de Presenca&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Processar uma lista como essa esbarra em uma série de dificuldades
+técnicas que algoritmos simples não resolvem o problema com
+facilidade.&lt;/p&gt;
+
+&lt;p&gt;Esse post visa apresentar as motivações para um algoritmo de
+reconhecimento automático dessas assinaturas utilizando de ferramentas
+como &lt;a href=&quot;http://www.opencv.org&quot;&gt;OpenCV&lt;/a&gt;, uma biblioteca multi-linguagem
+para algoritmos em Visão Computacional) e QR codes, código de barras
+bidimensional bastante popular.&lt;/p&gt;
+
+&lt;h2 id=&quot;um-modelo-adaptado-para-a-lista-de-assinaturas&quot;&gt;Um modelo adaptado para a lista de assinaturas&lt;/h2&gt;
+
+&lt;p&gt;Um link para o modelo de lista de assinaturas sobre o
+qual o algoritmo foi construido pode ser
+obtido
+&lt;a href=&quot;https://github.com/teonacio/GIT_lista_de_presenca/blob/master/_pdf/qrnovo.pdf&quot;&gt;neste endereço&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;E porque adaptar os modelos tradicionais? Para facilitar a tarefa do
+próprio algoritmo usando QR codes. Os códigos estão lá para ajudar no
+processo de ajuste de possíveis distorções que ocorrem quando a câmera
+é posicionada nas laterais da imagem. Num scanner tradicional o efeito
+de distorção de perspectiva não ocorre.&lt;/p&gt;
+
+&lt;p&gt;Códigos de barra e códigos QR são bem populares e além de guardarem
+informações (geralmente URLs) também podem ser usados para identificar
+as posições dos cantos da folha e realizar a correção de perspectiva.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/deteccao-assinaturas/qrcode-example.png&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apesar de os círculos vermelhos estarem exagerados, o intuito é
+explicar que, utilizando a biblioteca ZBar (biblioteca para detecção
+de QR codes e barcodes em geral), conseguimos recuperar não apenas o
+conteúdo do QR code scaneado, mas também as posições dos pixels
+extremos de cada QR code.&lt;/p&gt;
+
+&lt;p&gt;Essa informação é muito útil, pois ao scanear o modelo, recuperamos as
+posições dos extremos do retângulo com as assinaturas, utilizando
+apenas as posições dos extremos dos quatro QR codes do modelo. Ou
+seja: Todo o resto do modelo (espaços em branco) não interferem no
+algoritmo, e podem ser utilizados para inserir informações acerca da
+instuição (logotipo, nome) e da turma (disciplina, turno, professor).&lt;/p&gt;
+
+&lt;p&gt;No próximo post, ireimos explicar como, a partir do retângulo
+de assinaturas, separamos apenas as assinaturas (excluimos os nomes
+dos alunos, que para a detecção não interferem no resultado).&lt;/p&gt;
+
+&lt;p&gt;Até lá!&lt;/p&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Detecção de assinaturas em listas de presenças - Parte 1&amp;url=/blog/2018/08/30/detecao-assinaturas-part1/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/30/detecao-assinaturas-part1/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Thu, 30 Aug 2018 08:44:21 +0000</pubDate>
+        <link>/blog/2018/08/30/detecao-assinaturas-part1/</link>
+        <guid isPermaLink="true">/blog/2018/08/30/detecao-assinaturas-part1/</guid>
+      </item>
+    
+      <item>
+        <title>Secador de Grãos - Parte 1</title>
+        
+          <description>&lt;p&gt;Nessa primeira série de postagens, iremos abordar um projeto
+desenvolvido durante o curso de Sistemas Digitais da UFRN: um secador de grãos.&lt;/p&gt;
+
+&lt;p&gt;A estrutura de controle do secador foi embarcada em um processador
+&lt;a href=&quot;https://www.microchip.com/wwwproducts/en/ATmega328P&quot;&gt;ATmega328P&lt;/a&gt;,
+popularmente disseminado pela plataforma &lt;a href=&quot;https://arduino.cc&quot;&gt;Arduino&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Como o projeto é um pouco grande, vamos apresentá-lo por partes em
+(pelo menos) umas três postagens:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Objetivos e diagrama esquemático.&lt;/li&gt;
+  &lt;li&gt;Desenvolvimento do código fonte que controla o sistema.&lt;/li&gt;
+  &lt;li&gt;Seu funcionamento e apresentação do aplicativo Android que
+interagem com o secador.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;objetivos-do-projeto&quot;&gt;Objetivos do Projeto&lt;/h2&gt;
+
+&lt;p&gt;O sistema do secador de grãos precisava ter os seguintes requisitos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tempo de execução de 3 minutos&lt;/li&gt;
+  &lt;li&gt;Seguir uma curva de secagem definida&lt;/li&gt;
+  &lt;li&gt;Uso de sensores de temperatura e luminosidade que alteram a curva&lt;/li&gt;
+  &lt;li&gt;Velocidade do ventilador controlada pela velocidade de secagem&lt;/li&gt;
+  &lt;li&gt;Resposta em tempo real da alteração da curva&lt;/li&gt;
+  &lt;li&gt;LEDs de indicação para início de processo, nível de sensores e &lt;a href=&quot;https://pt.wikipedia.org/wiki/Modula%C3%A7%C3%A3o_por_largura_de_pulso&quot;&gt;PWM&lt;/a&gt; do ventilador.&lt;/li&gt;
+  &lt;li&gt;Botão para iniciar o processo&lt;/li&gt;
+  &lt;li&gt;Painel remoto para visualização de informações&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Definidas as especificações de funcionamento, decidimos montar um
+esquemático do circuito para facilitar a visualização e montagem. Usei
+para isso o editor de circuito da &lt;a href=&quot;https://www.easyeda.com&quot;&gt;EasyEDA&lt;/a&gt; que é
+online e gratuito. O resultado foi está na imagem abaixo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/secador-graos/secador-esquematico.svg&quot; alt=&quot;placeholder&quot; title=&quot;Esquemático do circuito&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O circuito acima mostra a pinagem do Atmega328p e não os pinos do
+Arduino. Mas é fácil achar a referência do Arduino para as ligações.&lt;/p&gt;
+
+&lt;p&gt;A ativação do ventilador foi feita usando um transistor. Poderia ter
+sido um acoplador óptico (mais seguro), mas foi usado o que estava à
+mão naquele momento (hehe).&lt;/p&gt;
+
+&lt;p&gt;Os quatro LEDs são colocados cada um em um pino que gera PWM no
+Arduino. Dois são usados para indicar o nível dos sensores no momento
+da leitura; um é usado para indicar quando o processo de secagem é
+iniciado e o último é usado para indicar o PWM que está chegando no
+ventilador.&lt;/p&gt;
+
+&lt;p&gt;A curva de secagem que deve ser seguida é apresentada na imagem
+abaixo. A curva define para cada instante qual deve ser a configuração
+dos pulsos enviados ao ventilador.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/secador-graos/curva-secagem.svg&quot; alt=&quot;placeholder&quot; title=&quot;Curva de secagem&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A curva mostra o evento de secagem passando em apenas 60 segundos. O
+tempo foi reduzido apenas para fins de demonstração (originalmente
+eram 3 minutos). Porém, isso não afeta o funcionamento do
+sistema. Para voltar aos 3 minutos (ou até mais) basta recalcular os
+tempos em que se atingirão os percentuais de PWM indicados.&lt;/p&gt;
+
+&lt;p&gt;Nesse sistema, foram necessários vários periféricos para operarem em
+conjunto com o microcontrolador (além de entendimento de programação
+específica para este). Um conversor A/D, temporizadores e contadores,
+interrupções, gerador de PWM e comunicação serial via USART foram as
+usadas durante o desenvolvimento.&lt;/p&gt;
+
+&lt;p&gt;Ah, embora não tenha sido apresentado nesse diagrama esquemático, foi
+usado um módulo bluetooth para Arduino. Esse módulo serviu para fazer
+a comunicação com um aplicativo Android (também desenvolvido durante o
+projeto) e enviar informações do processo, como a curva de secagem e os
+sinais dos sensores. Os dados eram exibidos em um gráfico.&lt;/p&gt;
+
+&lt;p&gt;O objetivo desse primeiro post é apenas demonstrar qual o sistema,
+suas características e o que foi usado.&lt;/p&gt;
+
+&lt;p&gt;Detalhes da implementação serão mostrados no próximo post da série.&lt;/p&gt;
+
+&lt;p&gt;Até lá!&lt;/p&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Secador de Grãos - Parte 1&amp;url=/blog/2018/08/21/secador-graos-p1/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/21/secador-graos-p1/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Tue, 21 Aug 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/08/21/secador-graos-p1/</link>
+        <guid isPermaLink="true">/blog/2018/08/21/secador-graos-p1/</guid>
+      </item>
+    
+      <item>
+        <title>Blogs contribuintes</title>
+        
+          <description>&lt;p&gt;O seguintes autores e seus respectivos projetos estarão contribuindo para o editorial do ajustetecnico:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://danielaraujorn.github.io/blog&quot;&gt;Daniel Araújo&lt;/a&gt; descrevendo um sistema que facilita o desenvolvimento de dispositivos de internet das coisas. Mostrará como uma aplicação em tempo real pode ser desenvolvida com módulos de visualização de dados, controle, sensoriamento e verificação de regras.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://teonacio.github.io/&quot;&gt;Bruno Teonácio&lt;/a&gt;, com seu algoritmo para detecção de assinaturas em folhas A4 utilizadas para marcação de presenças.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogpedro048.github.io&quot;&gt;Pedro Victor&lt;/a&gt; e o jogo Snake em C++, mostrando como o desenvolvimento de funcionalidades de uma implementação jogo Snake no intuito de treinar, de uma forma divertida, variados conceitos da linguagem C++.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://deangelacgn.github.io&quot;&gt;Deangela Neves&lt;/a&gt;, apresentando O TEDFinder, uma mini search engine que utiliza técnicas de processamento de linguagem natural para rankear as palestras do TED mais relacionadas a uma dada query.&lt;/li&gt;
+  &lt;li&gt;Mateus Eloi Bastos e o housekeeper robotic, um robô que limpa os ambientes e compartilha informações sobre a situação da casa via internet para o seu dispositivo móvel ou computador.&lt;/li&gt;
+  &lt;li&gt;Matheus Pessoa stema de Secagem de Grãos com Supervisório	Sistema desenvolvido usando o microcontrolador Atmega328p, realizando a leitura de sensores de luminosidade e temperatura para executar uma curva de secagem de grãos. Para acompanhar o processo foi desenvolvido um aplicativo Android que se comunica por bluetooth com o sistema e plota um gráfico em tempo real.&lt;/li&gt;
+  &lt;li&gt;Alex Barros e programação de Trilhos de LED, ilustrando a representação de quatro trilhos de trem através de fitas de LED sem haver “choque” entre eles. Para isso, é feito uso de temporizadores e sistema de prioridade usando a linguagem de programação C++. A velocidade de cada “trem” também pode ser alterada através de potenciômetros.&lt;/li&gt;
+  &lt;li&gt;Mariaelena apresentando um POV rotativo, um display de led, onde a imagem é formada pela rotação dos leds.&lt;/li&gt;
+  &lt;li&gt;Daniel Menescal Jales e o Find-Travel-Type, um projeto de Inteligencia Artificial utilizando MLP.&lt;/li&gt;
+  &lt;li&gt;Luccas Bonato e a criação de um braço robótico para desenhar imagens através da técnica de pontilhismo.&lt;/li&gt;
+  &lt;li&gt;Gabriel Signoretti e um moderno sistema de monitoramento de alimentação canina, para plugar na Internet uma tigela de alimentação convencional. A tigela será turbinada com um Raspberry pi, usando a API REST para controle e monitoramento (Django ou Flask), OpenCV para analisar o conteúdo presente na tigela. Esforços estão sendo feitos de modo a permitir o controle remoto do sistema.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Blogs contribuintes&amp;url=/blog/2018/08/20/editorial/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/20/editorial/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Mon, 20 Aug 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/08/20/editorial/</link>
+        <guid isPermaLink="true">/blog/2018/08/20/editorial/</guid>
+      </item>
+    
+      <item>
+        <title>Instalando Jekyll...</title>
+        
+          <description>&lt;p&gt;A criação de um blog com Jekyll pode ser feito com passos simples,
+como será mostrado nesse post. Funciona que é uma maravilha, mas é
+necessário que o sistema tenha disponível todo o aparato que o Jekyll
+precisa para operar e, normalmente, esse aparato não vem instalado por
+default num &lt;em&gt;fresh install&lt;/em&gt; do sistema.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Os passos seguintes foram testados em um sistema GNU Linux Ubuntu,
+versão 18.04 &lt;em&gt;fresh install&lt;/em&gt;, ou seja, num sistema recém-instalado,
+sem nenhuma das ferramentas necessárias para uma execução adequada de
+um blog com Jekyll.&lt;/p&gt;
+
+&lt;p&gt;O primeiro passo foi a instalação é do próprio Jekyll. Basta digitar o comando&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;que praticamente todo o ferramental que necessário será
+instalado. Como o Jekyll é feito em ruby, todas as dependências para
+que funcione também são instaladas, como o próprio interpretador ruby,
+bibliotecas para a criação de um pequeno servidor web e formatadores de
+conteúdo, entre outras coisas.&lt;/p&gt;
+
+&lt;p&gt;O &lt;em&gt;ruby bundler&lt;/em&gt; também deve ser instalado. Trata-se de uma ferramenta
+que permite a instalação automática de pacotes em ruby que podem ser
+necessários para personalização da página &lt;em&gt;default&lt;/em&gt; que criada pelo
+Jekyll. Não necessariamente sua presença é necessária, mas vários
+temas criados para o Jekyll usam &lt;em&gt;gemas&lt;/em&gt; do ruby para melhorar
+aspectos visuais e introduzir elementos nas páginas. A incorporação
+dessa gemas é justamente tratada pelo &lt;code class=&quot;highlighter-rouge&quot;&gt;bundler&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt install bundler
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Daqui para frente a criação de um repositório local para o blog pode
+ser feita com comandos adaptados diretamento do próprio site
+&lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyllrb.com&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new meublog
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;meublog
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ou quase… Essa última instrução nem sempre funciona. No Ubuntu o
+bundler exige a presença de um arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; no diretório onde o
+blog foi criado (no caso, o diretório &lt;code class=&quot;highlighter-rouge&quot;&gt;meublog&lt;/code&gt;) e esse arquivo não é
+criado por default pelo Jekyll. Basta criar um arquivo vazio com
+qualquer editor de texto e nomeá-lo como &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; ou fazer isso na
+própria shell com o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;touch&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;touch Gemfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Agora é só repetir a instrução que invoca o bundler que o sistema será
+preparado sem erros.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Se a instalação tiver sido feita corretamente as seguintes mensagems
+deverão ser apresentadas no terminal:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Configuration file: /home/user/meublog/_config.yml
+            Source: /home/user/meublog
+       Destination: /home/user/meublog/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    &lt;span class=&quot;k&quot;&gt;done in &lt;/span&gt;0.225 seconds.
+ Auto-regeneration: enabled &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/home/user/meublog'&lt;/span&gt;
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;O Jekyll deverá processar as páginas criadas localmente,
+convertendo-as para HTML e hospedando-as no diretório _site, de onde
+as páginas são dispensadas para o navegador.&lt;/p&gt;
+
+&lt;p&gt;Agora é só acessar o endereço
+&lt;a href=&quot;http://127.0.0.1:4000/&quot;&gt;http://127.0.0.1:4000&lt;/a&gt; no seu navegador e o
+esqueleto do blog deverá ser mostrado.&lt;/p&gt;
+
+&lt;p&gt;Mantenha o terminal onde o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle&lt;/code&gt; foi lançado, para não
+finalizar o processo que executa o pequeno servidor web e ainda poder
+acompanhar todas as alterações realizadas no desenvolvimento dos
+posts.&lt;/p&gt;
+
+&lt;p&gt;Caso a página hospedada no GitHub pages já esteja sendo usada para
+outros fins, é possível também hospedá-la em um subdiretório. Para
+isso, os seguintes passos devem ser realizados:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Criar um repositório com um nome específico no GitHub. Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;blog&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Clonar o repositório remoto na máquina local. Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone
+git@github.com:usuario/blog.git&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Criar o blog nesse diretório usando Jekyll. Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new blog&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Entre no diretório criado e execute o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -b
+gh-pages&lt;/code&gt;. Todas as páginas do GitHub são lançadas nesse branch
+denominado &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt;. Logo, mais uma página ficará disponível para
+acesso pelo GitHub pages.&lt;/li&gt;
+  &lt;li&gt;Atualize o arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, incluindo as seguintes linhas:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;baseurl: &quot;/blog&quot;
+production_url : http://usuario.github.io.com/blog
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Os procedimentos descritos aqui servem apenas para criar um esqueleto
+bem rudimentar para um blog baseado em Jekyll. A criação de um blog
+com qualidade visual diferenciada é possível e será fruto de um post
+futuro.&lt;/p&gt;
+
+&lt;p&gt;Para os curiosos, é possível trabalhar com temas em Jekyll, como
+sugerem sites como &lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;jekyllthemes.io/&lt;/a&gt;. O
+próprio &lt;a href=&quot;https://github.com&quot;&gt;github.com&lt;/a&gt; suporta Jekyll e, inclusive,
+ajuda a criação de blogs com alguns temas sugeridos.&lt;/p&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Instalando Jekyll...&amp;url=/blog/2018/08/01/install-jekyll-blog/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/01/install-jekyll-blog/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Wed, 01 Aug 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/08/01/install-jekyll-blog/</link>
+        <guid isPermaLink="true">/blog/2018/08/01/install-jekyll-blog/</guid>
+      </item>
+    
+      <item>
+        <title>Alô, mundo!</title>
+        
+          <description>&lt;p&gt;Blog são bastante dinâmicos e dão trabalho para escrever e manter. Por
+sorte, existem iniciativas que facilitam o trabalho dos autores para
+criar seus posts e manter páginas elegantes para todos apreciarem (e
+criticarem).&lt;/p&gt;
+
+&lt;p&gt;Quando me refiro a iniciativas, trato de ferramentas apropriadas
+que foram criadas especificamente para escrita de blogs.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Já usei algumas delas: blogspot, wordpress, alguns ensaios com
+asciidoctor, mas este blog foi construído usando
+&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;. Em suma, jekyll é uma ferramenta
+simples que visa transformar texto simples em websites. É feito em
+ruby, é de uso livre e é suportado pelo serviço &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github
+Pages&lt;/a&gt;. O próprio Github possui ferramentas
+online para ajudar a dar os primeiros passos na criação de um blog
+pessoal.&lt;/p&gt;
+
+&lt;p&gt;Jekyll vai além, suportando a criação de temas que embelezam as
+páginas e que podem ser adaptados para gostos pessoais.&lt;/p&gt;
+
+&lt;p&gt;Esse site foi feito com um fork do tema &lt;a href=&quot;https://github.com/dyndna/lanyon-plus&quot;&gt;Lanyon
+Plus&lt;/a&gt;. O tema, junto com o
+conjunto de páginas de layouts pré-definidos permitem criar posts que
+são naturalmente suportados pelo Github pages e tornam a edição dos
+posts algo bem tranquilo de fazer.&lt;/p&gt;
+
+&lt;p&gt;Os posts são escritos em Markdown, uma espécie de forma de marcar o
+texto simples para que, quando processado, as marcações signifiquem
+coisas especiais para serem exibidas. Com Markdown, espera-se que o
+processador escrito em Jekyll interprete as marcações e formate belas
+páginas nos posts, enquanto o processo de escrita é facilitado.&lt;/p&gt;
+
+&lt;p&gt;Tem uma lista de dicas
+&lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;Aqui&lt;/a&gt;
+com as marcações mais comuns. Dando uma olhada rápida dá para se
+compreender como faz.&lt;/p&gt;
+
+&lt;p&gt;Vamos procurar fazer alguns exemplos em outros posts para mostrar
+dicas de uso.&lt;/p&gt;
+
+&lt;p&gt;Valeu!&lt;/p&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Alô, mundo!&amp;url=/blog/2018/06/12/alo-mundo/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/06/12/alo-mundo/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Tue, 12 Jun 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/06/12/alo-mundo/</link>
+        <guid isPermaLink="true">/blog/2018/06/12/alo-mundo/</guid>
+      </item>
+    
+      <item>
+        <title>What's Jekyll?</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s an immensely useful tool and one we encourage you to use here with Lanyon.&lt;/p&gt;
+
+&lt;p&gt;Find out more by &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=What's Jekyll?&amp;url=/blog/2015/01/31/whats-jekyll/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2015/01/31/whats-jekyll/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Sat, 31 Jan 2015 00:00:00 -0300</pubDate>
+        <link>/blog/2015/01/31/whats-jekyll/</link>
+        <guid isPermaLink="true">/blog/2015/01/31/whats-jekyll/</guid>
+      </item>
+    
+  </channel>
+</rss>
