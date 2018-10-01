@@ -21,11 +21,6 @@ callback([
   } ,
 
   {
-    "text": "Instalando Jekyll...",
-    "href": "/blog/2018/08/01/install-jekyll-blog/"
-  } ,
-
-  {
     "text": "Blogs contribuintes",
     "href": "/blog/2018/08/20/editorial/"
   } ,
@@ -37,12 +32,12 @@ callback([
 
   {
     "text": "Detecção de assinaturas em listas de presenças - Parte 1",
-    "href": "/blog/2018/08/21/detecao-assinaturas-part1/"
+    "href": "/blog/2018/08/30/detecao-assinaturas-part1/"
   } ,
 
   {
-    "text": "Detecção de assinaturas em listas de presenças - Parte 1",
-    "href": "/blog/2018/08/30/detecao-assinaturas-part1/"
+    "text": "Traçando gráficos",
+    "href": "/blog/2018/09/18/plots/"
   } ,
 
   {

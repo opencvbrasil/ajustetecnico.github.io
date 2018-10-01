@@ -176,7 +176,9 @@ Matrizes em LaTeX são criadas com os comandos ```matrix``` e
 ```array```. Há outros também, mas esse são os mais comuns e utilizados.
 
 Ex: 
-```x = \left[\begin{matrix}
+
+```
+	x = \left[\begin{matrix}
   1 & 2 & 3 \\
   4 & 5 & 6 \\
   7 & 8 & 9
@@ -185,7 +187,8 @@ Ex:
 
 produz
 
-$$x = \left[\begin{matrix}
+$$
+  x = \left[\begin{matrix}
   1 & 2 & 3 \\
   4 & 5 & 6 \\
   7 & 8 & 9
@@ -196,7 +199,9 @@ O comando ```array``` permite que as matrizes possam ser trabalhadas
   na forma do _environment_ tabular usado para criar tabelas em LaTeX.
   
 Ex: 
-```y = \begin{array}{c|c|c}
+
+```
+y = \begin{array}{c|c|c}
 \sin(x) & x^2 & x_3 \\ \hline
   \frac{1}{3} & \int_1^3 f(x) dx & 6 \\ \hline
   7 & 8 & 9 \\
@@ -220,6 +225,7 @@ array ou uma sequência a ser completada. Os comandos são o da família
 ou diagonais.
 
 Ex:
+
 ```
 x = [\begin{matrix} x_1 & x_2 & x_3 & \dots & x_n \end{matrix}]
 ``` 
@@ -230,6 +236,7 @@ $$x = [\begin{matrix} x_1 & x_2 & x_3 & \dots & x_n \end{matrix}]
 $$ 
 
 Ex:
+
 ```
 \mathrm{A} = \left[\begin{matrix}
 a_{11} & a_{12} & \dots & a_{1N} \\

@@ -206,6 +206,136 @@ que lidam equações e precisam apresentá-las para divulgar suas ideias.
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blog/2018/09/18/plots/">
+        Traçando gráficos
+      </a>
+    </h1>
+
+  <span class="post-date indexpg" itemprop="datePublished" content="2018-09-18"><i class="fa fa-calendar" title="Date published"> 18 Sep 2018</i> </span>
+
+ <h2 id="traando-grficos-de-barra-com-chartsjshttpschartjsorg">Traçando gráficos de barra com <a href="https://chartjs.org">charts.js</a>
+</h2>
+
+<canvas id="myChart-bar" width="600" height="380"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+
+<script>
+var ctx = document.getElementById("myChart-bar");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Azul", "Vermelho", "Amarelo", "Verde", "Purpura", "Laranja"],
+        datasets: [{
+            label: 'probabilidade de ocorrência',
+            data: [3, 15, 1, 2, 2, 20],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                },
+                  scaleLabel: {
+       			  display: true,
+        		  labelString: 'probabilidade'
+				}			 
+            }],
+			xAxes:
+			[{
+			      scaleLabel:{
+				  display: true,
+				labelString: 'cor'
+			}}
+			]
+        }
+    }
+});
+</script>
+
+<h2 id="traando-grficos-de-linha-com-chartjs">Traçando gráficos de linha com chart.js</h2>
+
+<canvas id="myChart-line" width="600" height="380"></canvas>
+<script>
+var ctx = document.getElementById("myChart-line");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+				labels: [1950, 1960, 1970, 1980, 1991, 2000, 2010],
+        datasets:
+				[
+						{
+								data: [51,70,94,121,146,169,190],
+				  			label: "Crescimento populacional",
+								borderColor: "#3e95cd",
+								fill: false
+						}, {
+								data: [48,52,57,62,66,69,73],
+								label: "Expectativa de vida",
+								borderColor: "#3cba9f",
+								fill: false
+						}
+				]
+    },
+    options: {
+				title:{
+						display: true,
+						text: 'crescimento populacional'
+				}
+     }
+});
+</script>
+
+<h2 id="traando-grficos-com-plotly">Traçando gráficos com plot.ly</h2>
+
+<div id="tester" style="width:600px;height:380px;"></div>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<script>
+
+var trace1 = {
+  x: [1, 2, 3, 4],
+  y: [16, 11, 12, 21],
+  type: 'scatter'
+};
+
+var trace2 = {
+  x: [1, 2, 3, 4],
+  y: [10, 5, 11, 9],
+  line: {shape: 'spline'},
+  type: 'scatter'
+};
+
+var data = [trace1, trace2];
+
+Plotly.newPlot('tester', data);
+</script>
+
+ <a href="/blog/2018/09/18/plots/" title="Read more"><strong>Read more...</strong></a>
+  </div>
+  <hr class="transp">
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blog/2018/08/30/detecao-assinaturas-part1/">
         Detecção de assinaturas em listas de presenças - Parte 1
       </a>
@@ -223,28 +353,6 @@ presenças, muito utilizadas pelos professores para registrar para a
 presença dos alunos em sala de aula.
 
  <a href="/blog/2018/08/30/detecao-assinaturas-part1/" title="Read more"><strong>Read more...</strong></a>
-  </div>
-  <hr class="transp">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2018/08/21/detecao-assinaturas-part1/">
-        Detecção de assinaturas em listas de presenças - Parte 1
-      </a>
-    </h1>
-
-  <span class="post-date indexpg" itemprop="datePublished" content="2018-08-21"><i class="fa fa-calendar" title="Date published"> 21 Aug 2018</i> </span>
-
- Olá,
-
-Nesse post iremos iniciar uma discussão acerca de um trabalho
-desenvolvido durante nosso curso de graduação na UFRN.
-
-Trata-se de um algoritmo de detecção de assinaturas em listas de
-presenças, muito utilizadas pelos professores para registrar para a
-presença dos alunos em sala de aula.
-
- <a href="/blog/2018/08/21/detecao-assinaturas-part1/" title="Read more"><strong>Read more...</strong></a>
   </div>
   <hr class="transp">
   

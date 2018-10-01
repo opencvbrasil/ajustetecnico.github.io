@@ -17,13 +17,34 @@ Credits: /disclosure
 
 <title>
   
-    Alô, mundo! · Ajuste Técnico
+    Traçando gráficos · Ajuste Técnico
   
 </title>
 
 <!-- Search Engine Optimization -->
-<meta name="description" content="Blog são bastante dinâmicos e dão trabalho para escrever e manter. Por sorte, existem iniciativas que facilitam o trabalho dos autores para criar seus posts e manter páginas elegantes para todos apreciarem (e criticarem). Quando me refiro a iniciativas, trato de ferramentas apropriadas que foram criadas especificamente para escrita de...">
-<meta name="keywords" content="">
+<meta name="description" content="Traçando gráficos de barra com charts.js
+
+
+
+
+
+
+
+Traçando gráficos de linha com chart.js
+
+
+
+
+Traçando gráficos com plot.ly
+
+
+
+
+
+
+
+">
+<meta name="keywords" content="Equacoes, Gráficos">
 
 
 
@@ -35,17 +56,59 @@ Credits: /disclosure
 <meta name="twitter:image" content="/images/sitelogo.png">
 
 
-<meta name="twitter:title" content="Alô, mundo!">
-<meta name="twitter:description" content="Blog são bastante dinâmicos e dão trabalho para escrever e manter. Por sorte, existem iniciativas que facilitam o trabalho dos autores para criar seus posts e manter páginas elegantes para todos apreciarem (e criticarem). Quando me refiro a iniciativas, trato de ferramentas apropriadas que foram criadas especificamente para escrita de...">
+<meta name="twitter:title" content="Traçando gráficos">
+<meta name="twitter:description" content="Traçando gráficos de barra com charts.js
+
+
+
+
+
+
+
+Traçando gráficos de linha com chart.js
+
+
+
+
+Traçando gráficos com plot.ly
+
+
+
+
+
+
+
+">
 <meta name="twitter:creator" content="@ajustetecnico">
 <!-- End Twitter Cards -->
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Alô, mundo!">
-<meta property="og:description" content="Blog são bastante dinâmicos e dão trabalho para escrever e manter. Por sorte, existem iniciativas que facilitam o trabalho dos autores para criar seus posts e manter páginas elegantes para todos apreciarem (e criticarem). Quando me refiro a iniciativas, trato de ferramentas apropriadas que foram criadas especificamente para escrita de...">
-<meta property="og:url" content="/blog/2018/06/12/alo-mundo/">
+<meta property="og:title" content="Traçando gráficos">
+<meta property="og:description" content="Traçando gráficos de barra com charts.js
+
+
+
+
+
+
+
+Traçando gráficos de linha com chart.js
+
+
+
+
+Traçando gráficos com plot.ly
+
+
+
+
+
+
+
+">
+<meta property="og:url" content="/blog/2018/09/18/plots/">
 <meta property="og:site_name" content="Ajuste Técnico">
 
 <meta property="og:image" content="/images/sitelogo.png">
@@ -89,11 +152,57 @@ Credits: /disclosure
 <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
 
 
-<link rel="canonical" href="/blog/2018/06/12/alo-mundo/">
+<link rel="canonical" href="/blog/2018/09/18/plots/">
 <link rel="author" href="https://plus.google.com/+ajustetecnico?rel=author">
 
 <!-- RSS -->
 <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+
+  <!--Load Mathjax-->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'" 
+                }
+            },
+            showProcessingMessages: false
+        });
+    </script>
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ['\(', '\)'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
 
 
 
@@ -167,74 +276,148 @@ Credits: /disclosure
 
       <div class="container content">
         <div class="post">
-  <h1 itemprop="name" class="post-title">Alô, mundo! </h1>
+  <h1 itemprop="name" class="post-title">Traçando gráficos </h1>
 	<h3 itemprop="name" class="post-author">por Agostinho Brito </h3>
-  <span class="post-date" itemprop="datePublished" content="2018-06-12"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/06/12/alo-mundo/" itemprop="url" title="Permanent link to this post">12 Jun 2018</a> </i></span>
+  <span class="post-date" itemprop="datePublished" content="2018-09-18"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/09/18/plots/" itemprop="url" title="Permanent link to this post">18 Sep 2018</a> </i></span>
   
-  <span class="post-tags" itemprop="keywords" content=""></span>
+  <span class="post-tags" itemprop="keywords" content="Equacoes and Gráficos"><i class="fa fa-tags" title="page tags"></i> <a href="/tags/#Equacoes" title="Pages tagged Equacoes" rel="tag">Equacoes</a> •  <a href="/tags/#Gr%C3%A1ficos" title="Pages tagged Gráficos" rel="tag">Gráficos</a></span>
     
-      <span class="social-icons"><a href="https://twitter.com/share?text=Al%C3%B4,%20mundo!&amp;url=/blog/2018/06/12/alo-mundo/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
-<a href="https://plus.google.com/share?url=/blog/2018/06/12/alo-mundo/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
-<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/06/12/alo-mundo/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+      <span class="social-icons"><a href="https://twitter.com/share?text=Tra%C3%A7ando%20gr%C3%A1ficos&amp;url=/blog/2018/09/18/plots/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=/blog/2018/09/18/plots/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/09/18/plots/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
 
 
 <a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
 </span>
 
     
-  <p>Blog são bastante dinâmicos e dão trabalho para escrever e manter. Por
-sorte, existem iniciativas que facilitam o trabalho dos autores para
-criar seus posts e manter páginas elegantes para todos apreciarem (e
-criticarem).</p>
+  <h2 id="traando-grficos-de-barra-com-chartsjshttpschartjsorg">Traçando gráficos de barra com <a href="https://chartjs.org">charts.js</a>
+</h2>
 
-<p>Quando me refiro a iniciativas, trato de ferramentas apropriadas
-que foram criadas especificamente para escrita de blogs.</p>
+<canvas id="myChart-bar" width="600" height="380"></canvas>
 
-<!--more-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
-<p>Já usei algumas delas: blogspot, wordpress, alguns ensaios com
-asciidoctor, mas este blog foi construído usando
-<a href="http://jekyllrb.com">Jekyll</a>. Em suma, jekyll é uma ferramenta
-simples que visa transformar texto simples em websites. É feito em
-ruby, é de uso livre e é suportado pelo serviço <a href="https://pages.github.com/">Github
-Pages</a>. O próprio Github possui ferramentas
-online para ajudar a dar os primeiros passos na criação de um blog
-pessoal.</p>
+<script>
+var ctx = document.getElementById("myChart-bar");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Azul", "Vermelho", "Amarelo", "Verde", "Purpura", "Laranja"],
+        datasets: [{
+            label: 'probabilidade de ocorrência',
+            data: [3, 15, 1, 2, 2, 20],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                },
+                  scaleLabel: {
+       			  display: true,
+        		  labelString: 'probabilidade'
+				}			 
+            }],
+			xAxes:
+			[{
+			      scaleLabel:{
+				  display: true,
+				labelString: 'cor'
+			}}
+			]
+        }
+    }
+});
+</script>
 
-<p>Jekyll vai além, suportando a criação de temas que embelezam as
-páginas e que podem ser adaptados para gostos pessoais.</p>
+<h2 id="traando-grficos-de-linha-com-chartjs">Traçando gráficos de linha com chart.js</h2>
 
-<p>Esse site foi feito com um fork do tema <a href="https://github.com/dyndna/lanyon-plus">Lanyon
-Plus</a>. O tema, junto com o
-conjunto de páginas de layouts pré-definidos permitem criar posts que
-são naturalmente suportados pelo Github pages e tornam a edição dos
-posts algo bem tranquilo de fazer.</p>
+<canvas id="myChart-line" width="600" height="380"></canvas>
+<script>
+var ctx = document.getElementById("myChart-line");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+				labels: [1950, 1960, 1970, 1980, 1991, 2000, 2010],
+        datasets:
+				[
+						{
+								data: [51,70,94,121,146,169,190],
+				  			label: "Crescimento populacional",
+								borderColor: "#3e95cd",
+								fill: false
+						}, {
+								data: [48,52,57,62,66,69,73],
+								label: "Expectativa de vida",
+								borderColor: "#3cba9f",
+								fill: false
+						}
+				]
+    },
+    options: {
+				title:{
+						display: true,
+						text: 'crescimento populacional'
+				}
+     }
+});
+</script>
 
-<p>Os posts são escritos em Markdown, uma espécie de forma de marcar o
-texto simples para que, quando processado, as marcações signifiquem
-coisas especiais para serem exibidas. Com Markdown, espera-se que o
-processador escrito em Jekyll interprete as marcações e formate belas
-páginas nos posts, enquanto o processo de escrita é facilitado.</p>
+<h2 id="traando-grficos-com-plotly">Traçando gráficos com plot.ly</h2>
 
-<p>Tem uma lista de dicas
-<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Aqui</a>
-com as marcações mais comuns. Dando uma olhada rápida dá para se
-compreender como faz.</p>
+<div id="tester" style="width:600px;height:380px;"></div>
 
-<p>Vamos procurar fazer alguns exemplos em outros posts para mostrar
-dicas de uso.</p>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<p>Valeu!</p>
+<script>
+
+var trace1 = {
+  x: [1, 2, 3, 4],
+  y: [16, 11, 12, 21],
+  type: 'scatter'
+};
+
+var trace2 = {
+  x: [1, 2, 3, 4],
+  y: [10, 5, 11, 9],
+  line: {shape: 'spline'},
+  type: 'scatter'
+};
+
+var data = [trace1, trace2];
+
+Plotly.newPlot('tester', data);
+</script>
+
 
   <hr>
   
-  <span class="post-date metafoot" itemprop="datePublished" content="2018-06-12"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/06/12/alo-mundo/" itemprop="url" title="Permanent link to this post">12 Jun 2018</a> </i></span>
+  <span class="post-date metafoot" itemprop="datePublished" content="2018-09-18"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="/blog/2018/09/18/plots/" itemprop="url" title="Permanent link to this post">18 Sep 2018</a> </i></span>
   
-  <span class="post-tags" itemprop="keywords" content=""></span>
+  <span class="post-tags" itemprop="keywords" content="Equacoes and Gráficos"><i class="fa fa-tags" title="page tags"></i> <a href="/tags/#Equacoes" title="Pages tagged Equacoes" rel="tag">Equacoes</a> •  <a href="/tags/#Gr%C3%A1ficos" title="Pages tagged Gráficos" rel="tag">Gráficos</a></span>
     
-      <span class="social-icons"><a href="https://twitter.com/share?text=Al%C3%B4,%20mundo!&amp;url=/blog/2018/06/12/alo-mundo/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
-<a href="https://plus.google.com/share?url=/blog/2018/06/12/alo-mundo/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
-<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/06/12/alo-mundo/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+      <span class="social-icons"><a href="https://twitter.com/share?text=Tra%C3%A7ando%20gr%C3%A1ficos&amp;url=/blog/2018/09/18/plots/&amp;via=ajustetecnico" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=/blog/2018/09/18/plots/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/2018/09/18/plots/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
 
 
 <a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
@@ -255,9 +438,9 @@ dicas de uso.</p>
   <tbody>
     <tr>
       <td>
-<i class="fa fa-anchor"> /blog/2018/06/12/alo-mundo/</i><br><i class="fa fa-calendar"> 12-Jun-18</i><br><i class="fa fa-creative-commons"> BY-NC-SA 4.0 /disclosure</i>
+<i class="fa fa-anchor"> /blog/2018/09/18/plots/</i><br><i class="fa fa-calendar"> 18-Sep-18</i><br><i class="fa fa-creative-commons"> BY-NC-SA 4.0 /disclosure</i>
 </td>
-      <td><img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=/blog/2018/06/12/alo-mundo/&amp;choe=UTF-8" alt="/blog/2018/06/12/alo-mundo/"></td>
+      <td><img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=/blog/2018/09/18/plots/&amp;choe=UTF-8" alt="/blog/2018/09/18/plots/"></td>
     </tr>
   </tbody>
 </table>
@@ -271,40 +454,76 @@ dicas de uso.</p>
 <ul>
   
      
+       
+        
+       
+        
       
     
   
      
-      
-    
-  
-     
-      
-    
-  
-     
-      
-    
-  
-     
-      
-    
-  
-     
-      
-    
-  
-     
+       
+        
+       
+        
       
     
   
     
   
      
+       
+        
+       
+        
       
     
   
      
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
       
     
   
@@ -313,10 +532,10 @@ dicas de uso.</p>
 
 <div class="prevnext">
   
-    <a class="prevnext-item older" href="/blog/2015/01/31/whats-jekyll/" title="What's Jekyll?">Older</a>
+    <a class="prevnext-item older" href="/blog/2018/08/30/detecao-assinaturas-part1/" title="Detecção de assinaturas em listas de presenças - Parte 1">Older</a>
   
   
-    <a class="prevnext-item older" href="/blog/2018/08/01/install-jekyll-blog/" title="Instalando Jekyll...">Newer</a>
+    <a class="prevnext-item older" href="/blog/2018/09/18/equacoes-markdown/" title="Usando Equações em Markdown">Newer</a>
   
 </div>
 

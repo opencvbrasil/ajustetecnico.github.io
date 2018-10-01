@@ -5,7 +5,7 @@
     <description>Divulgação de habilidades em Engenharia de Computação</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-09-17T14:00:15-03:00</updated>
+    <updated>2018-10-01T16:12:55-03:00</updated>
     <id></id>
     <author>
       <name>Ajuste Técnico</name>
@@ -175,13 +175,15 @@ produz&lt;/p&gt;
 &lt;p&gt;Matrizes em LaTeX são criadas com os comandos &lt;code class=&quot;highlighter-rouge&quot;&gt;matrix&lt;/code&gt; e
 &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt;. Há outros também, mas esse são os mais comuns e utilizados.&lt;/p&gt;
 
-&lt;p&gt;Ex: 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;x = \left[\begin{matrix}
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	x = \left[\begin{matrix}
   1 &amp;amp; 2 &amp;amp; 3 \\
   4 &amp;amp; 5 &amp;amp; 6 \\
   7 &amp;amp; 8 &amp;amp; 9
  \end{matrix}\right]
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;produz&lt;/p&gt;
 
@@ -195,13 +197,15 @@ x = \left[\begin{matrix}
 &lt;p&gt;O comando &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt; permite que as matrizes possam ser trabalhadas
   na forma do &lt;em&gt;environment&lt;/em&gt; tabular usado para criar tabelas em LaTeX.&lt;/p&gt;
 
-&lt;p&gt;Ex: 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;y = \begin{array}{c|c|c}
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;y = \begin{array}{c|c|c}
 \sin(x) &amp;amp; x^2 &amp;amp; x_3 \\ \hline
   \frac{1}{3} &amp;amp; \int_1^3 f(x) dx &amp;amp; 6 \\ \hline
   7 &amp;amp; 8 &amp;amp; 9 \\
  \end{array}
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;produz&lt;/p&gt;
 
@@ -219,25 +223,27 @@ array ou uma sequência a ser completada. Os comandos são o da família
 &lt;code class=&quot;highlighter-rouge&quot;&gt;dots&lt;/code&gt;, e podem representar continuidades verticais, horizontais
 ou diagonais.&lt;/p&gt;
 
-&lt;p&gt;Ex:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-x = [\begin{matrix} x_1 &amp;amp; x_2 &amp;amp; x_3 &amp;amp; \dots &amp;amp; x_n \end{matrix}]
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;x = [\begin{matrix} x_1 &amp;amp; x_2 &amp;amp; x_3 &amp;amp; \dots &amp;amp; x_n \end{matrix}]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;produz&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
 x = [\begin{matrix} x_1 &amp; x_2 &amp; x_3 &amp; \dots &amp; x_n \end{matrix}] %]]&gt;&lt;/script&gt;
 
-&lt;p&gt;Ex:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-\mathrm{A} = \left[\begin{matrix}
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\mathrm{A} = \left[\begin{matrix}
 a_{11} &amp;amp; a_{12} &amp;amp; \dots &amp;amp; a_{1N} \\
 a_{21} &amp;amp; a_{22} &amp;amp; \dots &amp;amp; a_{2N} \\
 \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
 a_{M1} &amp;amp; a_{M2} &amp;amp; \dots &amp;amp; a_{MN} 
 \end{matrix} \right]
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;produz&lt;/p&gt;
 
@@ -284,8 +290,8 @@ imagem, tipo &lt;img style=&quot;vertical-align=middle; display: inline&quot; sr
 ficava comprometida, desalinhada ou com péssima qualidade visual.&lt;/p&gt;
 
 &lt;p&gt;Um exemplo de ferramenta que criava equações dessa maneira era
-&lt;a href=&quot;www.latex2html.org&quot;&gt;latex2html&lt;/a&gt;. Embora antiga, transformava com
-algum sucesso documentos escritos em &lt;a href=&quot;www.latex-project.org&quot;&gt;LaTeX&lt;/a&gt;
+&lt;a href=&quot;http://www.latex2html.org&quot;&gt;latex2html&lt;/a&gt;. Embora antiga, transformava com
+algum sucesso documentos escritos em &lt;a href=&quot;http://www.latex-project.org&quot;&gt;LaTeX&lt;/a&gt;
 para HTML. As equações surgiam na forma de imagens no fluxo do texto.&lt;/p&gt;
 
 &lt;p&gt;Com o tempo, tentativas de padronização foram surgindo, como
@@ -293,12 +299,12 @@ para HTML. As equações surgiam na forma de imagens no fluxo do texto.&lt;/p&gt
 Consortium. Trata-se de uma especificação em &lt;a href=&quot;www.w3.org/XML&quot;&gt;XML&lt;/a&gt; que
 descreve como conteúdos matemáticos e científicos devem ser
 interpretados por um navegador. O problema é que nem todos suportam a
-especificação, tal como o &lt;a href=&quot;www.google.com/chrome&quot;&gt;Google Chrome&lt;/a&gt;.&lt;/p&gt;
+especificação, tal como o &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Google Chrome&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;mathjax&quot;&gt;MathJax&lt;/h2&gt;
 
 &lt;p&gt;Recentemente, uma solução definitiva parece ter sido encontrada:
-&lt;a href=&quot;www.mathjax.org&quot;&gt;MathJax&lt;/a&gt;. A proposta do projeto é permitir que
+&lt;a href=&quot;http://www.mathjax.org&quot;&gt;MathJax&lt;/a&gt;. A proposta do projeto é permitir que
 equações escritas em LaTeX possam ser desenhadas diretamente no fluxo
 do texto usando um motor desenvolvido em javascript para esse fim.&lt;/p&gt;
 
@@ -381,6 +387,133 @@ apresentadas no navegador.&lt;/p&gt;
         <pubDate>Tue, 18 Sep 2018 00:00:00 -0300</pubDate>
         <link>/blog/2018/09/18/equacoes-markdown/</link>
         <guid isPermaLink="true">/blog/2018/09/18/equacoes-markdown/</guid>
+      </item>
+    
+      <item>
+        <title>Traçando gráficos</title>
+        
+          <description>&lt;h2 id=&quot;traando-grficos-de-barra-com-chartsjshttpschartjsorg&quot;&gt;Traçando gráficos de barra com &lt;a href=&quot;https://chartjs.org&quot;&gt;charts.js&lt;/a&gt;&lt;/h2&gt;
+
+&lt;canvas id=&quot;myChart-bar&quot; width=&quot;600&quot; height=&quot;380&quot;&gt;&lt;/canvas&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var ctx = document.getElementById(&quot;myChart-bar&quot;);
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [&quot;Azul&quot;, &quot;Vermelho&quot;, &quot;Amarelo&quot;, &quot;Verde&quot;, &quot;Purpura&quot;, &quot;Laranja&quot;],
+        datasets: [{
+            label: 'probabilidade de ocorrência',
+            data: [3, 15, 1, 2, 2, 20],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                },
+                  scaleLabel: {
+       			  display: true,
+        		  labelString: 'probabilidade'
+				}			 
+            }],
+			xAxes:
+			[{
+			      scaleLabel:{
+				  display: true,
+				labelString: 'cor'
+			}}
+			]
+        }
+    }
+});
+&lt;/script&gt;
+
+&lt;h2 id=&quot;traando-grficos-de-linha-com-chartjs&quot;&gt;Traçando gráficos de linha com chart.js&lt;/h2&gt;
+
+&lt;canvas id=&quot;myChart-line&quot; width=&quot;600&quot; height=&quot;380&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+var ctx = document.getElementById(&quot;myChart-line&quot;);
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+				labels: [1950, 1960, 1970, 1980, 1991, 2000, 2010],
+        datasets:
+				[
+						{
+								data: [51,70,94,121,146,169,190],
+				  			label: &quot;Crescimento populacional&quot;,
+								borderColor: &quot;#3e95cd&quot;,
+								fill: false
+						}, {
+								data: [48,52,57,62,66,69,73],
+								label: &quot;Expectativa de vida&quot;,
+								borderColor: &quot;#3cba9f&quot;,
+								fill: false
+						}
+				]
+    },
+    options: {
+				title:{
+						display: true,
+						text: 'crescimento populacional'
+				}
+     }
+});
+&lt;/script&gt;
+
+&lt;h2 id=&quot;traando-grficos-com-plotly&quot;&gt;Traçando gráficos com plot.ly&lt;/h2&gt;
+
+&lt;div id=&quot;tester&quot; style=&quot;width:600px;height:380px;&quot;&gt;&lt;/div&gt;
+
+&lt;script src=&quot;https://cdn.plot.ly/plotly-latest.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+
+var trace1 = {
+  x: [1, 2, 3, 4],
+  y: [16, 11, 12, 21],
+  type: 'scatter'
+};
+
+var trace2 = {
+  x: [1, 2, 3, 4],
+  y: [10, 5, 11, 9],
+  line: {shape: 'spline'},
+  type: 'scatter'
+};
+
+var data = [trace1, trace2];
+
+Plotly.newPlot('tester', data);
+&lt;/script&gt;
+
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Traçando gráficos&amp;url=/blog/2018/09/18/plots/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/09/18/plots/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Tue, 18 Sep 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/09/18/plots/</link>
+        <guid isPermaLink="true">/blog/2018/09/18/plots/</guid>
       </item>
     
       <item>
@@ -477,102 +610,6 @@ dos alunos, que para a detecção não interferem no resultado).&lt;/p&gt;
         <pubDate>Thu, 30 Aug 2018 08:44:21 +0000</pubDate>
         <link>/blog/2018/08/30/detecao-assinaturas-part1/</link>
         <guid isPermaLink="true">/blog/2018/08/30/detecao-assinaturas-part1/</guid>
-      </item>
-    
-      <item>
-        <title>Detecção de assinaturas em listas de presenças - Parte 1</title>
-        
-          <description>&lt;p&gt;Olá,&lt;/p&gt;
-
-&lt;p&gt;Nesse post iremos iniciar uma discussão acerca de um trabalho
-desenvolvido durante nosso curso de graduação na UFRN.&lt;/p&gt;
-
-&lt;p&gt;Trata-se de um algoritmo de detecção de assinaturas em listas de
-presenças, muito utilizadas pelos professores para registrar para a
-presença dos alunos em sala de aula.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;motivaes&quot;&gt;Motivações&lt;/h2&gt;
-
-&lt;p&gt;Existem diversas maneiras de obter as presenças dos alunos em uma sala
-de aula. O registro pode ser feito pelas assinatura dos alunos em uma
-lista de presença, preenchendo um formulário impresso, também
-conhecida como “chamada” (que também pode ser feita via web), por
-reconhecimento facial, detecção via ponto eletrônico. As
-possibilidades são muitas…&lt;/p&gt;
-
-&lt;p&gt;Focando no método pelas assinaturas dos alunos, é um método bastante
-utilizado em diversas instituições de ensino superior pelo Brasil
-(como na UFRN), onde é passado uma lista de assinaturas para os alunos
-preencherem.&lt;/p&gt;
-
-&lt;p&gt;O problema de processar as listas surge quando é necessário salvar
-essas assinaturas em algum outro lugar (como na Web), pois demanda um
-tempo considerável para o docente ter que conferir folha a folha,
-assinatura a assinatura, para salvá-las no sistema acadêmico. A
-existência de um mecanismo que torne facilite esse processo para o
-docente foi o motivador para o trabalho. E desenvolvê-lo usando
-técnicas de visão artificial foi o grande desafio.&lt;/p&gt;
-
-&lt;p&gt;A foto abaixo ilustra um exemplo de lista de presença. Provavelmente,
-a maioria dos leitores já se deparou com uma.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/deteccao-assinaturas/lista-assinaturas.jpg&quot; alt=&quot;Lista de presença&quot; title=&quot;Lista de Presenca&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Processar uma lista como essa esbarra em uma série de dificuldades
-técnicas que algoritmos simples não resolvem o problema com
-facilidade.&lt;/p&gt;
-
-&lt;p&gt;Esse post visa apresentar as motivações para um algoritmo de
-reconhecimento automático dessas assinaturas utilizando de ferramentas
-como &lt;a href=&quot;http://www.opencv.org&quot;&gt;OpenCV&lt;/a&gt;, uma biblioteca multi-linguagem
-para algoritmos em Visão Computacional) e QR codes, código de barras
-bidimensional bastante popular.&lt;/p&gt;
-
-&lt;h2 id=&quot;um-modelo-adaptado-para-a-lista-de-assinaturas&quot;&gt;Um modelo adaptado para a lista de assinaturas&lt;/h2&gt;
-
-&lt;p&gt;Um link para o modelo de lista de assinaturas sobre o
-qual o algoritmo foi construido pode ser
-obtido
-&lt;a href=&quot;https://github.com/teonacio/GIT_lista_de_presenca/blob/master/_pdf/qrnovo.pdf&quot;&gt;neste endereço&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;E porque adaptar os modelos tradicionais? Para facilitar a tarefa do
-próprio algoritmo usando QR codes. Os códigos estão lá para ajudar no
-processo de ajuste de possíveis distorções que ocorrem quando a câmera
-é posicionada nas laterais da imagem. Num scanner tradicional o efeito
-de distorção de perspectiva não ocorre.&lt;/p&gt;
-
-&lt;p&gt;Códigos de barra e códigos QR são bem populares e além de guardarem
-informações (geralmente URLs) também podem ser usados para identificar
-as posições dos cantos da folha e realizar a correção de perspectiva.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/deteccao-assinaturas/qrcode-example.png&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apesar de os círculos vermelhos estarem exagerados, o intuito é
-explicar que, utilizando a biblioteca ZBar (biblioteca para detecção
-de QR codes e barcodes em geral), conseguimos recuperar não apenas o
-conteúdo do QR code scaneado, mas também as posições dos pixels
-extremos de cada QR code.&lt;/p&gt;
-
-&lt;p&gt;Essa informação é muito útil, pois ao scanear o modelo, recuperamos as
-posições dos extremos do retângulo com as assinaturas, utilizando
-apenas as posições dos extremos dos quatro QR codes do modelo. Ou
-seja: Todo o resto do modelo (espaços em branco) não interferem no
-algoritmo, e podem ser utilizados para inserir informações acerca da
-instuição (logotipo, nome) e da turma (disciplina, turno, professor).&lt;/p&gt;
-
-&lt;p&gt;No próximo post, ireimos explicar como, a partir do retângulo
-de assinaturas, separamos apenas as assinaturas (excluimos os nomes
-dos alunos, que para a detecção não interferem no resultado).&lt;/p&gt;
-
-&lt;p&gt;Até lá!&lt;/p&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Detecção de assinaturas em listas de presenças - Parte 1&amp;url=/blog/2018/08/21/detecao-assinaturas-part1/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/21/detecao-assinaturas-part1/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
-</description>
-        
-        <pubDate>Tue, 21 Aug 2018 08:44:21 +0000</pubDate>
-        <link>/blog/2018/08/21/detecao-assinaturas-part1/</link>
-        <guid isPermaLink="true">/blog/2018/08/21/detecao-assinaturas-part1/</guid>
       </item>
     
       <item>
@@ -833,119 +870,6 @@ ajuda a criação de blogs com alguns temas sugeridos.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Instalando Jekyll...</title>
-        
-          <description>&lt;p&gt;A criação de um blog com Jekyll pode ser feito com passos simples,
-como será mostrado nesse post. Funciona que é uma maravilha, mas é
-necessário que o sistema tenha disponível todo o aparato que o Jekyll
-precisa para operar e, normalmente, esse aparato não vem instalado por
-default num &lt;em&gt;fresh install&lt;/em&gt; do sistema.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Os passos seguintes foram testados em um sistema GNU Linux Ubuntu,
-versão 18.04 &lt;em&gt;fresh install&lt;/em&gt;, ou seja, num sistema recém-instalado,
-sem nenhuma das ferramentas necessárias para uma execução adequada de
-um blog com Jekyll.&lt;/p&gt;
-
-&lt;p&gt;O primeiro passo foi a instalação é do próprio Jekyll. Basta digitar o comando&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt install jekyll
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;que praticamente todo o ferramental que necessário será
-instalado. Como o Jekyll é feito em ruby, todas as dependências para
-que funcione também são instaladas, como o próprio interpretador ruby,
-bibliotecas para a criação de um pequeno servidor web e formatadores de
-conteúdo, entre outras coisas.&lt;/p&gt;
-
-&lt;p&gt;O &lt;em&gt;ruby bundler&lt;/em&gt; também deve ser instalado. Trata-se de uma ferramenta
-que permite a instalação automática de pacotes em ruby que podem ser
-necessários para personalização da página &lt;em&gt;default&lt;/em&gt; que criada pelo
-Jekyll. Não necessariamente sua presença é necessária, mas vários
-temas criados para o Jekyll usam &lt;em&gt;gemas&lt;/em&gt; do ruby para melhorar
-aspectos visuais e introduzir elementos nas páginas. A incorporação
-dessa gemas é justamente tratada pelo &lt;code class=&quot;highlighter-rouge&quot;&gt;bundler&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt install bundler
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Daqui para frente a criação de um repositório local para o blog pode
-ser feita com comandos adaptados diretamento do próprio site
-&lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyllrb.com&lt;/a&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new meublog
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;meublog
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Ou quase… Essa última instrução nem sempre funciona. No Ubuntu o
-bundler exige a presença de um arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; no diretório onde o
-blog foi criado (no caso, o diretório &lt;code class=&quot;highlighter-rouge&quot;&gt;meublog&lt;/code&gt;) e esse arquivo não é
-criado por default pelo Jekyll. Basta criar um arquivo vazio com
-qualquer editor de texto e nomeá-lo como &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; ou fazer isso na
-própria shell com o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;touch&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;touch Gemfile
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Agora é só repetir a instrução que invoca o bundler que o sistema será
-preparado sem erros.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Se a instalação tiver sido feita corretamente as seguintes mensagems
-deverão ser apresentadas no terminal:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Configuration file: /home/user/meublog/_config.yml
-            Source: /home/user/meublog
-       Destination: /home/user/meublog/_site
- Incremental build: disabled. Enable with --incremental
-      Generating... 
-                    &lt;span class=&quot;k&quot;&gt;done in &lt;/span&gt;0.225 seconds.
- Auto-regeneration: enabled &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/home/user/meublog'&lt;/span&gt;
-    Server address: http://127.0.0.1:4000/
-  Server running... press ctrl-c to stop.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;O Jekyll deverá processar as páginas criadas localmente,
-convertendo-as para HTML e hospedando-as no diretório _site, de onde
-as páginas são dispensadas para o navegador.&lt;/p&gt;
-
-&lt;p&gt;Agora é só acessar o endereço
-&lt;a href=&quot;http://127.0.0.1:4000/&quot;&gt;http://127.0.0.1:4000&lt;/a&gt; no seu navegador e o
-esqueleto do blog deverá ser mostrado.&lt;/p&gt;
-
-&lt;p&gt;Mantenha o terminal onde o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle&lt;/code&gt; foi lançado, para não
-finalizar o processo que executa o pequeno servidor web e ainda poder
-acompanhar todas as alterações realizadas no desenvolvimento dos
-posts.&lt;/p&gt;
-
-&lt;p&gt;Os procedimentos descritos aqui servem apenas para criar um esqueleto
-bem rudimentar para um blog baseado em Jekyll. A criação de um blog
-com qualidade visual diferenciada é possível e será fruto de um post
-futuro.&lt;/p&gt;
-
-&lt;p&gt;Para os curiosos, é possível trabalhar com temas em Jekyll, como
-sugerem sites como &lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;jekyllthemes.io&lt;/a&gt;. O
-próprio &lt;a href=&quot;https://github.com&quot;&gt;github.com&lt;/a&gt; suporta Jekyll e, inclusive,
-ajuda a criação de blogs com alguns temas sugeridos.&lt;/p&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Instalando Jekyll...&amp;url=/blog/2018/08/01/install-jekyll-blog/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/08/01/install-jekyll-blog/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
-</description>
-        
-        <pubDate>Wed, 01 Aug 2018 00:00:00 -0300</pubDate>
-        <link>/blog/2018/08/01/install-jekyll-blog/</link>
-        <guid isPermaLink="true">/blog/2018/08/01/install-jekyll-blog/</guid>
-      </item>
-    
-      <item>
         <title>Alô, mundo!</title>
         
           <description>&lt;p&gt;Blog são bastante dinâmicos e dão trabalho para escrever e manter. Por
@@ -1019,6 +943,317 @@ dicas de uso.&lt;/p&gt;
         <pubDate>Sat, 31 Jan 2015 00:00:00 -0300</pubDate>
         <link>/blog/2015/01/31/whats-jekyll/</link>
         <guid isPermaLink="true">/blog/2015/01/31/whats-jekyll/</guid>
+      </item>
+    
+      <item>
+        <title>Example content</title>
+        
+          <description>&lt;p&gt;Howdy! This is an example blog post that shows features supported in &lt;strong&gt;lanyon-plus&lt;/strong&gt; theme. See &lt;a href=&quot;https://raw.githubusercontent.com/dyndna/lanyon-plus/master/_posts/2013-01-01-example-content.md&quot;&gt;raw post&lt;/a&gt; for required YAML header and liquid tag specifications.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading&quot; id=&quot;markdown-toc-heading&quot;&gt;Heading&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inline-html-elements&quot; id=&quot;markdown-toc-inline-html-elements&quot;&gt;Inline HTML elements&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#code&quot; id=&quot;markdown-toc-code&quot;&gt;Code&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#alternate-code-block&quot; id=&quot;markdown-toc-alternate-code-block&quot;&gt;Alternate code block:&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#pygments-based-highlighting-deprecated&quot; id=&quot;markdown-toc-pygments-based-highlighting-deprecated&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pygments&lt;/code&gt; based highlighting (deprecated)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lists&quot; id=&quot;markdown-toc-lists&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tables&quot; id=&quot;markdown-toc-tables&quot;&gt;Tables&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#markdown-formatted&quot; id=&quot;markdown-toc-markdown-formatted&quot;&gt;markdown formatted:&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#html-table&quot; id=&quot;markdown-toc-html-table&quot;&gt;html table:&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#text-highlight&quot; id=&quot;markdown-toc-text-highlight&quot;&gt;Text highlight:&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#blockquotes&quot; id=&quot;markdown-toc-blockquotes&quot;&gt;Blockquotes&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#stylized&quot; id=&quot;markdown-toc-stylized&quot;&gt;stylized&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#regular&quot; id=&quot;markdown-toc-regular&quot;&gt;regular&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#embed-video&quot; id=&quot;markdown-toc-embed-video&quot;&gt;Embed video&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#embed-picture&quot; id=&quot;markdown-toc-embed-picture&quot;&gt;Embed picture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inline-css-attributes&quot; id=&quot;markdown-toc-inline-css-attributes&quot;&gt;Inline css attributes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#mathjax&quot; id=&quot;markdown-toc-mathjax&quot;&gt;MathJax&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#gist-embed&quot; id=&quot;markdown-toc-gist-embed&quot;&gt;gist embed&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#references&quot; id=&quot;markdown-toc-references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;heading&quot;&gt;Heading&lt;/h3&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;h1&quot;&gt;H1&lt;/h1&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;h2&quot;&gt;H2&lt;/h2&gt;
+
+&lt;h3 class=&quot;no_toc&quot; id=&quot;h3&quot;&gt;H3&lt;/h3&gt;
+
+&lt;h4 class=&quot;no_toc&quot; id=&quot;h4&quot;&gt;H4&lt;/h4&gt;
+
+&lt;h5 class=&quot;no_toc&quot; id=&quot;h5&quot;&gt;H5&lt;/h5&gt;
+
+&lt;h6 class=&quot;no_toc&quot; id=&quot;h6&quot;&gt;H6&lt;/h6&gt;
+
+&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
+
+&lt;h3 id=&quot;inline-html-elements&quot;&gt;Inline HTML elements&lt;/h3&gt;
+
+&lt;p&gt;HTML defines a long list of available inline tags, a complete list of which can be found on the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;To bold text&lt;/strong&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;To italicize text&lt;/em&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;em&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Abbreviations, like &lt;abbr title=&quot;HyperText Markup Langage&quot;&gt;HTML&lt;/abbr&gt; should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;, with an optional &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; attribute for the full phrase.&lt;/li&gt;
+  &lt;li&gt;Citations, like &lt;cite&gt;— Mark otto&lt;/cite&gt;, should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;Deleted&lt;/del&gt; text should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;del&amp;gt;&lt;/code&gt; and &lt;ins&gt;inserted&lt;/ins&gt; text should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Superscript &lt;sup&gt;text&lt;/sup&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; and subscript &lt;sub&gt;text&lt;/sub&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.&lt;/p&gt;
+
+&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
+
+&lt;p&gt;Cum sociis natoque penatibus et magnis dis &lt;code class=&quot;highlighter-rouge&quot;&gt;code element&lt;/code&gt; montes, nascetur ridiculus mus.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;return a + b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.&lt;/p&gt;
+
+&lt;h4 id=&quot;alternate-code-block&quot;&gt;Alternate code block:&lt;/h4&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uuid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stringr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parallel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data.table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;pygments-based-highlighting-deprecated&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pygments&lt;/code&gt; based highlighting (deprecated)&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;library&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;uuid&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+library&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stringr&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+library&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;parallel&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+library&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;data.table&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;lists&quot;&gt;Lists&lt;/h3&gt;
+
+&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/li&gt;
+  &lt;li&gt;Donec id elit non mi porta gravida at eget metus.&lt;/li&gt;
+  &lt;li&gt;Nulla vitae elit libero, a pharetra augue.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Vestibulum id ligula porta felis euismod semper.&lt;/li&gt;
+  &lt;li&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/li&gt;
+  &lt;li&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;HyperText Markup Language (HTML)&lt;/dt&gt;
+  &lt;dd&gt;The language used to describe and define the content of a Web page&lt;/dd&gt;
+
+  &lt;dt&gt;Cascading Style Sheets (CSS)&lt;/dt&gt;
+  &lt;dd&gt;Used to describe the appearance of Web content&lt;/dd&gt;
+
+  &lt;dt&gt;JavaScript (JS)&lt;/dt&gt;
+  &lt;dd&gt;The programming language used to build advanced Web sites and applications&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
+
+&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
+
+&lt;h4 id=&quot;markdown-formatted&quot;&gt;markdown formatted:&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Heading 1&lt;/th&gt;
+      &lt;th&gt;Heading 2&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Heading 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Hello&lt;/td&gt;
+      &lt;td&gt;World&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt; @foo&lt;/i&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+
+&lt;h4 id=&quot;html-table&quot;&gt;html table:&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Upvotes&lt;/th&gt;
+      &lt;th&gt;Downvotes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Totals&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;23&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alice&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bob&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Charlie&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;text-highlight&quot;&gt;Text highlight:&lt;/h3&gt;
+
+&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. &lt;code class=&quot;yelhglt highlighter-rouge&quot;&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Highlighted color will be removed during prinintg and replaced with underline.&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h3&gt;
+
+&lt;h4 id=&quot;stylized&quot;&gt;stylized&lt;/h4&gt;
+
+&lt;blockquote class=&quot;style1&quot;&gt;
+Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;regular&quot;&gt;regular&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;When you bring new things into a society, you can either, it’s like the balance of the force. You can either use it for good or you can use it for evil. And what happens when something new: People have a tendency to overdo it; they abuse it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;embed-video&quot;&gt;Embed video&lt;/h3&gt;
+
+&lt;hr class=&quot;transp&quot; /&gt;
+
+&lt;div class=&quot;ytube-video-container&quot;&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/iG9CE55wbtY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;hr class=&quot;transp&quot; /&gt;
+
+&lt;h3 id=&quot;embed-picture&quot;&gt;Embed picture&lt;/h3&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;/images//media/apple-icon.png&quot; alt=&quot;Toy example&quot; title=&quot;Toy example&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;inline-css-attributes&quot;&gt;Inline css attributes&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://haixing-hu.github.io/programming/2013/09/20/how-to-use-mathjax-in-jekyll-generated-github-pages/&quot; target=&quot;_blank&quot;&gt;MahJax source - link open in new window&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mathjax&quot;&gt;MathJax&lt;/h3&gt;
+
+&lt;p&gt;Let’s test some inline math $x$, $y$, $x_1$, $y_1$.&lt;/p&gt;
+
+&lt;p&gt;Now a inline math with special character: $|\psi\rangle$, $x’$, $x^*$ and $|\psi_1\rangle = a|0\rangle + b|1\rangle$&lt;/p&gt;
+
+&lt;p&gt;Test a display math:
+&lt;script type=&quot;math/tex&quot;&gt;|\psi_1\rangle = a|0\rangle + b|1\rangle&lt;/script&gt;
+Is it O.K.?&lt;/p&gt;
+
+&lt;p&gt;Test a display math with equation number:
+\begin{equation}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+\end{equation}
+Is it O.K.?&lt;/p&gt;
+
+&lt;p&gt;Test a display math with equation number:&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\begin{align}
+    |\psi_1\rangle &amp;= a|0\rangle + b|1\rangle \\
+    |\psi_2\rangle &amp;= c|0\rangle + d|1\rangle
+  \end{align} %]]&gt;&lt;/script&gt;
+Is it O.K.?&lt;/p&gt;
+
+&lt;p&gt;And test a display math without equaltion number:
+&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+    |\psi_1\rangle &amp;= a|0\rangle + b|1\rangle \\
+    |\psi_2\rangle &amp;= c|0\rangle + d|1\rangle
+  \end{align*} %]]&gt;&lt;/script&gt;
+Is it O.K.?&lt;/p&gt;
+
+&lt;p&gt;Test a display math with equation number:
+&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\begin{align}
+    |\psi_1\rangle &amp;= a|0\rangle + b|1\rangle \\
+    |\psi_2\rangle &amp;= c|0\rangle + d|1\rangle
+\end{align} %]]&gt;&lt;/script&gt;
+Is it O.K.?&lt;/p&gt;
+
+&lt;p&gt;And test a display math without equaltion number:
+&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+    |\psi_1\rangle &amp;= a|0\rangle + b|1\rangle \\
+    |\psi_2\rangle &amp;= c|0\rangle + d|1\rangle
+\end{align*} %]]&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;gist-embed&quot;&gt;gist embed&lt;/h3&gt;
+
+&lt;p&gt;Below is a partial code showing main steps of merge function.&lt;/p&gt;
+
+&lt;p&gt;&lt;code data-gist-id=&quot;0fe211678316cc53370c&quot; data-gist-file=&quot;merge_tables_datatable.R&quot; data-gist-line=&quot;50-52,57,65-69,80,88-90,100-106&quot;&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Multiple&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and with comments&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/dyndna/lanyon-plus/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://lanyon.getpoole.com&quot;&gt;lanyon theme&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+
+      &lt;p&gt;&lt;a href=&quot;https://github.com/dyndna/lanyon-plus&quot; title=&quot;accessed on January 01, 2013&quot;&gt;lanyon-plus theme&lt;/a&gt;&lt;/p&gt;
+
+      &lt;blockquote&gt;
+        &lt;p&gt;Excerpt: Sample post showing enabled features for post: &lt;code class=&quot;highlighter-rouge&quot;&gt;inline code&lt;/code&gt;, &lt;code class=&quot;yelhglt highlighter-rouge&quot;&gt;text highlight&lt;/code&gt;, code block with syntax highlights, embed gist, stylized blockquotes, video and image cards for twitter, markdown tables, inline and code bocks having mathjax support, references, print format, disqus comments, related posts, tags.&lt;/p&gt;
+      &lt;/blockquote&gt;
+      &lt;p&gt;&lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Example content&amp;url=/blog/2013/01/01/example_content/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2013/01/01/example_content/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Tue, 01 Jan 2013 00:00:00 -0300</pubDate>
+        <link>/blog/2013/01/01/example_content/</link>
+        <guid isPermaLink="true">/blog/2013/01/01/example_content/</guid>
       </item>
     
   </channel>

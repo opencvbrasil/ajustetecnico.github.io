@@ -25,8 +25,8 @@ src="/images/equacoes-markdown/equacao.png">, mas a exibição muitas vezes
 ficava comprometida, desalinhada ou com péssima qualidade visual.
 
 Um exemplo de ferramenta que criava equações dessa maneira era
-[latex2html](www.latex2html.org). Embora antiga, transformava com
-algum sucesso documentos escritos em [LaTeX](www.latex-project.org)
+[latex2html](http://www.latex2html.org). Embora antiga, transformava com
+algum sucesso documentos escritos em [LaTeX](http://www.latex-project.org)
 para HTML. As equações surgiam na forma de imagens no fluxo do texto.
 
 Com o tempo, tentativas de padronização foram surgindo, como
@@ -34,12 +34,12 @@ Com o tempo, tentativas de padronização foram surgindo, como
 Consortium. Trata-se de uma especificação em [XML](www.w3.org/XML) que
 descreve como conteúdos matemáticos e científicos devem ser
 interpretados por um navegador. O problema é que nem todos suportam a
-especificação, tal como o [Google Chrome](www.google.com/chrome).
+especificação, tal como o [Google Chrome](http://www.google.com/chrome).
 
 ## MathJax
 
 Recentemente, uma solução definitiva parece ter sido encontrada:
-[MathJax](www.mathjax.org). A proposta do projeto é permitir que
+[MathJax](http://www.mathjax.org). A proposta do projeto é permitir que
 equações escritas em LaTeX possam ser desenhadas diretamente no fluxo
 do texto usando um motor desenvolvido em javascript para esse fim.
 
