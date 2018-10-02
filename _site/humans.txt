@@ -7,6 +7,6 @@ Twitter: https://twitter.com/ajustetecnico
 Design Contributors: /disclosure/
 
 /* SITE */
-Last Updated: 2018/10/01
+Last Updated: 2018/10/02
 Standards: HTML5, CSS3
 Software: Sublime Text, Chrome, Jekyll, Git, Sass

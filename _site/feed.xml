@@ -5,7 +5,7 @@
     <description>Divulgação de habilidades em Engenharia de Computação</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-10-01T17:19:00-03:00</updated>
+    <updated>2018-10-02T08:08:55-03:00</updated>
     <id></id>
     <author>
       <name>Ajuste Técnico</name>
@@ -456,29 +456,46 @@ var myChart = new Chart(ctx, {
 var ctx = document.getElementById(&quot;myChart-line&quot;);
 var myChart = new Chart(ctx, {
     type: 'line',
-    data: {
-				labels: [1950, 1960, 1970, 1980, 1991, 2000, 2010],
-        datasets:
-				[
-						{
-								data: [51,70,94,121,146,169,190],
-				  			label: &quot;Crescimento populacional&quot;,
-								borderColor: &quot;#3e95cd&quot;,
-								fill: false
-						}, {
-								data: [48,52,57,62,66,69,73],
-								label: &quot;Expectativa de vida&quot;,
-								borderColor: &quot;#3cba9f&quot;,
-								fill: false
-						}
-				]
-    },
+	data: {
+      labels: [10, 20, 30, 40, 50],
+	datasets: [{
+			data: [1, 2, 5, 4, 3],
+			label: &quot;Experimento 1&quot;,
+			borderColor: &quot;#ff0000&quot;,
+			fill: false,
+			lineTension: 0.5
+	},{
+			data: [4, 5, 3, 3, 0],
+			label: &quot;Experimento 2&quot;,
+			borderColor: &quot;#00ff00&quot;,
+			fill: false,
+			lineTension: 0.0
+	}]
+	},
     options: {
 				title:{
 						display: true,
-						text: 'crescimento populacional'
-				}
-     }
+						text: 'Experimentos'
+				},
+				scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                },
+                scaleLabel: {
+       							display: true,
+        						labelString: 'Temperatura'
+								}			 
+            }],
+						xAxes:
+						[{
+								scaleLabel:{
+										display: true,
+										labelString: 'Tempo'
+								}
+						}]
+        }
+    }
 });
 &lt;/script&gt;
 
@@ -493,23 +510,39 @@ var myChart = new Chart(ctx, {
 var trace1 = {
   x: [1, 2, 3, 4],
   y: [16, 11, 12, 21],
-  type: 'scatter'
+		type: 'scatter',
+		name: 'Experimento1'
 };
 
 var trace2 = {
   x: [1, 2, 3, 4],
   y: [10, 5, 11, 9],
   line: {shape: 'spline'},
-  type: 'scatter'
+		type: 'scatter',
+		name: 'Experimento2'
+};
+
+var layout = {
+  title: 'Experimentos',
+  xaxis: {
+    title: 'Temperatura',
+    showgrid: true,
+    zeroline: false
+  },
+  yaxis: {
+    title: 'Tempo',
+    showline: false
+  }
 };
 
 var data = [trace1, trace2];
 
-Plotly.newPlot('plotit-2d', data);
+Plotly.newPlot('plotit-2d', data, layout);
 &lt;/script&gt;
 
 &lt;h2 id=&quot;tranando-grficos-3d-com-plotly&quot;&gt;Trançando gráficos 3d com plot.ly&lt;/h2&gt;
-&lt;div id=&quot;plotit-3d&quot; style=&quot;width:600px;height:380px;&quot;&gt;&lt;/div&gt;
+
+&lt;div id=&quot;plotit-3d&quot; style=&quot;width:600px;height:580px;&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
 Plotly.d3.csv('https://raw.githubusercontent.com/ajustetecnico/ajustetecnico.github.io/master/images/plots/myplot.csv', function(err, rows){
@@ -529,15 +562,15 @@ var data = [{
         }];
   
 var layout = {
-  title: 'Funcao',
+  title: 'Função f(x,y)',
   autosize: false,
   width: 600,
-  height: 380,
+  height: 580,
   margin: {
-    l: 65,
-    r: 50,
-    b: 65,
-    t: 90,
+    l: 0,
+    r: 0,
+    b: 0,
+    t: 50,
   }
 };
 Plotly.newPlot('plotit-3d', data, layout);
@@ -546,7 +579,7 @@ Plotly.newPlot('plotit-3d', data, layout);
 
 &lt;h2 id=&quot;traando-funes-diretamente-com-plotit&quot;&gt;Traçando funções diretamente com plot.it&lt;/h2&gt;
 
-&lt;div id=&quot;plotit-3d1&quot; style=&quot;width:600px;height:380px;&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;plotit-3d1&quot; style=&quot;width:600px;height:580px;&quot;&gt;&lt;/div&gt;
 
 &lt;p id=&quot;demo&quot;&gt;Alo&lt;/p&gt;
 
@@ -559,11 +592,22 @@ for(var x=-1; x&lt;1; x=x+0.05){
   }
   z1.push(zrow);
 }	
-
+var layout = {
+  title: 'Função f(x,y)',
+  autosize: false,
+  width: 600,
+  height: 580,
+  margin: {
+    l: 0,
+    r: 0,
+    b: 0,
+    t: 50,
+  }
+};
 document.getElementById(&quot;demo&quot;).innerHTML=z1.length+&quot;x&quot;+z1[0].length;
 
 var data_z1 = {z: z1, type: 'surface'};
-Plotly.newPlot('plotit-3d1', data_z1);
+Plotly.newPlot('plotit-3d1', [data_z1], layout);
 &lt;/script&gt;
 
 &lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Traçando gráficos&amp;url=/blog/2018/09/18/plots/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/09/18/plots/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
