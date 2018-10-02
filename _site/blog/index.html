@@ -306,7 +306,7 @@ var myChart = new Chart(ctx, {
 
 <h2 id="traando-grficos-com-plotly">Traçando gráficos com plot.ly</h2>
 
-<div id="tester" style="width:600px;height:380px;"></div>
+<div id="plotit-2d" style="width:600px;height:380px;"></div>
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -327,7 +327,7 @@ var trace2 = {
 
 var data = [trace1, trace2];
 
-Plotly.newPlot('tester', data);
+Plotly.newPlot('plotit-2d', data);
 </script>
 
 <h2 id="tranando-grficos-3d-com-plotly">Trançando gráficos 3d com plot.ly</h2>
@@ -340,7 +340,7 @@ function unpack(rows, key) {
 }
   
 var z_data=[ ]
-for(i=0;i<40;i++)
+for(i=0;i<41;i++)
 {
   z_data.push(unpack(rows,i));
 }
@@ -353,8 +353,8 @@ var data = [{
 var layout = {
   title: 'Funcao',
   autosize: false,
-  width: 500,
-  height: 500,
+  width: 600,
+  height: 380,
   margin: {
     l: 65,
     r: 50,
@@ -366,8 +366,31 @@ Plotly.newPlot('plotit-3d', data, layout);
 });
 </script>
 
+<h2 id="traando-funes-diretamente-com-plotit">Traçando funções diretamente com plot.it</h2>
+
+<div id="plotit-3d1" style="width:600px;height:380px;"></div>
+
+<p id="demo">Alo
+
+<script>
+z1 = [];
+for(var x=-1; x<1; x=x+0.05){
+  zrow = [];
+  for(var y=-1; y<1; y=y+0.05){
+    zrow.push((x*x+y*y)*Math.sin(6*x)*Math.cos(6*y));
+  }
+  z1.push(zrow);
+}	
+
+document.getElementById("demo").innerHTML=z1.length+"x"+z1[0].length;
+
+var data_z1 = {z: z1, type: 'surface'};
+Plotly.newPlot('plotit-3d1', data_z1);
+</script>
+
  <a href="/blog/2018/09/18/plots/" title="Read more"><strong>Read more...</strong></a>
-  </div>
+  </p>
+</div>
   <hr class="transp">
   
   <div class="post">

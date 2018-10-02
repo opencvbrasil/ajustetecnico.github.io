@@ -5,7 +5,7 @@
     <description>Divulgação de habilidades em Engenharia de Computação</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-10-01T16:21:11-03:00</updated>
+    <updated>2018-10-01T17:19:00-03:00</updated>
     <id></id>
     <author>
       <name>Ajuste Técnico</name>
@@ -484,7 +484,7 @@ var myChart = new Chart(ctx, {
 
 &lt;h2 id=&quot;traando-grficos-com-plotly&quot;&gt;Traçando gráficos com plot.ly&lt;/h2&gt;
 
-&lt;div id=&quot;tester&quot; style=&quot;width:600px;height:380px;&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;plotit-2d&quot; style=&quot;width:600px;height:380px;&quot;&gt;&lt;/div&gt;
 
 &lt;script src=&quot;https://cdn.plot.ly/plotly-latest.min.js&quot;&gt;&lt;/script&gt;
 
@@ -505,7 +505,7 @@ var trace2 = {
 
 var data = [trace1, trace2];
 
-Plotly.newPlot('tester', data);
+Plotly.newPlot('plotit-2d', data);
 &lt;/script&gt;
 
 &lt;h2 id=&quot;tranando-grficos-3d-com-plotly&quot;&gt;Trançando gráficos 3d com plot.ly&lt;/h2&gt;
@@ -518,7 +518,7 @@ function unpack(rows, key) {
 }
   
 var z_data=[ ]
-for(i=0;i&lt;40;i++)
+for(i=0;i&lt;41;i++)
 {
   z_data.push(unpack(rows,i));
 }
@@ -531,8 +531,8 @@ var data = [{
 var layout = {
   title: 'Funcao',
   autosize: false,
-  width: 500,
-  height: 500,
+  width: 600,
+  height: 380,
   margin: {
     l: 65,
     r: 50,
@@ -542,6 +542,28 @@ var layout = {
 };
 Plotly.newPlot('plotit-3d', data, layout);
 });
+&lt;/script&gt;
+
+&lt;h2 id=&quot;traando-funes-diretamente-com-plotit&quot;&gt;Traçando funções diretamente com plot.it&lt;/h2&gt;
+
+&lt;div id=&quot;plotit-3d1&quot; style=&quot;width:600px;height:380px;&quot;&gt;&lt;/div&gt;
+
+&lt;p id=&quot;demo&quot;&gt;Alo&lt;/p&gt;
+
+&lt;script&gt;
+z1 = [];
+for(var x=-1; x&lt;1; x=x+0.05){
+  zrow = [];
+  for(var y=-1; y&lt;1; y=y+0.05){
+    zrow.push((x*x+y*y)*Math.sin(6*x)*Math.cos(6*y));
+  }
+  z1.push(zrow);
+}	
+
+document.getElementById(&quot;demo&quot;).innerHTML=z1.length+&quot;x&quot;+z1[0].length;
+
+var data_z1 = {z: z1, type: 'surface'};
+Plotly.newPlot('plotit-3d1', data_z1);
 &lt;/script&gt;
 
 &lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Traçando gráficos&amp;url=/blog/2018/09/18/plots/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/09/18/plots/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
