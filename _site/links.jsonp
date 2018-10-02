@@ -41,11 +41,6 @@ callback([
   } ,
 
   {
-    "text": "Traçando gráficos",
-    "href": "/blog/2018/09/18/plots/"
-  } ,
-
-  {
     "text": "Usando Equações em Markdown",
     "href": "/blog/2018/09/18/equacoes-markdown/"
   } ,
@@ -53,6 +48,11 @@ callback([
   {
     "text": "Criando Equações em LaTeX",
     "href": "/blog/2018/09/19/equacoes-latex/"
+  } ,
+
+  {
+    "text": "Traçando gráficos em Jekyll",
+    "href": "/blog/2018/10/02/plots/"
   } 
 
 ])

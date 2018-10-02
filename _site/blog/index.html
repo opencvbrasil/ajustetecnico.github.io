@@ -170,6 +170,26 @@ Credits: /disclosure
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blog/2018/10/02/plots/">
+        Traçando gráficos em Jekyll
+      </a>
+    </h1>
+
+  <span class="post-date indexpg" itemprop="datePublished" content="2018-10-02"><i class="fa fa-calendar" title="Date published"> 02 Oct 2018</i> </span>
+
+ Há muitas formas de apresentar gráficos usando Jekyll. A mais simples
+é capturar uma tela da ferramenta usada para realizar o traçado e
+adicioná-la ao post na forma de uma imagem. Entretanto, há estratégias
+mais modernas e elegantes disponíveis para uso.
+
+Nesse post, testamos duas bibliotecas: <a href="https://chartjs.org">chart.js</a> e <a href="https://plot.ly">plot.ly</a>.
+
+ <a href="/blog/2018/10/02/plots/" title="Read more"><strong>Read more...</strong></a>
+  </div>
+  <hr class="transp">
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blog/2018/09/19/equacoes-latex/">
         Criando Equações em LaTeX
       </a>
@@ -202,239 +222,6 @@ que lidam equações e precisam apresentá-las para divulgar suas ideias.
 
  <a href="/blog/2018/09/18/equacoes-markdown/" title="Read more"><strong>Read more...</strong></a>
   </div>
-  <hr class="transp">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2018/09/18/plots/">
-        Traçando gráficos
-      </a>
-    </h1>
-
-  <span class="post-date indexpg" itemprop="datePublished" content="2018-09-18"><i class="fa fa-calendar" title="Date published"> 18 Sep 2018</i> </span>
-
- <h2 id="traando-grficos-de-barra-com-chartsjshttpschartjsorg">Traçando gráficos de barra com <a href="https://chartjs.org">charts.js</a>
-</h2>
-
-<canvas id="myChart-bar" width="600" height="380"></canvas>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-
-<script>
-var ctx = document.getElementById("myChart-bar");
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["Azul", "Vermelho", "Amarelo", "Verde", "Purpura", "Laranja"],
-        datasets: [{
-            label: 'probabilidade de ocorrência',
-            data: [3, 15, 1, 2, 2, 20],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                },
-                  scaleLabel: {
-       			  display: true,
-        		  labelString: 'probabilidade'
-				}			 
-            }],
-			xAxes:
-			[{
-			      scaleLabel:{
-				  display: true,
-				labelString: 'cor'
-			}}
-			]
-        }
-    }
-});
-</script>
-
-<h2 id="traando-grficos-de-linha-com-chartjs">Traçando gráficos de linha com chart.js</h2>
-
-<canvas id="myChart-line" width="600" height="380"></canvas>
-<script>
-var ctx = document.getElementById("myChart-line");
-var myChart = new Chart(ctx, {
-    type: 'line',
-	data: {
-      labels: [10, 20, 30, 40, 50],
-	datasets: [{
-			data: [1, 2, 5, 4, 3],
-			label: "Experimento 1",
-			borderColor: "#ff0000",
-			fill: false,
-			lineTension: 0.5
-	},{
-			data: [4, 5, 3, 3, 0],
-			label: "Experimento 2",
-			borderColor: "#00ff00",
-			fill: false,
-			lineTension: 0.0
-	}]
-	},
-    options: {
-				title:{
-						display: true,
-						text: 'Experimentos'
-				},
-				scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                },
-                scaleLabel: {
-       							display: true,
-        						labelString: 'Temperatura'
-								}			 
-            }],
-						xAxes:
-						[{
-								scaleLabel:{
-										display: true,
-										labelString: 'Tempo'
-								}
-						}]
-        }
-    }
-});
-</script>
-
-<h2 id="traando-grficos-com-plotly">Traçando gráficos com plot.ly</h2>
-
-<div id="plotit-2d" style="width:600px;height:380px;"></div>
-
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-<script>
-
-var trace1 = {
-  x: [1, 2, 3, 4],
-  y: [16, 11, 12, 21],
-		type: 'scatter',
-		name: 'Experimento1'
-};
-
-var trace2 = {
-  x: [1, 2, 3, 4],
-  y: [10, 5, 11, 9],
-  line: {shape: 'spline'},
-		type: 'scatter',
-		name: 'Experimento2'
-};
-
-var layout = {
-  title: 'Experimentos',
-  xaxis: {
-    title: 'Temperatura',
-    showgrid: true,
-    zeroline: false
-  },
-  yaxis: {
-    title: 'Tempo',
-    showline: false
-  }
-};
-
-var data = [trace1, trace2];
-
-Plotly.newPlot('plotit-2d', data, layout);
-</script>
-
-<h2 id="tranando-grficos-3d-com-plotly">Trançando gráficos 3d com plot.ly</h2>
-
-<div id="plotit-3d" style="width:600px;height:580px;"></div>
-
-<script>
-Plotly.d3.csv('https://raw.githubusercontent.com/ajustetecnico/ajustetecnico.github.io/master/images/plots/myplot.csv', function(err, rows){
-function unpack(rows, key) {
-  return rows.map(function(row) { return row[key]; });
-}
-  
-var z_data=[ ]
-for(i=0;i<41;i++)
-{
-  z_data.push(unpack(rows,i));
-}
-
-var data = [{
-           z: z_data,
-           type: 'surface'
-        }];
-  
-var layout = {
-  title: 'Função f(x,y)',
-  autosize: false,
-  width: 600,
-  height: 580,
-  margin: {
-    l: 0,
-    r: 0,
-    b: 0,
-    t: 50,
-  }
-};
-Plotly.newPlot('plotit-3d', data, layout);
-});
-</script>
-
-<h2 id="traando-funes-diretamente-com-plotit">Traçando funções diretamente com plot.it</h2>
-
-<div id="plotit-3d1" style="width:600px;height:580px;"></div>
-
-<p id="demo">Alo
-
-<script>
-z1 = [];
-for(var x=-1; x<1; x=x+0.05){
-  zrow = [];
-  for(var y=-1; y<1; y=y+0.05){
-    zrow.push((x*x+y*y)*Math.sin(6*x)*Math.cos(6*y));
-  }
-  z1.push(zrow);
-}	
-var layout = {
-  title: 'Função f(x,y)',
-  autosize: false,
-  width: 600,
-  height: 580,
-  margin: {
-    l: 0,
-    r: 0,
-    b: 0,
-    t: 50,
-  }
-};
-document.getElementById("demo").innerHTML=z1.length+"x"+z1[0].length;
-
-var data_z1 = {z: z1, type: 'surface'};
-Plotly.newPlot('plotit-3d1', [data_z1], layout);
-</script>
-
- <a href="/blog/2018/09/18/plots/" title="Read more"><strong>Read more...</strong></a>
-  </p>
-</div>
   <hr class="transp">
   
   <div class="post">
