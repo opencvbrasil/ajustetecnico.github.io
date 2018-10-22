@@ -10,9 +10,10 @@ mathjax: false
 
 A preparação de estatísticas de uso requer uma ferramenta de rastreio
 capaz de verificar cada acesso que é feito em um site. A [Google
-Analytics](https://analytics.google.com) é uma das que se presta a esse serviço, de forma gratuita e
-eficiente.
+Analytics](https://analytics.google.com) é uma das que se presta a
+esse serviço, de forma gratuita e eficiente.
 
+<!--more--> 
 Para adicionar a ferramenta a um site, é necessário ter uma conta na
 Google e cadastrar uma conta específica para o fim.
 
