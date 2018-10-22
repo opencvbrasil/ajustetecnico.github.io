@@ -5,11 +5,81 @@
     <description>Divulgação de habilidades em Engenharia de Computação</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-10-02T14:00:35-03:00</updated>
+    <updated>2018-10-22T14:57:15-03:00</updated>
     <id></id>
     <author>
       <name>Ajuste Técnico</name>
     </author>
+    
+      <item>
+        <title>Trabalhando com estatísticas de acesso</title>
+        
+          <description>&lt;p&gt;A preparação de estatísticas de uso requer uma ferramenta de rastreio
+capaz de verificar cada acesso que é feito em um site. A &lt;a href=&quot;https://analytics.google.com&quot;&gt;Google
+Analytics&lt;/a&gt; é uma das que se presta a esse serviço, de forma gratuita e
+eficiente.&lt;/p&gt;
+
+&lt;p&gt;Para adicionar a ferramenta a um site, é necessário ter uma conta na
+Google e cadastrar uma conta específica para o fim.&lt;/p&gt;
+
+&lt;p&gt;Alguns dados precisam ser disponibilizados na conta para o website que
+precisa ser rastreado. No caso do ajustetecnico, os seguintes dados
+foram cadastrados:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nome de uma conta: ajustetecnico&lt;/li&gt;
+  &lt;li&gt;Nome do website: ajustetecnico&lt;/li&gt;
+  &lt;li&gt;URL do website: http://ajustetecnico.github.io&lt;/li&gt;
+  &lt;li&gt;Categoria do website: Computers and Electronics&lt;/li&gt;
+  &lt;li&gt;Timezone: Brazil&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Uma vez cadastrados esses dados, uma página de aceitação de termos de
+serviço é apresentada e um UID é retornado para o usuário.&lt;/p&gt;
+
+&lt;p&gt;A página que segue é um painel de adminstração do página rastreada, e
+um &lt;em&gt;Tracking ID&lt;/em&gt; gerado é fornecido. Por exemplo, para o website do
+ajustetecnico, o &lt;em&gt;Tracking ID&lt;/em&gt; gerado foi &lt;strong&gt;UA-127912728-1&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Junto com o &lt;em&gt;Tracking ID&lt;/em&gt; a Google disponibiliza um trecho de código
+em Javascript para incorporar às páginas. Para o ajustetecnico, o
+código gerado foi o seguinte:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Global&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;site&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tag&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gtag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Google&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Analytics&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://www.googletagmanager.com/gtag/js?id=UA-127912728-1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dataLayer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dataLayer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gtag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dataLayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;gtag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;gtag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'config'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'UA-127912728-1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Uma vez adicionado o trecho de código ao grupo de páginas a ser
+rastreado, o Google Analytics disponibiliza um painel para acompanhar
+os acessos gerados.&lt;/p&gt;
+
+&lt;p&gt;Em se tratando do Jekyll, a inserção do rastreio via Google Analytics
+é bem simples (usando o tema
+&lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;minima&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;O arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; contém uma linha de configuração justo
+para cadastrar as estatísticas. Para o ajustetecnico, foi habilitada a
+seguinte linha no &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;google_analytics&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;UA-127912728-1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Trabalhando com estatísticas de acesso&amp;url=/blog/2018/10/22/analytics/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/10/22/analytics/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
+</description>
+        
+        <pubDate>Mon, 22 Oct 2018 00:00:00 -0300</pubDate>
+        <link>/blog/2018/10/22/analytics/</link>
+        <guid isPermaLink="true">/blog/2018/10/22/analytics/</guid>
+      </item>
     
       <item>
         <title>Traçando gráficos em Jekyll</title>
@@ -846,119 +916,6 @@ apresentadas no navegador.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Traçado de gráficos em Jekyll</title>
-        
-          <description>&lt;p&gt;Diversas são as formas de traçar gráficos usando Jekyll e Javascript. Nesse post, testamos duas bibliotecas: &lt;a href=&quot;https://chartjs.org&quot;&gt;chart.js&lt;/a&gt; e &lt;a href=&quot;https://plot.ly&quot;&gt;plot.ly&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;usando-chartjshttpschartjsorg&quot;&gt;Usando &lt;a href=&quot;https://chartjs.org&quot;&gt;chart.js&lt;/a&gt;&lt;/h2&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js&quot;&gt;&lt;/script&gt;
-
-&lt;canvas id=&quot;myChart&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
-&lt;script&gt;
-var ctx = document.getElementById(&quot;myChart&quot;).getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: [&quot;Red&quot;, &quot;Blue&quot;, &quot;Yellow&quot;, &quot;Green&quot;, &quot;Purple&quot;, &quot;Orange&quot;],
-        datasets: [{
-            label: 'Número de Votos',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
-&lt;/script&gt;
-
-&lt;p&gt;Quebra de linha&lt;/p&gt;
-
-&lt;canvas id=&quot;lineplot&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
-
-&lt;script&gt;
-		var ctx = document.getElementById(&quot;lineplot&quot;).getContext('2d');
-var myChart = new Chart(ctx, {
-		type: 'line',
-		data: {
-				labels: [10, 20, 30, 40, 50],
-				datasets: [{
-						data: [1, 2, 5, 4, 3],
-						label: &quot;Experimento 1&quot;,
-						borderColor: &quot;#ff0000&quot;,
-						fill: false
-				},
-				{
-				 data: [4, 5, 3, 3, 0],
-						label: &quot;Experimento 2&quot;,
-						borderColor: &quot;#00ff00&quot;,
-						fill: false
-				}]
-		},
-		options: {
-				scales:{
-						yAxes: [{
-								scaleLabel: {
-										display: true,
-										labelString: &quot;Temperatura (Celsius)&quot;
-								}
-						}
-									 ],
-						xAxes: [{
-								scaleLabel: {
-										display: true,
-										labelString: &quot;Tempo (s)&quot;
-								}
-						}
-						]
-
-						
-				},
-				elements: {
-						line: { tension: 0.5,}
-				},
-				title: {
-						display: true,
-						text: &quot;Temperatura x tempo&quot;
-				}
-		}
-});
-
-## Usando [plot.ly](https://plot.ly)
-
-&lt;/script&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Traçado de gráficos em Jekyll&amp;url=/blog/2018/09/18/plots-and-charts/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/09/18/plots-and-charts/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
-</description>
-        
-        <pubDate>Tue, 18 Sep 2018 00:00:00 -0300</pubDate>
-        <link>/blog/2018/09/18/plots-and-charts/</link>
-        <guid isPermaLink="true">/blog/2018/09/18/plots-and-charts/</guid>
-      </item>
-    
-      <item>
         <title>Detecção de assinaturas em listas de presenças - Parte 1</title>
         
           <description>&lt;p&gt;Olá,&lt;/p&gt;
@@ -1363,28 +1320,6 @@ dicas de uso.&lt;/p&gt;
         <pubDate>Tue, 12 Jun 2018 00:00:00 -0300</pubDate>
         <link>/blog/2018/06/12/alo-mundo/</link>
         <guid isPermaLink="true">/blog/2018/06/12/alo-mundo/</guid>
-      </item>
-    
-      <item>
-        <title>What's Jekyll?</title>
-        
-          <description>&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It’s an immensely useful tool and one we encourage you to use here with Lanyon.&lt;/p&gt;
-
-&lt;p&gt;Find out more by &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=What's Jekyll?&amp;url=/blog/2015/01/31/whats-jekyll/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2015/01/31/whats-jekyll/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
-</description>
-        
-        <pubDate>Sat, 31 Jan 2015 00:00:00 -0300</pubDate>
-        <link>/blog/2015/01/31/whats-jekyll/</link>
-        <guid isPermaLink="true">/blog/2015/01/31/whats-jekyll/</guid>
       </item>
     
   </channel>

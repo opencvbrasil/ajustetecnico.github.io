@@ -3,6 +3,21 @@
   
     
     <url>
+      <loc>/blog/2018/10/22/analytics/</loc>
+      
+        <lastmod>2018-10-22T00:00:00-03:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>/blog/2018/10/02/plots/</loc>
       
         <lastmod>2018-10-02T00:00:00-03:00</lastmod>
@@ -34,21 +49,6 @@
     
     <url>
       <loc>/blog/2018/09/18/equacoes-markdown/</loc>
-      
-        <lastmod>2018-09-18T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/blog/2018/09/18/plots-and-charts/</loc>
       
         <lastmod>2018-09-18T00:00:00-03:00</lastmod>
       
@@ -136,36 +136,6 @@
     </url>
     
   
-    
-    <url>
-      <loc>/blog/2015/01/31/whats-jekyll/</loc>
-      
-        <lastmod>2015-01-31T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/blog/2013/01/01/example_content/</loc>
-      
-        <lastmod>2013-01-01T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
   
     
   
@@ -203,7 +173,7 @@
     <url>
       <loc>/archive/</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -250,7 +220,7 @@
     <url>
       <loc>/disclosure/</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -267,7 +237,7 @@
     <url>
       <loc>/feed.xml</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -282,7 +252,7 @@
     <url>
       <loc>/humans.txt</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -297,7 +267,7 @@
     <url>
       <loc>/blog/</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -312,7 +282,7 @@
     <url>
       <loc>/</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -327,7 +297,7 @@
     <url>
       <loc>/links.jsonp</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -361,7 +331,7 @@
     <url>
       <loc>/readme/</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -378,7 +348,7 @@
     <url>
       <loc>/rfeed.xml</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -395,7 +365,7 @@
     <url>
       <loc>/sitemap.xml</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -418,22 +388,7 @@
     <url>
       <loc>/blog/page2/</loc>
       
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/blog/page3/</loc>
-      
-        <lastmod>2018-10-02T14:00:35-03:00</lastmod>
+        <lastmod>2018-10-22T14:57:15-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

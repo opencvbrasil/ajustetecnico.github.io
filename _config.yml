@@ -92,7 +92,7 @@ twitter_widget_id: ajustetecnico
 disqus_shortname: ajustetecnico
 
 # Analytics and webmaster tools stuff goes here
-#google_analytics:   xyz123abc
+google_analytics: UA-127912728-1
 
 #### For dummy website only - remove if you wish ####
 #github_repo: https://github.com/dyndna/lanyon-plus

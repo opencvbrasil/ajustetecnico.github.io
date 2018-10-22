@@ -170,6 +170,80 @@ Credits: /disclosure
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blog/2018/10/22/analytics/">
+        Trabalhando com estatísticas de acesso
+      </a>
+    </h1>
+
+  <span class="post-date indexpg" itemprop="datePublished" content="2018-10-22"><i class="fa fa-calendar" title="Date published"> 22 Oct 2018</i> </span>
+
+ A preparação de estatísticas de uso requer uma ferramenta de rastreio
+capaz de verificar cada acesso que é feito em um site. A <a href="https://analytics.google.com">Google
+Analytics</a> é uma das que se presta a esse serviço, de forma gratuita e
+eficiente.
+
+Para adicionar a ferramenta a um site, é necessário ter uma conta na
+Google e cadastrar uma conta específica para o fim.
+
+Alguns dados precisam ser disponibilizados na conta para o website que
+precisa ser rastreado. No caso do ajustetecnico, os seguintes dados
+foram cadastrados:
+
+<ul>
+  <li>Nome de uma conta: ajustetecnico</li>
+  <li>Nome do website: ajustetecnico</li>
+  <li>URL do website: http://ajustetecnico.github.io</li>
+  <li>Categoria do website: Computers and Electronics</li>
+  <li>Timezone: Brazil</li>
+</ul>
+
+Uma vez cadastrados esses dados, uma página de aceitação de termos de
+serviço é apresentada e um UID é retornado para o usuário.
+
+A página que segue é um painel de adminstração do página rastreada, e
+um <em>Tracking ID</em> gerado é fornecido. Por exemplo, para o website do
+ajustetecnico, o <em>Tracking ID</em> gerado foi <strong>UA-127912728-1</strong>.
+
+Junto com o <em>Tracking ID</em> a Google disponibiliza um trecho de código
+em Javascript para incorporar às páginas. Para o ajustetecnico, o
+código gerado foi o seguinte:
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="c">&lt;!--</span> <span class="nx">Global</span> <span class="nx">site</span> <span class="nx">tag</span> <span class="p">(</span><span class="nx">gtag</span><span class="p">.</span><span class="nx">js</span><span class="p">)</span> <span class="o">-</span> <span class="nx">Google</span> <span class="nx">Analytics</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">async</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"https://www.googletagmanager.com/gtag/js?id=UA-127912728-1"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">dataLayer</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">dataLayer</span> <span class="o">||</span> <span class="p">[];</span>
+  <span class="kd">function</span> <span class="nx">gtag</span><span class="p">(){</span><span class="nx">dataLayer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);}</span>
+  <span class="nx">gtag</span><span class="p">(</span><span class="s1">'js'</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+
+  <span class="nx">gtag</span><span class="p">(</span><span class="s1">'config'</span><span class="p">,</span> <span class="s1">'UA-127912728-1'</span><span class="p">);</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+Uma vez adicionado o trecho de código ao grupo de páginas a ser
+rastreado, o Google Analytics disponibiliza um painel para acompanhar
+os acessos gerados.
+
+Em se tratando do Jekyll, a inserção do rastreio via Google Analytics
+é bem simples (usando o tema
+<a href="https://github.com/jekyll/minima">minima</a>).
+
+O arquivo <code class="highlighter-rouge">_config.yml</code> contém uma linha de configuração justo
+para cadastrar as estatísticas. Para o ajustetecnico, foi habilitada a
+seguinte linha no <code class="highlighter-rouge">_config.yml</code>
+
+<div class="language-yaml highlighter-rouge">
+<pre class="highlight"><code><span class="s">google_analytics</span><span class="pi">:</span> <span class="s">UA-127912728-1</span>
+</code></pre>
+</div>
+
+ <a href="/blog/2018/10/22/analytics/" title="Read more"><strong>Read more...</strong></a>
+  </div>
+  <hr class="transp">
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blog/2018/10/02/plots/">
         Traçando gráficos em Jekyll
       </a>
@@ -221,123 +295,6 @@ calo no pé de matemáticos, engenheiros, físicos e demais profissionais
 que lidam equações e precisam apresentá-las para divulgar suas ideias.
 
  <a href="/blog/2018/09/18/equacoes-markdown/" title="Read more"><strong>Read more...</strong></a>
-  </div>
-  <hr class="transp">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2018/09/18/plots-and-charts/">
-        Traçado de gráficos em Jekyll
-      </a>
-    </h1>
-
-  <span class="post-date indexpg" itemprop="datePublished" content="2018-09-18"><i class="fa fa-calendar" title="Date published"> 18 Sep 2018</i> </span>
-
- Diversas são as formas de traçar gráficos usando Jekyll e Javascript. Nesse post, testamos duas bibliotecas: <a href="https://chartjs.org">chart.js</a> e <a href="https://plot.ly">plot.ly</a>
-
-<h2 id="usando-chartjshttpschartjsorg">Usando <a href="https://chartjs.org">chart.js</a>
-</h2>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-
-<canvas id="myChart" width="400" height="300"></canvas>
-<script>
-var ctx = document.getElementById("myChart").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: 'Número de Votos',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
-</script>
-
-Quebra de linha
-
-<canvas id="lineplot" width="400" height="300"></canvas>
-
-<script>
-		var ctx = document.getElementById("lineplot").getContext('2d');
-var myChart = new Chart(ctx, {
-		type: 'line',
-		data: {
-				labels: [10, 20, 30, 40, 50],
-				datasets: [{
-						data: [1, 2, 5, 4, 3],
-						label: "Experimento 1",
-						borderColor: "#ff0000",
-						fill: false
-				},
-				{
-				 data: [4, 5, 3, 3, 0],
-						label: "Experimento 2",
-						borderColor: "#00ff00",
-						fill: false
-				}]
-		},
-		options: {
-				scales:{
-						yAxes: [{
-								scaleLabel: {
-										display: true,
-										labelString: "Temperatura (Celsius)"
-								}
-						}
-									 ],
-						xAxes: [{
-								scaleLabel: {
-										display: true,
-										labelString: "Tempo (s)"
-								}
-						}
-						]
-
-						
-				},
-				elements: {
-						line: { tension: 0.5,}
-				},
-				title: {
-						display: true,
-						text: "Temperatura x tempo"
-				}
-		}
-});
-
-## Usando [plot.ly](https://plot.ly)
-
-</script>
-
- <a href="/blog/2018/09/18/plots-and-charts/" title="Read more"><strong>Read more...</strong></a>
   </div>
   <hr class="transp">
   
@@ -423,6 +380,22 @@ presença dos alunos em sala de aula.
       })(document);
     </script>
     
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-127912728-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
 
 <!-- gist embed -->
 

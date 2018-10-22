@@ -1,16 +1,6 @@
 callback([
 
   {
-    "text": "Example content",
-    "href": "/blog/2013/01/01/example_content/"
-  } ,
-
-  {
-    "text": "What's Jekyll?",
-    "href": "/blog/2015/01/31/whats-jekyll/"
-  } ,
-
-  {
     "text": "Alô, mundo!",
     "href": "/blog/2018/06/12/alo-mundo/"
   } ,
@@ -36,11 +26,6 @@ callback([
   } ,
 
   {
-    "text": "Traçado de gráficos em Jekyll",
-    "href": "/blog/2018/09/18/plots-and-charts/"
-  } ,
-
-  {
     "text": "Usando Equações em Markdown",
     "href": "/blog/2018/09/18/equacoes-markdown/"
   } ,
@@ -53,6 +38,11 @@ callback([
   {
     "text": "Traçando gráficos em Jekyll",
     "href": "/blog/2018/10/02/plots/"
+  } ,
+
+  {
+    "text": "Trabalhando com estatísticas de acesso",
+    "href": "/blog/2018/10/22/analytics/"
   } 
 
 ])
