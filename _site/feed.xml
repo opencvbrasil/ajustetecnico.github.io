@@ -5,7 +5,7 @@
     <description>Divulgação de habilidades em Engenharia de Computação</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2018-10-22T15:00:37-03:00</updated>
+    <updated>2018-10-22T15:18:00-03:00</updated>
     <id></id>
     <author>
       <name>Ajuste Técnico</name>
@@ -72,6 +72,11 @@ seguinte linha no &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt
 &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;google_analytics&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;UA-127912728-1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;Essa linha habilita a inclusão do rastreio via Google Analytics pelos
+arquivos de script do Jekyll. No caso do tema usado nesse blog, a
+inclusão fica realizada pelo arquivo &lt;em&gt;_includes/.html&lt;/em&gt;. Para o minima,
+a inclusão é feita via arquivo &lt;em&gt;_includes/google-analytics.html&lt;/em&gt;.&lt;/p&gt;
 
 &lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=Trabalhando com estatísticas de acesso&amp;url=/blog/2018/10/22/analytics/&amp;via=ajustetecnico&quot; target=&quot;_blank&quot; title=&quot;tweet author @ajustetecnico&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=/blog/2018/10/22/analytics/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
 </description>

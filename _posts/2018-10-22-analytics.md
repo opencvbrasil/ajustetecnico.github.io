@@ -65,3 +65,8 @@ seguinte linha no ```_config.yml```
 google_analytics: UA-127912728-1
 ```
 
+Essa linha habilita a inclusão do rastreio via Google Analytics pelos
+arquivos de script do Jekyll. No caso do tema usado nesse blog, a
+inclusão fica realizada pelo arquivo *_includes/.html*. Para o minima,
+a inclusão é feita via arquivo *_includes/google-analytics.html*.
+
